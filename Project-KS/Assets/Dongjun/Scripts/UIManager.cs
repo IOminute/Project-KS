@@ -1,17 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-using System.Globalization;
-using Unity.VisualScripting;
+using System;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    public Image[] behaviours;
+    public GameObject behaviourContainer;
+    public TMP_Text manaInfo;
+    public GameObject[] behaviours;
 
     public TMP_Text deadBodiesCount;
     public TMP_Text kindredPointCount;
@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     public TMP_Text progressName;
     public GameObject progressBarContainer;
     public Image progressBar;
+    public Image manaBar;
+
+    private string[] manas;
 
     private int kindredPoint;
     private int deadBodies;
@@ -26,6 +29,15 @@ public class UIManager : MonoBehaviour
     private int currentBehaviour;
 
     private bool isProgressing;
+
+    public TMP_Text gameTime;
+    private float sec;
+    private float min;
+
+    private float maxMana = 1000;
+    private float mana = 1000; //Temporary Value, It will be replaced with PlayerManager's Variable.
+
+    private WaitForSeconds waitPointOne;
 
     void Awake()
     {
@@ -42,21 +54,29 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        manas = new string[] {"20 / Body", "300", "500"};
         maxBodies = 20;
         deadBodies = 0;
         currentBehaviour = 0;
+
+        for (int i = 0; i < behaviours.Length; i++)
+        {
+            if (i == currentBehaviour) behaviours[i].SetActive(true);
+            else behaviours[i].SetActive(false);
+        }
 
         progressBar.gameObject.SetActive(false);
         progressName.gameObject.SetActive(false);
         progressBarContainer.SetActive(false);
         progressBar.fillAmount = 0f;
+
+        waitPointOne = new WaitForSeconds(0.1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) ChangeBehaviour(1);
-        if (Input.GetMouseButtonDown(1)) ChangeBehaviour(-1);
+        if (Input.GetMouseButtonDown(0)) StartCoroutine(ChangeBehaviour());
 
         if (Input.GetKeyDown(KeyCode.A)) ManageBodies(1);
         if (Input.GetKeyDown(KeyCode.S)) ManageBodies(-1);
@@ -64,17 +84,32 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)) ManageKindredPoint(-1);
 
 
-        if (Input.GetKeyDown(KeyCode.Q)) StartCoroutine(ProgressBarInitiated("Necromance", 0.5f));
-        if (Input.GetKeyDown(KeyCode.W)) StartCoroutine(ProgressBarInitiated("Possesion", 2f));
+        if (Input.GetKeyDown(KeyCode.Q)) StartCoroutine(SkillInitiated("Necromance", 0.5f, 20f));
+        if (Input.GetKeyDown(KeyCode.W)) StartCoroutine(SkillInitiated("Possesion", 2f, 100f));
+
+        sec += Time.deltaTime;
+        if (sec >= 60f)
+        {
+            min += 1;
+            sec = 0;
+        }
+
+        gameTime.text = min.ToString("00") + " : " + sec.ToString("00");
     }
 
-    void ChangeBehaviour(int direction)
+    IEnumerator ChangeBehaviour()
     {
-        behaviours[currentBehaviour].DOFade(0f, 0.1f).SetEase(Ease.InSine);
-        currentBehaviour += direction;
-        if (currentBehaviour == -1) currentBehaviour = 2;
-        else if (currentBehaviour == 3) currentBehaviour = 0;
-        behaviours[currentBehaviour].DOFade(1f, 0.1f).SetEase(Ease.OutSine).SetDelay(0.1f);
+        behaviourContainer.GetComponent<CanvasGroup>().DOFade(0f, 0.1f).SetEase(Ease.InSine);
+        currentBehaviour += 1;
+        if (currentBehaviour == 3) currentBehaviour = 0;
+        yield return waitPointOne;
+        manaInfo.text = "Mana : " + manas[currentBehaviour];
+        for (int i = 0; i < behaviours.Length; i++) 
+        {
+            if (i  == currentBehaviour) behaviours[i].SetActive(true);
+            else behaviours[i].SetActive(false);
+        }
+        behaviourContainer.GetComponent<CanvasGroup>().DOFade(1f, 0.1f).SetEase(Ease.OutSine);
     }
 
     void ManageBodies(int amount)
@@ -104,13 +139,16 @@ public class UIManager : MonoBehaviour
         kindredPointCount.text = "KindredPoint : " + kindredPoint.ToString();
     }
 
-    IEnumerator ProgressBarInitiated(string pgName, float duration)
+    IEnumerator SkillInitiated(string pgName, float duration, float requireMana)
     {
         if (isProgressing)
         {
             print("Other Progress is onloading!");
             yield break;
         }
+        float currentMana = mana - requireMana;
+        manaBar.DOFillAmount(currentMana / maxMana, 0.1f);
+        mana = currentMana;
         isProgressing = true;
         progressBar.gameObject.SetActive(true);
         progressName.gameObject.SetActive(true);
