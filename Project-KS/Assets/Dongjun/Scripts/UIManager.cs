@@ -34,6 +34,11 @@ public class UIManager : MonoBehaviour
     private float sec;
     private float min;
 
+    public GameObject pauseContainer;
+    public GameObject settingsContainer;
+    private bool isPaused;
+    private bool isSettingsOn;
+
     private float maxMana = 1000;
     private float mana = 1000; //Temporary Value, It will be replaced with PlayerManager's Variable.
 
@@ -71,6 +76,11 @@ public class UIManager : MonoBehaviour
         progressBar.fillAmount = 0f;
 
         waitPointOne = new WaitForSeconds(0.1f);
+
+        pauseContainer.SetActive(false);
+        settingsContainer.SetActive(false);
+        isPaused = false;
+        isSettingsOn = false;
     }
 
     // Update is called once per frame
@@ -95,8 +105,14 @@ public class UIManager : MonoBehaviour
         }
 
         gameTime.text = min.ToString("00") + " : " + sec.ToString("00");
-    }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused && isSettingsOn) SettingsOff();
+            else if (isPaused) PauseOff();
+            else if (!isPaused) PauseOn();
+        }
+    }
     IEnumerator ChangeBehaviour()
     {
         behaviourContainer.GetComponent<CanvasGroup>().DOFade(0f, 0.1f).SetEase(Ease.InSine);
@@ -164,4 +180,28 @@ public class UIManager : MonoBehaviour
         yield return null;
     }
 
+    public void PauseOn()
+    {
+        pauseContainer.SetActive(true);
+        isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void PauseOff()
+    {
+        pauseContainer.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1;
+    }
+
+    public void SettingsOn()
+    {
+        settingsContainer.SetActive(true);
+        isSettingsOn = true;
+    }
+    public void SettingsOff()
+    {
+        settingsContainer.SetActive(false);
+        isSettingsOn = false;
+    }
 }
