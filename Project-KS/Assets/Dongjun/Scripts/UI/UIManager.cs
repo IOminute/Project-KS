@@ -23,9 +23,7 @@ public class UIManager : MonoBehaviour
 
     private string[] manas;
 
-    private int kindredPoint;
-    private int deadBodies;
-    private int maxBodies;
+    
     private int currentBehaviour;
 
     private bool isProgressing;
@@ -38,9 +36,6 @@ public class UIManager : MonoBehaviour
     public GameObject settingsContainer;
     private bool isPaused;
     private bool isSettingsOn;
-
-    private float maxMana = 1000;
-    private float mana = 1000; //Temporary Value, It will be replaced with PlayerManager's Variable.
 
     private WaitForSeconds waitPointOne;
 
@@ -60,8 +55,6 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         manas = new string[] {"20 / Body", "300", "500"};
-        maxBodies = 20;
-        deadBodies = 0;
         currentBehaviour = 0;
 
         for (int i = 0; i < behaviours.Length; i++)
@@ -86,16 +79,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) StartCoroutine(ChangeBehaviour());
-
-        if (Input.GetKeyDown(KeyCode.A)) ManageBodies(1);
-        if (Input.GetKeyDown(KeyCode.S)) ManageBodies(-1);
-        if (Input.GetKeyDown(KeyCode.D)) ManageKindredPoint(1);
-        if (Input.GetKeyDown(KeyCode.F)) ManageKindredPoint(-1);
-
-
-        if (Input.GetKeyDown(KeyCode.Q)) StartCoroutine(SkillInitiated("Necromance", 0.5f, 20f));
-        if (Input.GetKeyDown(KeyCode.W)) StartCoroutine(SkillInitiated("Possesion", 2f, 100f));
 
         sec += Time.deltaTime;
         if (sec >= 60f)
@@ -113,7 +96,7 @@ public class UIManager : MonoBehaviour
             else if (!isPaused) PauseOn();
         }
     }
-    IEnumerator ChangeBehaviour()
+    public IEnumerator ChangeBehaviour()
     {
         behaviourContainer.GetComponent<CanvasGroup>().DOFade(0f, 0.1f).SetEase(Ease.InSine);
         currentBehaviour += 1;
@@ -128,43 +111,27 @@ public class UIManager : MonoBehaviour
         behaviourContainer.GetComponent<CanvasGroup>().DOFade(1f, 0.1f).SetEase(Ease.OutSine);
     }
 
-    void ManageBodies(int amount)
+    public int GetCurrentBehaviourIndex() { return currentBehaviour; }
+
+    public void BodyTextChange(int amount)
     {
-        if (deadBodies + amount > maxBodies || deadBodies + amount < 0)
-        {
-            Debug.Log("Invalid Access! UIManager.cs -> ManageBodies()");
-        } else 
-        {
-            deadBodies += amount;
-        }
-        deadBodiesCount.text = "Dead Bodies : " + deadBodies.ToString();
-        if (deadBodies == 20) deadBodiesCount.color = Color.red;
+        deadBodiesCount.text = "Dead Bodies : " + amount.ToString();
+        if (amount == 20) deadBodiesCount.color = Color.red;
         else deadBodiesCount.color = Color.white;
     }
 
-    void ManageKindredPoint(int amount)
+    public void KindredPointTextChange(int amount)
     {
-        if (kindredPoint + amount < 0)
-        {
-            Debug.Log("Invalid Access! UIManager.cs -> ManageKindredPoint()");
-        }
-        else
-        {
-            kindredPoint += amount;
-        }
-        kindredPointCount.text = "KindredPoint : " + kindredPoint.ToString();
+        kindredPointCount.text = "KindredPoint : " + amount.ToString();
     }
 
-    IEnumerator SkillInitiated(string pgName, float duration, float requireMana)
+    public IEnumerator SkillInitiated(string pgName, float duration, float requireMana)
     {
         if (isProgressing)
         {
             print("Other Progress is onloading!");
             yield break;
         }
-        float currentMana = mana - requireMana;
-        manaBar.DOFillAmount(currentMana / maxMana, 0.1f);
-        mana = currentMana;
         isProgressing = true;
         progressBar.gameObject.SetActive(true);
         progressName.gameObject.SetActive(true);
@@ -179,6 +146,12 @@ public class UIManager : MonoBehaviour
         progressBar.fillAmount = 0f;
         yield return null;
     }
+
+    public void ManaBarAnim(float mana, float maxMana)
+    {
+        manaBar.DOFillAmount(mana/maxMana, 0.1f);
+    }
+
 
     public void PauseOn()
     {
