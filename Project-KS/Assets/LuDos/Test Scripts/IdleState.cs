@@ -6,21 +6,47 @@ public class IdleState : BaseState
 
     public override void Enter()
     {
-        // Idle 애니메이션 트리거
         enemy.animator.SetTrigger("Idle");
     }
 
     public override void Update()
     {
-        // Idle 상태에서는 특정한 동작 없이 대기
-        // 특정 조건이 충족되면 다른 상태로 전환 가능
+        Collider[] attackColliders = Physics.OverlapSphere(enemy.transform.position, enemy.attackRange);
+        foreach (var collider in attackColliders)
+        {
+            Vector3 targetPosition = collider.transform.position;
+            targetPosition.y = 0f;
 
-        // 예: 일정 시간이 지나면 MoveToCastleState로 전환
-        // enemy.ChangeState(new MoveToCastleState(enemy));
+            Vector3 enemyPosition = enemy.transform.position;
+            enemyPosition.y = 0f;
+
+            if (Vector3.Distance(enemyPosition, targetPosition) <= enemy.attackRange)
+            {
+                enemy.ChangeState(new AttackState(enemy, collider.transform));
+                return;
+            }
+        }
+
+        Collider[] chaseColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
+        foreach (var collider in chaseColliders)
+        {
+            Vector3 targetPosition = collider.transform.position;
+            targetPosition.y = 0f;
+
+            Vector3 enemyPosition = enemy.transform.position;
+            enemyPosition.y = 0f;
+
+            if (Vector3.Distance(enemyPosition, targetPosition) <= enemy.chaseRange)
+            {
+                enemy.ChangeState(new ChaseState(enemy, collider.transform));
+                return;
+            }
+        }
+        enemy.ChangeState(new MoveToCastleState(enemy));
     }
 
     public override void Exit()
     {
-        // IdleState에서 나갈 때 수행할 동작이 있다면 추가
+
     }
 }

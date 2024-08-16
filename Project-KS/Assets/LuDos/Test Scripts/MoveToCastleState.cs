@@ -6,7 +6,7 @@ public class MoveToCastleState : BaseState
 
     public override void Enter()
     {
-        // enemy.animator.SetTrigger("Idle");
+
     }
 
     public override void Update()
@@ -17,7 +17,7 @@ public class MoveToCastleState : BaseState
         Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("PlayerUnit") || hitCollider.CompareTag("Castle")) // 아군 tag
+            if (hitCollider.CompareTag("PlayerUnit")) // 아군 tag
             {
                 enemy.ChangeState(new ChaseState(enemy, hitCollider.transform));
                 break;

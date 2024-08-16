@@ -13,13 +13,16 @@ public class EnemyController : MonoBehaviour
     public bool isAttacking;
 
     public Animator animator;
+    public Rigidbody Rb;
+
     private StateMachine stateMachine;
-    private Coroutine attackCoroutine;
+    public Coroutine attackCoroutine;
 
     private void Awake()
     {
         stateMachine = new StateMachine();
         animator = GetComponent<Animator>();
+        Rb= GetComponent<Rigidbody>();
     }
 
     private void Start()
@@ -37,6 +40,8 @@ public class EnemyController : MonoBehaviour
     {
         animator.SetTrigger("Run");
 
+        targetPosition.y = 0f;
+
         Vector3 direction = (targetPosition - transform.position).normalized;
 
         if (direction != Vector3.zero)
@@ -45,17 +50,24 @@ public class EnemyController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f); // 회전 속도
         }
 
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        Vector3 newPosition = transform.position + direction * moveSpeed * Time.deltaTime;
+        newPosition.y = 0f;
+        transform.position = newPosition;
     }
-
 
     public void ChaseTarget(Transform target)
     {
         MoveTo(target.position);
     }
 
+    public void Stop()
+    {
+        Rb.velocity = Vector3.zero;
+    }
+
     public virtual void Attack()
     {
+        Stop();
         animator.SetTrigger("Attack");
     }
 
@@ -71,7 +83,7 @@ public class EnemyController : MonoBehaviour
 
     public void Die()
     {
-        // stop
+        Stop();
 
         animator.SetTrigger("Death");
 

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Threading;
+using TMPro;
 using UnityEngine;
 
 public class AttackState : BaseState
 {
     private Transform target;
-    private float lastAttackTime;
 
     public AttackState(EnemyController enemy, Transform target) : base(enemy)
     {
@@ -14,22 +14,20 @@ public class AttackState : BaseState
 
     public override void Enter()
     {
-        enemy.StartCoroutine(AttackCoroutine());
+        enemy.attackCoroutine = enemy.StartCoroutine(AttackCoroutine());
     }
 
     public override void Update()
     {
-        if (Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange)
+        if (Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 1)
         {
-            Debug.Log("Chase");
             enemy.ChangeState(new ChaseState(enemy, target));
         }
     }
 
     public override void Exit()
     {
-        Debug.Log("Fin");
-        // enemy.StopAttack();
+        enemy.StopAttack();
     }
 
     private IEnumerator AttackCoroutine()
@@ -39,11 +37,10 @@ public class AttackState : BaseState
         enemy.Attack();
         
         yield return new WaitForSeconds(1.0f);
-
         yield return new WaitForSeconds(enemy.attackCoolTime);
 
         enemy.isAttacking = false;
 
-        enemy.ChangeState(new ChaseState(enemy, target));
+        enemy.ChangeState(new IdleState(enemy));
     }
 }
