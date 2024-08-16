@@ -5090,6 +5090,7 @@ GameObject:
   - component: {fileID: 6516425221053101322}
   - component: {fileID: 8411462731113057394}
   - component: {fileID: 3067089905053945632}
+  - component: {fileID: 367279191610728503}
   m_Layer: 0
   m_Name: ELF_weapon_sword_A
   m_TagString: Untagged
@@ -5162,6 +5163,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &367279191610728503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989281518953347521}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.89411396, y: 0.12193517, z: 0.2138826}
+  m_Center: {x: -0.53603464, y: 0.003365436, z: -0.007347017}
 --- !u!1 &3661391717300966047
 GameObject:
   m_ObjectHideFlags: 0
