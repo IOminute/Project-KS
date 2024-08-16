@@ -1303,6 +1303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414380}
   - component: {fileID: 13782576}
+  - component: {fileID: 3664832472505311628}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
   m_TagString: Untagged
@@ -1394,6 +1395,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.056288123, y: 0.048735425, z: -0.0000011622906}
     m_Extent: {x: 0.66918516, y: 0.34701622, z: 0.5828366}
   m_DirtyAABB: 0
+--- !u!65 &3664832472505311628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132250}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.57627106, y: 0.87155706, z: 1.2387252}
+  m_Center: {x: 0.018414795, y: -0.09299475, z: 1.238031}
 --- !u!1 &133614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,6 +2652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470104}
+  - component: {fileID: 8497213421396176618}
   m_Layer: 0
   m_Name: Bip001 L Foot
   m_TagString: Untagged
@@ -2653,6 +2676,27 @@ Transform:
   - {fileID: 451420}
   m_Father: {fileID: 402678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8497213421396176618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29369843, y: 0.53975314, z: 0.23658118}
+  m_Center: {x: -0.03343172, y: 0.25126308, z: -0.021200264}
 --- !u!1 &156966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,6 +2890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472086}
+  - component: {fileID: 1187448027953628693}
   m_Layer: 0
   m_Name: Bip001 R Foot
   m_TagString: Untagged
@@ -2869,6 +2914,27 @@ Transform:
   - {fileID: 440346}
   m_Father: {fileID: 473678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1187448027953628693
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160562}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.36379847, y: 0.53718966, z: 0.24568872}
+  m_Center: {x: -0.07519236, y: 0.25286272, z: 0.014309457}
 --- !u!1 &161546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452082}
   - component: {fileID: 13754070}
+  - component: {fileID: 4390909322601495958}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
   m_TagString: Untagged
@@ -3143,6 +3210,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.53250533, y: 0.01886043, z: -0.0063355863}
     m_Extent: {x: 0.26532096, y: 0.20363212, z: 0.18589875}
   m_DirtyAABB: 0
+--- !u!65 &4390909322601495958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166292}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.41843867, y: 0.5400793, z: 0.5218172}
+  m_Center: {x: 0.028863912, y: 0.515049, z: 0.15009889}
 --- !u!1 &168794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4040,6 +4128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449308}
+  - component: {fileID: 912832116740995356}
   m_Layer: 0
   m_Name: Bip001 L Hand
   m_TagString: Untagged
@@ -4063,6 +4152,27 @@ Transform:
   - {fileID: 488080}
   m_Father: {fileID: 468190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &912832116740995356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182480}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4712202, y: 0.3817286, z: 0.22331518}
+  m_Center: {x: -0.21922798, y: -0.008125605, z: -0.05828701}
 --- !u!1 &184512
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +4429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465976}
+  - component: {fileID: 4311532428183858281}
   m_Layer: 0
   m_Name: Bip001 R Hand
   m_TagString: Untagged
@@ -4342,6 +4453,27 @@ Transform:
   - {fileID: 410264}
   m_Father: {fileID: 423324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4311532428183858281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48164317, y: 0.36931786, z: 0.26541567}
+  m_Center: {x: -0.18734215, y: 0.0047329394, z: -0.0033138895}
 --- !u!1 &190026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,6 +5680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667338157863547239}
   - component: {fileID: 7495231911208691246}
+  - component: {fileID: 6128299070023438233}
   m_Layer: 0
   m_Name: ELF_Horse
   m_TagString: Untagged
@@ -5645,6 +5778,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.6635354, y: 0.21568388, z: 0.00039708614}
     m_Extent: {x: 1.2660563, y: 0.99542814, z: 0.38493866}
   m_DirtyAABB: 0
+--- !u!65 &6128299070023438233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434588105261898147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.769881, y: 2.0121312, z: 1.071764}
+  m_Center: {x: -0.00039723516, y: -0.28932428, z: 1.3230306}
 --- !u!1 &4581720691965263553
 GameObject:
   m_ObjectHideFlags: 0

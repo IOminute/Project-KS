@@ -2476,6 +2476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640058107011132923}
   - component: {fileID: 3228074290315563386}
+  - component: {fileID: 1664114996533806440}
   m_Layer: 0
   m_Name: UD_Units_head_D
   m_TagString: Untagged
@@ -2552,6 +2553,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.14204611, y: -0.008096382, z: -0.00000008940697}
     m_Extent: {x: 0.15389909, y: 0.15426287, z: 0.22649474}
   m_DirtyAABB: 0
+--- !u!65 &1664114996533806440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099947543360348129}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4529904, y: 0.3314473, z: 0.33077836}
+  m_Center: {x: -0.00000093869323, y: 0.011587171, z: 1.4406009}
 --- !u!1 &4224594023432857687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,6 +3497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107622955856277038}
   - component: {fileID: 4524303344719341949}
+  - component: {fileID: 7898459551256832950}
   m_Layer: 0
   m_Name: UD_Units_body_F
   m_TagString: Untagged
@@ -3568,6 +3591,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11571041, y: -0.00096708536, z: 0.0000005364418}
     m_Extent: {x: 0.5167886, y: 0.18643317, z: 0.50527805}
   m_DirtyAABB: 0
+--- !u!65 &7898459551256832950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601151144759535191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5108874, y: 0.37287065, z: 0.90331197}
+  m_Center: {x: 0.0026906133, y: 0.050061762, z: 0.7854265}
 --- !u!1 &6933342567280957554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3672,6 +3716,7 @@ GameObject:
   - component: {fileID: 7283655475430518675}
   - component: {fileID: 8334035504441876195}
   - component: {fileID: 5158866781574576339}
+  - component: {fileID: 2148726252200421268}
   m_Layer: 0
   m_Name: UD_weapon_Sword_C
   m_TagString: Untagged
@@ -3744,6 +3789,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2148726252200421268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306645948526528084}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.98967934, y: 0.08362915, z: 0.13143577}
+  m_Center: {x: -0.60100585, y: 0.0048146658, z: 0.015850471}
 --- !u!1 &7756291617336617234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7960111902202620082}
+  - component: {fileID: 4904071152787438562}
   m_Layer: 0
   m_Name: Bip001 L Foot
   m_TagString: Untagged
@@ -4236,6 +4303,27 @@ Transform:
   - {fileID: 7960111902202620074}
   m_Father: {fileID: 7960111902202620086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4904071152787438562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960111902202459282}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11, y: 0.41619414, z: 0.24462026}
+  m_Center: {x: -0.054000016, y: 0.089408115, z: 0.012126267}
 --- !u!1 &7960111902202459284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7960111902202620060}
+  - component: {fileID: 8305866755613662654}
   m_Layer: 0
   m_Name: Bip001 R Foot
   m_TagString: Untagged
@@ -4773,6 +4862,27 @@ Transform:
   - {fileID: 7960111902202620052}
   m_Father: {fileID: 7960111902202620064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8305866755613662654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960111902202459388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11000315, y: 0.4114206, z: 0.24261296}
+  m_Center: {x: -0.05400158, y: 0.08699183, z: -0.013938355}
 --- !u!1 &7960111902202459390
 GameObject:
   m_ObjectHideFlags: 0

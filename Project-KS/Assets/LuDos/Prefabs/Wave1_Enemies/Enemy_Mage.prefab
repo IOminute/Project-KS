@@ -1225,6 +1225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497702}
   - component: {fileID: 13777094}
+  - component: {fileID: 2760675945620322019}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
   m_TagString: Untagged
@@ -1316,6 +1317,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.04807368, y: 0.024235502, z: 0.0000005066395}
     m_Extent: {x: 0.6850418, y: 0.25709498, z: 0.5675379}
   m_DirtyAABB: 0
+--- !u!65 &2760675945620322019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130168}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5290208, y: 0.51419514, z: 1.0701835}
+  m_Center: {x: 0.0104907155, y: 0.024859399, z: 0.68450224}
 --- !u!1 &130208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 493840}
+  - component: {fileID: 8873175094618454363}
   m_Layer: 0
   m_Name: Bip001 L Foot
   m_TagString: Untagged
@@ -1530,6 +1553,27 @@ Transform:
   - {fileID: 431544}
   m_Father: {fileID: 453822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8873175094618454363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137964}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11, y: 0.4409929, z: 0.1954116}
+  m_Center: {x: -0.05000001, y: 0.093826495, z: 0.024029935}
 --- !u!1 &138698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 481962}
+  - component: {fileID: 1604398957483423946}
   m_Layer: 0
   m_Name: Bip001 R Foot
   m_TagString: Untagged
@@ -1562,6 +1607,27 @@ Transform:
   - {fileID: 446502}
   m_Father: {fileID: 428378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1604398957483423946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138698}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1000032, y: 0.3968085, z: 0.2199482}
+  m_Center: {x: -0.050001606, y: 0.09610355, z: -0.016858554}
 --- !u!1 &142224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482660}
   - component: {fileID: 13764122}
+  - component: {fileID: 6453732435769386673}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
   m_TagString: Untagged
@@ -1935,6 +2002,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.55780923, y: 0.0060095787, z: -0.000000044703484}
     m_Extent: {x: 0.27072173, y: 0.19078104, z: 0.13331826}
   m_DirtyAABB: 0
+--- !u!65 &6453732435769386673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.23284611, y: 0.47309068, z: 0.33358288}
+  m_Center: {x: -0.0000007854923, y: -0.0064244866, z: -0.029943224}
 --- !u!1 &156850
 GameObject:
   m_ObjectHideFlags: 0
