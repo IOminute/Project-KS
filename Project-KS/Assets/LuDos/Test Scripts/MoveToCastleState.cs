@@ -6,11 +6,13 @@ public class MoveToCastleState : BaseState
 
     public override void Enter()
     {
-
+        Debug.Log("MopveToCastleStart");
     }
 
     public override void Update()
     {
+        if (enemy.IsDie) return;
+
         Vector3 castlePosition = Vector3.zero; // [임시완] 성의 위치
         enemy.MoveTo(castlePosition);
 

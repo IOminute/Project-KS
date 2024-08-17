@@ -11,11 +11,13 @@ public class ChaseState : BaseState
 
     public override void Enter()
     {
-
+        Debug.Log("ChaseStart");
     }
 
     public override void Update()
     {
+        if (enemy.IsDie) return;
+
         enemy.ChaseTarget(target);
 
         Vector3 targetPosition = target.position;

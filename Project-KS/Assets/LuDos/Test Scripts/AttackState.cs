@@ -1,4 +1,5 @@
 using System.Collections;
+using System.ComponentModel;
 using System.Threading;
 using TMPro;
 using UnityEngine;
@@ -14,19 +15,24 @@ public class AttackState : BaseState
 
     public override void Enter()
     {
+        Debug.Log("AttackStart");
         enemy.attackCoroutine = enemy.StartCoroutine(AttackCoroutine());
     }
 
     public override void Update()
     {
+        if (enemy.IsDie) return;
+
         if (Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 1)
         {
-            enemy.ChangeState(new ChaseState(enemy, target));
+            Debug.Log("ChangeToChase");
+            //enemy.ChangeState(new ChaseState(enemy, target));
         }
     }
 
     public override void Exit()
     {
+        Debug.Log("AttackFin");
         enemy.StopAttack();
     }
 
@@ -40,6 +46,8 @@ public class AttackState : BaseState
         yield return new WaitForSeconds(enemy.attackCoolTime);
 
         enemy.isAttacking = false;
+
+        Debug.Log("Real?");
 
         enemy.ChangeState(new IdleState(enemy));
     }

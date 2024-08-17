@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class IdleState : BaseState
@@ -6,12 +7,15 @@ public class IdleState : BaseState
 
     public override void Enter()
     {
+        Debug.Log("IdleStart");
         enemy.animator.SetTrigger("Idle");
     }
 
     public override void Update()
     {
-        Collider[] attackColliders = Physics.OverlapSphere(enemy.transform.position, enemy.attackRange);
+        if (enemy.IsDie) return;
+
+        Collider[] attackColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
         foreach (var collider in attackColliders)
         {
             Vector3 targetPosition = collider.transform.position;
@@ -23,26 +27,19 @@ public class IdleState : BaseState
             if (Vector3.Distance(enemyPosition, targetPosition) <= enemy.attackRange)
             {
                 enemy.ChangeState(new AttackState(enemy, collider.transform));
-                return;
+                break;
             }
-        }
-
-        Collider[] chaseColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
-        foreach (var collider in chaseColliders)
-        {
-            Vector3 targetPosition = collider.transform.position;
-            targetPosition.y = 0f;
-
-            Vector3 enemyPosition = enemy.transform.position;
-            enemyPosition.y = 0f;
-
-            if (Vector3.Distance(enemyPosition, targetPosition) <= enemy.chaseRange)
+            else if (Vector3.Distance(enemyPosition, targetPosition) > enemy.attackRange && Vector3.Distance(enemyPosition, targetPosition) <= enemy.chaseRange)
             {
                 enemy.ChangeState(new ChaseState(enemy, collider.transform));
-                return;
+                break;
+            }
+            else
+            {
+                enemy.ChangeState(new MoveToCastleState(enemy));
+                break;
             }
         }
-        enemy.ChangeState(new MoveToCastleState(enemy));
     }
 
     public override void Exit()

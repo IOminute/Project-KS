@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public float attackRange = 1f;
 
     public bool isAttacking;
+    public bool IsDie;
 
     public Animator animator;
     public Rigidbody Rb;
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
     {
         stateMachine.Initialize(new MoveToCastleState(this));
         isAttacking = false;
+        IsDie = false;
     }
 
     private void Update()
@@ -38,6 +40,8 @@ public class EnemyController : MonoBehaviour
 
     public void MoveTo(Vector3 targetPosition)
     {
+        // Debug.Log("MoveTo");
+
         animator.SetTrigger("Run");
 
         targetPosition.y = 0f;
@@ -75,6 +79,7 @@ public class EnemyController : MonoBehaviour
     {
         if (attackCoroutine != null)
         {
+            animator.SetTrigger("Idle");
             StopCoroutine(attackCoroutine);
             attackCoroutine = null;
             isAttacking = false;
@@ -84,6 +89,11 @@ public class EnemyController : MonoBehaviour
     public void Die()
     {
         Stop();
+
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+        }
 
         animator.SetTrigger("Death");
 
@@ -103,11 +113,16 @@ public class EnemyController : MonoBehaviour
 
     private void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-
-        if (health <= 0)
+        if (!IsDie)
         {
-            Die();
+            health -= damageAmount;
+
+            if (health <= 0)
+            {
+                health = 0;
+                IsDie = true;
+                Die();
+            }
         }
     }
 
