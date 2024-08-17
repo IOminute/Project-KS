@@ -13,17 +13,44 @@ public class MoveToCastleState : BaseState
     {
         if (enemy.IsDie) return;
 
-        Vector3 castlePosition = Vector3.zero; // [임시완] 성의 위치
-        enemy.MoveTo(castlePosition);
+        Transform castleTransform = enemy.Castle.transform;
+
+        enemy.MoveTo(castleTransform.position);
+
+        if (enemy.IsCastle)
+        {
+            enemy.ChangeState(new AttackState(enemy, castleTransform));
+        }
 
         Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
+
+        Collider closestTarget = null;
+        float closestDistance = Mathf.Infinity;
+
         foreach (var hitCollider in hitColliders)
         {
             if (hitCollider.CompareTag("PlayerUnit")) // 아군 tag
             {
-                enemy.ChangeState(new ChaseState(enemy, hitCollider.transform));
-                break;
+                Vector3 targetPosition = hitCollider.transform.position;
+                targetPosition.y = 0f;
+
+                Vector3 enemyPosition = enemy.transform.position;
+                enemyPosition.y = 0f;
+
+                float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
+
+                if (distanceToTarget < closestDistance)
+                {
+                    closestDistance = distanceToTarget;
+                    closestTarget = hitCollider;
+                }
             }
         }
+
+        if (closestTarget != null)
+        {
+            enemy.ChangeState(new ChaseState(enemy, closestTarget.transform));
+        }
+
     }
 }

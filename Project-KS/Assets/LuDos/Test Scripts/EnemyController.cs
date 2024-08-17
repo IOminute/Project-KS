@@ -10,13 +10,22 @@ public class EnemyController : MonoBehaviour
     public float chaseRange = 5f;
     public float attackRange = 1f;
 
-    public bool isAttacking;
+    [HideInInspector]
+    public bool IsAttacking;
+    [HideInInspector]
     public bool IsDie;
+    [HideInInspector]
+    public bool IsCastle;
 
+    [HideInInspector]
     public Animator animator;
+    [HideInInspector]
     public Rigidbody Rb;
 
+    public GameObject Castle;
+
     private StateMachine stateMachine;
+    [HideInInspector]
     public Coroutine attackCoroutine;
 
     private void Awake()
@@ -29,8 +38,9 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         stateMachine.Initialize(new MoveToCastleState(this));
-        isAttacking = false;
+        IsAttacking = false;
         IsDie = false;
+        IsCastle = false;
     }
 
     private void Update()
@@ -51,12 +61,16 @@ public class EnemyController : MonoBehaviour
         if (direction != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f); // 회전 속도
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 15f); // 회전 속도
         }
 
-        Vector3 newPosition = transform.position + direction * moveSpeed * Time.deltaTime;
-        newPosition.y = 0f;
-        transform.position = newPosition;
+        if (!IsCastle)
+        {
+            Vector3 newPosition = transform.position + direction * moveSpeed * Time.deltaTime;
+            newPosition.y = 0f;
+            transform.position = newPosition;
+        }
+
     }
 
     public void ChaseTarget(Transform target)
@@ -67,6 +81,7 @@ public class EnemyController : MonoBehaviour
     public void Stop()
     {
         Rb.velocity = Vector3.zero;
+        transform.position = transform.position;
     }
 
     public virtual void Attack()
@@ -82,7 +97,7 @@ public class EnemyController : MonoBehaviour
             animator.SetTrigger("Idle");
             StopCoroutine(attackCoroutine);
             attackCoroutine = null;
-            isAttacking = false;
+            IsAttacking = false;
         }
     }
 
@@ -95,8 +110,8 @@ public class EnemyController : MonoBehaviour
             StopCoroutine(attackCoroutine);
         }
 
-        SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
-        Necromancer.AddSpirit(gameObject); // 적 영혼 리스트에 자기 자신 추가
+        //SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
+        //Necromancer.AddSpirit(gameObject); // 적 영혼 리스트에 자기 자신 추가
 
         animator.SetTrigger("Death");
 
@@ -111,6 +126,11 @@ public class EnemyController : MonoBehaviour
             {
                 TakeDamage(weapon.damage);
             }
+        }
+        else if (other.CompareTag("Castle"))
+        {
+            Debug.Log("Castle");
+            IsCastle = true;
         }
     }
 

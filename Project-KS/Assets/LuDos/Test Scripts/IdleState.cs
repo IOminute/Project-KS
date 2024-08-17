@@ -15,30 +15,54 @@ public class IdleState : BaseState
     {
         if (enemy.IsDie) return;
 
-        Collider[] attackColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
-        foreach (var collider in attackColliders)
+        GameObject[] potentialTargets = GameObject.FindGameObjectsWithTag("PlayerUnit");
+
+        GameObject closestTarget = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (var potentialTarget in potentialTargets)
         {
-            Vector3 targetPosition = collider.transform.position;
+            Vector3 targetPosition = potentialTarget.transform.position;
             targetPosition.y = 0f;
 
             Vector3 enemyPosition = enemy.transform.position;
             enemyPosition.y = 0f;
 
-            if (Vector3.Distance(enemyPosition, targetPosition) <= enemy.attackRange)
+            float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
+
+            if (distanceToTarget < closestDistance)
             {
-                enemy.ChangeState(new AttackState(enemy, collider.transform));
-                break;
+                closestDistance = distanceToTarget;
+                closestTarget = potentialTarget;
             }
-            else if (Vector3.Distance(enemyPosition, targetPosition) > enemy.attackRange && Vector3.Distance(enemyPosition, targetPosition) <= enemy.chaseRange)
+        }
+
+        if (closestTarget != null)
+        {
+            Vector3 targetPosition = closestTarget.transform.position;
+            targetPosition.y = 0f;
+
+            Vector3 enemyPosition = enemy.transform.position;
+            enemyPosition.y = 0f;
+
+            float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
+
+            if (enemy.IsCastle || distanceToTarget <= enemy.attackRange || enemy.IsCastle)
             {
-                enemy.ChangeState(new ChaseState(enemy, collider.transform));
-                break;
+                enemy.ChangeState(new AttackState(enemy, closestTarget.transform));
+            }
+            else if (!enemy.IsAttacking && distanceToTarget > enemy.attackRange && distanceToTarget <= enemy.chaseRange)
+            {
+                enemy.ChangeState(new ChaseState(enemy, closestTarget.transform));
             }
             else
             {
                 enemy.ChangeState(new MoveToCastleState(enemy));
-                break;
             }
+        }
+        else
+        {
+            enemy.ChangeState(new MoveToCastleState(enemy));
         }
     }
 

@@ -23,10 +23,10 @@ public class AttackState : BaseState
     {
         if (enemy.IsDie) return;
 
-        if (Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 1)
+        if (!enemy.IsAttacking && Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange)
         {
             Debug.Log("ChangeToChase");
-            //enemy.ChangeState(new ChaseState(enemy, target));
+            enemy.ChangeState(new ChaseState(enemy, target));
         }
     }
 
@@ -38,16 +38,14 @@ public class AttackState : BaseState
 
     private IEnumerator AttackCoroutine()
     {
-        enemy.isAttacking = true;
+        enemy.IsAttacking = true;
 
         enemy.Attack();
         
         yield return new WaitForSeconds(1.0f);
         yield return new WaitForSeconds(enemy.attackCoolTime);
 
-        enemy.isAttacking = false;
-
-        Debug.Log("Real?");
+        enemy.IsAttacking = false;
 
         enemy.ChangeState(new IdleState(enemy));
     }
