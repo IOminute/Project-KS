@@ -95,6 +95,7 @@ public class EnemyController : MonoBehaviour
             StopCoroutine(attackCoroutine);
         }
 
+        SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
         Necromancer.AddSpirit(gameObject); // 적 영혼 리스트에 자기 자신 추가
 
         animator.SetTrigger("Death");
