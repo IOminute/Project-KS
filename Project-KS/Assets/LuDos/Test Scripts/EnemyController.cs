@@ -28,11 +28,55 @@ public class EnemyController : MonoBehaviour
     [HideInInspector]
     public Coroutine attackCoroutine;
 
+    int soulIndex;
+    public GameObject soulPrefab;
+
     private void Awake()
     {
         stateMachine = new StateMachine();
         animator = GetComponent<Animator>();
         Rb= GetComponent<Rigidbody>();
+        AssignSoulIndexBasedOnTag();
+    }
+
+    private void AssignSoulIndexBasedOnTag()
+    {
+        switch (gameObject.tag)
+        {
+            case "Archer":
+                soulIndex = 0;
+                break;
+            case "Bad_Knight":
+                soulIndex = 1;
+                break;
+            case "Cavarly_Archer":
+                soulIndex = 2;
+                break;
+            case "Cavarly_Mage":
+                soulIndex = 3;
+                break;
+            case "Cavarly_Spear":
+                soulIndex = 4;
+                break;
+            case "Cavarly_Sword":
+                soulIndex = 5;
+                break;
+            case "Hammer":
+                soulIndex = 6;
+                break;
+            case "Mage":
+                soulIndex = 7;
+                break;
+            case "Spear":
+                soulIndex = 8;
+                break;
+            case "Good_Knight":
+                soulIndex = 9;
+                break;
+            default:
+                soulIndex = -1; // 알 수 없는 태그는 -1로 설정
+                break;
+        }
     }
 
     private void Start()
@@ -111,12 +155,24 @@ public class EnemyController : MonoBehaviour
         }
 
         //SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
-        //Necromancer.AddSpirit(gameObject); // 적 영혼 리스트에 자기 자신 추가
+
+        DropSoul();
 
         animator.SetTrigger("Death");
 
-        // Destroy(gameObject);
+        Destroy(gameObject, 2.0f);
     }
+
+    private void DropSoul()
+    {
+        GameObject soul = Instantiate(soulPrefab, transform.position, Quaternion.identity);
+
+        Soul soulComponent = soul.GetComponent<Soul>();
+        soulComponent.soulIndex = soulIndex;
+
+        Necromancer.AddSpirit(soul); // 소울 추가
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerWeapon"))

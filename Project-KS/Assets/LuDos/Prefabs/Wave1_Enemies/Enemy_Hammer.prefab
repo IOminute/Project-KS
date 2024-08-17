@@ -1044,7 +1044,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &6217372945238066494
 MonoBehaviour:
@@ -1064,10 +1064,13 @@ MonoBehaviour:
   attackCoolTime: 1
   chaseRange: 10
   attackRange: 2
-  isAttacking: 0
+  IsAttacking: 0
   IsDie: 0
+  IsCastle: 0
   animator: {fileID: 1218822572536810718}
   Rb: {fileID: 0}
+  Castle: {fileID: 0}
+  soulPrefab: {fileID: 0}
 --- !u!1 &1171379188302628834
 GameObject:
   m_ObjectHideFlags: 0

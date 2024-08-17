@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Necromancer : MonoBehaviour
@@ -19,6 +20,9 @@ public class Necromancer : MonoBehaviour
     private WaitForSeconds waitOneSec;
     private WaitForSeconds waitHalfSec;
     private WaitForSeconds waitThreeSec;
+
+    public List<GameObject> Units;
+
     void Start()
     {
         spirits = new List<GameObject>();
@@ -102,12 +106,15 @@ public class Necromancer : MonoBehaviour
         yield return null;
     }
 
-    void Revive(GameObject deadEnemy)
+    void Revive(GameObject soul)
     {
-        Vector3 spawnAllyPos = deadEnemy.transform.position;
-        // 적의 종류를 받아와 아군의 종류와 맞추기
-        spirits.Remove(deadEnemy);
+        Vector3 spawnAllyPos = soul.transform.position;
+
         // 스폰 포지션에 아군 소환하기
+        Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
+
+        spirits.Remove(soul);
+
         // 소환된 아군 리스트에 저장하기
     }
 

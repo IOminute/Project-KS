@@ -8,6 +8,16 @@ TagManager:
   - PlayerUnit
   - PlayerWeapon
   - Castle
+  - Archer
+  - Bad_Knight
+  - Cavarly_Archer
+  - Cavarly_Mage
+  - Cavarly_Spear
+  - Cavarly_Sword
+  - Hammer
+  - Mage
+  - Spear
+  - Good_Kight
   layers:
   - Default
   - TransparentFX
