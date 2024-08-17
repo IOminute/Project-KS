@@ -3468,7 +3468,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8534261130956806706}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5df31b043c2a49440a78028045ac053c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 424c13580b3409a439febc75549c03c2, type: 3}
   m_Controller: {fileID: 9100000, guid: 05d38fdbdd31bca4987b9bd61d516828, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -3524,7 +3524,7 @@ MonoBehaviour:
   moveSpeed: 2
   attackCoolTime: 1
   chaseRange: 5
-  attackRange: 1
+  attackRange: 1.5
   IsAttacking: 0
   IsDie: 0
   IsCastle: 0

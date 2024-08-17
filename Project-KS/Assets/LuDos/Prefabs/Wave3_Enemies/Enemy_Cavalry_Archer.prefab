@@ -3405,7 +3405,7 @@ Animator:
   m_GameObject: {fileID: 1729365743444912280}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 73b99eb08cbb781478937a8ceccab9d9, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6470f421996b0c74abb52a9bb48c4d6b, type: 2}
+  m_Controller: {fileID: 9100000, guid: aaa64c31848d39540bfa4eba1baf2813, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3433,7 +3433,7 @@ MonoBehaviour:
   moveSpeed: 2
   attackCoolTime: 1
   chaseRange: 5
-  attackRange: 1
+  attackRange: 5
   IsAttacking: 0
   IsDie: 0
   IsCastle: 0

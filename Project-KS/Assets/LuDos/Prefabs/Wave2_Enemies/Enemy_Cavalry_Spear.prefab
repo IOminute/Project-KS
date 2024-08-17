@@ -671,7 +671,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2550,8 +2550,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6773842308276486277}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 033a38625572b7944955d8b2afd751ef, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e0b61e05e5b53d047ad041149c10d931, type: 3}
+  m_Controller: {fileID: 9100000, guid: debf7aeab52429541a29e4f072b5b1fb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2606,13 +2606,14 @@ MonoBehaviour:
   moveSpeed: 2
   attackCoolTime: 1
   chaseRange: 5
-  attackRange: 1
+  attackRange: 2.5
   IsAttacking: 0
   IsDie: 0
   IsCastle: 0
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
+  soulPrefab: {fileID: 0}
 --- !u!1 &6773842308276486281
 GameObject:
   m_ObjectHideFlags: 0

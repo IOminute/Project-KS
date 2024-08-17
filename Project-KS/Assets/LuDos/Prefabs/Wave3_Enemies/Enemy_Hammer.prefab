@@ -1393,7 +1393,7 @@ MonoBehaviour:
   moveSpeed: 2
   attackCoolTime: 1
   chaseRange: 5
-  attackRange: 1
+  attackRange: 1.5
   IsAttacking: 0
   IsDie: 0
   IsCastle: 0

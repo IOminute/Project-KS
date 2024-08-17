@@ -40,7 +40,7 @@ public class AttackState : BaseState
     {
         enemy.IsAttacking = true;
 
-        enemy.Attack();
+        enemy.Attack(target.position);
         
         yield return new WaitForSeconds(1.0f);
         yield return new WaitForSeconds(enemy.attackCoolTime);

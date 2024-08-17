@@ -125,12 +125,22 @@ public class EnemyController : MonoBehaviour
     public void Stop()
     {
         Rb.velocity = Vector3.zero;
-        transform.position = transform.position;
     }
 
-    public virtual void Attack()
+    public virtual void Attack(Vector3 targetPosition)
     {
         Stop();
+
+        targetPosition.y = 0f;
+
+        Vector3 direction = (targetPosition - transform.position).normalized;
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = lookRotation;
+        }
+
         animator.SetTrigger("Attack");
     }
 
@@ -165,7 +175,10 @@ public class EnemyController : MonoBehaviour
 
     private void DropSoul()
     {
-        GameObject soul = Instantiate(soulPrefab, transform.position, Quaternion.identity);
+        Vector3 spawnPosition = transform.position;
+        spawnPosition.y = 2.0f;
+
+        GameObject soul = Instantiate(soulPrefab, spawnPosition, Quaternion.identity);
 
         Soul soulComponent = soul.GetComponent<Soul>();
         soulComponent.soulIndex = soulIndex;

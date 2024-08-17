@@ -1062,8 +1062,8 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 2
   attackCoolTime: 1
-  chaseRange: 10
-  attackRange: 2
+  chaseRange: 5
+  attackRange: 1.5
   IsAttacking: 0
   IsDie: 0
   IsCastle: 0
