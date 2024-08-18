@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 587153763515771641}
   m_Layer: 0
   m_Name: ELF_weapon_axe
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 836291234171731228}
   m_Layer: 0
   m_Name: ELF_shield_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 1650427666252498046}
   m_Layer: 0
   m_Name: ELF_weapon_staff_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 3748096240756667165}
   m_Layer: 0
   m_Name: ELF_Xtra_quiver
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,9 +344,10 @@ GameObject:
   - component: {fileID: 4907497064380992772}
   - component: {fileID: 1887312092523957846}
   - component: {fileID: 6343058143946251792}
+  - component: {fileID: 4271681028951232523}
   m_Layer: 0
   m_Name: ELF_weapon_sword_A
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,8 +436,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9, y: 0.12193498, z: 0.2138823}
-  m_Center: {x: -0.528639, y: 0.0033659514, z: -0.007345539}
+  m_Size: {x: 0.9, y: 0.06856427, z: 0.16534138}
+  m_Center: {x: -0.5286388, y: 0.011410756, z: -0.005289001}
+--- !u!114 &4271681028951232523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863757876045510839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344a5e543ae94754dbd760de09b2133b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &2793512811055140261
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +464,7 @@ GameObject:
   - component: {fileID: 9000172280887610287}
   m_Layer: 0
   m_Name: ELF_Xtra_wood
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +545,7 @@ GameObject:
   - component: {fileID: 3309122525479384215}
   m_Layer: 0
   m_Name: R_hand_container
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +584,7 @@ GameObject:
   - component: {fileID: 5070986368603896967}
   m_Layer: 0
   m_Name: ELF_Xtra_bag
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +665,7 @@ GameObject:
   - component: {fileID: 7664154815791715705}
   m_Layer: 0
   m_Name: L_hand_container
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,7 +702,7 @@ GameObject:
   - component: {fileID: 1449822758050799543}
   m_Layer: 0
   m_Name: ELF_weapon_sword_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,7 +783,7 @@ GameObject:
   - component: {fileID: 5021516460226975795}
   m_Layer: 0
   m_Name: L_shield_container
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,7 +819,7 @@ GameObject:
   - component: {fileID: 3799845676900952355}
   m_Layer: 0
   m_Name: ELF_shield_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +902,7 @@ GameObject:
   - component: {fileID: 2028468189586452645}
   m_Layer: 0
   m_Name: ELF_weapon_staff_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,7 +984,7 @@ GameObject:
   - component: {fileID: 6886251143453136476}
   m_Layer: 0
   m_Name: ELF_Units_Head_J
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,7 +1071,7 @@ GameObject:
   - component: {fileID: 6886251143453136478}
   m_Layer: 0
   m_Name: ELF_Units_Head_K
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,7 +1158,7 @@ GameObject:
   - component: {fileID: 6886251143453136464}
   m_Layer: 0
   m_Name: ELF_Units_Head_H
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1231,7 +1245,7 @@ GameObject:
   - component: {fileID: 6886251143453136466}
   m_Layer: 0
   m_Name: ELF_Units_Head_I
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1318,7 +1332,7 @@ GameObject:
   - component: {fileID: 6886251143453136454}
   m_Layer: 0
   m_Name: ELF_Units_Head_E
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1405,7 +1419,7 @@ GameObject:
   - component: {fileID: 6886251143453136448}
   m_Layer: 0
   m_Name: ELF_Units_Head_F
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1492,7 +1506,7 @@ GameObject:
   - component: {fileID: 6886251143453136506}
   m_Layer: 0
   m_Name: ELF_Units_Head_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1579,7 +1593,7 @@ GameObject:
   - component: {fileID: 6886251143453136452}
   m_Layer: 0
   m_Name: ELF_Units_Head_D
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1666,7 +1680,7 @@ GameObject:
   - component: {fileID: 6886251143453136462}
   m_Layer: 0
   m_Name: ELF_Units_Legs_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,7 +1771,7 @@ GameObject:
   - component: {fileID: 6886251143453136456}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1858,7 +1872,7 @@ GameObject:
   - component: {fileID: 6886251143453136450}
   m_Layer: 0
   m_Name: ELF_Units_Head_G
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1945,7 +1959,7 @@ GameObject:
   - component: {fileID: 6886251143453136460}
   m_Layer: 0
   m_Name: ELF_Units_Legs_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2036,7 +2050,7 @@ GameObject:
   - component: {fileID: 6886251143453136470}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2123,7 +2137,7 @@ GameObject:
   - component: {fileID: 6886251143453136458}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2210,7 +2224,7 @@ GameObject:
   - component: {fileID: 6886251143453136468}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2297,7 +2311,7 @@ GameObject:
   - component: {fileID: 6886251143453136548}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,7 +2398,7 @@ GameObject:
   - component: {fileID: 6886251143453136550}
   m_Layer: 0
   m_Name: ELF_Units_Head_O
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2471,7 +2485,7 @@ GameObject:
   - component: {fileID: 6886251143453136472}
   m_Layer: 0
   m_Name: ELF_Units_Head_L
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2558,7 +2572,7 @@ GameObject:
   - component: {fileID: 6886251143453136474}
   m_Layer: 0
   m_Name: ELF_Units_Head_M
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2645,7 +2659,7 @@ GameObject:
   - component: {fileID: 6886251143453136544}
   m_Layer: 0
   m_Name: ELF_Units_Head_P
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2732,7 +2746,7 @@ GameObject:
   - component: {fileID: 828083076778757389}
   m_Layer: 0
   m_Name: Bip001 Head
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2785,7 +2799,7 @@ GameObject:
   - component: {fileID: 6886251143449657506}
   m_Layer: 0
   m_Name: Bip001 HeadNub
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2816,7 +2830,7 @@ GameObject:
   - component: {fileID: 6886251143449657508}
   m_Layer: 0
   m_Name: Bip001
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2849,7 +2863,7 @@ GameObject:
   - component: {fileID: 6886251143449657510}
   m_Layer: 0
   m_Name: Bip001 Footsteps
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2881,7 +2895,7 @@ GameObject:
   - component: {fileID: 1056624120906322572}
   m_Layer: 0
   m_Name: Bip001 L Foot
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2934,7 +2948,7 @@ GameObject:
   - component: {fileID: 6886251143449657514}
   m_Layer: 0
   m_Name: Bip001 L Forearm
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2966,7 +2980,7 @@ GameObject:
   - component: {fileID: 6886251143449657516}
   m_Layer: 0
   m_Name: Bip001 L Calf
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2998,7 +3012,7 @@ GameObject:
   - component: {fileID: 6886251143449657518}
   m_Layer: 0
   m_Name: Bip001 L Clavicle
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3030,7 +3044,7 @@ GameObject:
   - component: {fileID: 6886251143449657520}
   m_Layer: 0
   m_Name: Bip001 L Toe0
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3062,7 +3076,7 @@ GameObject:
   - component: {fileID: 6886251143449657522}
   m_Layer: 0
   m_Name: Bip001 L Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3093,7 +3107,7 @@ GameObject:
   - component: {fileID: 6886251143449657524}
   m_Layer: 0
   m_Name: Bip001 L Hand
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3126,7 +3140,7 @@ GameObject:
   - component: {fileID: 6886251143449657526}
   m_Layer: 0
   m_Name: Bip001 L Thigh
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3158,7 +3172,7 @@ GameObject:
   - component: {fileID: 6886251143449657528}
   m_Layer: 0
   m_Name: Bip001 Pelvis
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3192,7 +3206,7 @@ GameObject:
   - component: {fileID: 6886251143449657530}
   m_Layer: 0
   m_Name: Bip001 R Calf
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3224,7 +3238,7 @@ GameObject:
   - component: {fileID: 6886251143449657532}
   m_Layer: 0
   m_Name: Bip001 L UpperArm
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3256,7 +3270,7 @@ GameObject:
   - component: {fileID: 6886251143449657534}
   m_Layer: 0
   m_Name: Bip001 Neck
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3288,7 +3302,7 @@ GameObject:
   - component: {fileID: 6886251143449657472}
   m_Layer: 0
   m_Name: Bip001 R Forearm
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3320,7 +3334,7 @@ GameObject:
   - component: {fileID: 6886251143449657474}
   m_Layer: 0
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3352,7 +3366,7 @@ GameObject:
   - component: {fileID: 6886251143449657476}
   m_Layer: 0
   m_Name: Bip001 R Clavicle
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3385,7 +3399,7 @@ GameObject:
   - component: {fileID: 1094708923633117380}
   m_Layer: 0
   m_Name: Bip001 R Foot
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3438,7 +3452,7 @@ GameObject:
   - component: {fileID: 6886251143449657480}
   m_Layer: 0
   m_Name: Bip001 R Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3469,7 +3483,7 @@ GameObject:
   - component: {fileID: 6886251143449657482}
   m_Layer: 0
   m_Name: Bip001 R UpperArm
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3501,7 +3515,7 @@ GameObject:
   - component: {fileID: 6886251143449657484}
   m_Layer: 0
   m_Name: Bip001 R Thigh
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3533,7 +3547,7 @@ GameObject:
   - component: {fileID: 6886251143449657486}
   m_Layer: 0
   m_Name: Bip001 R Toe0
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3565,7 +3579,7 @@ GameObject:
   - component: {fileID: 6886251143449657488}
   m_Layer: 0
   m_Name: Bone_wood
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3600,7 +3614,7 @@ GameObject:
   - component: {fileID: 7132055831761610689}
   m_Layer: 0
   m_Name: Enemy_Good_Knight
-  m_TagString: Good_Kight
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3716,11 +3730,12 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 2
   attackCoolTime: 1
-  chaseRange: 5
-  attackRange: 1.5
+  chaseRange: 15
+  attackRange: 5
   IsAttacking: 0
   IsDie: 0
-  IsCastle: 0
+  IsRangeShort: 0
+  IsRangeLong: 0
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
@@ -3737,7 +3752,7 @@ GameObject:
   - component: {fileID: 5116985103302793512}
   m_Layer: 0
   m_Name: Bip001 Spine
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3795,7 +3810,7 @@ GameObject:
   - component: {fileID: 6886251143449657494}
   m_Layer: 0
   m_Name: Bone_bag
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3828,7 +3843,7 @@ GameObject:
   - component: {fileID: 6886251143453136494}
   m_Layer: 0
   m_Name: ELF_Units_Body_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3927,7 +3942,7 @@ GameObject:
   - component: {fileID: 6886251143453136488}
   m_Layer: 0
   m_Name: ELF_Units_Head_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4014,7 +4029,7 @@ GameObject:
   - component: {fileID: 6886251143453136492}
   m_Layer: 0
   m_Name: ELF_Units_Arms_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4105,7 +4120,7 @@ GameObject:
   - component: {fileID: 6886251143453136502}
   m_Layer: 0
   m_Name: ELF_Units_Arms_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4196,7 +4211,7 @@ GameObject:
   - component: {fileID: 6886251143453136496}
   m_Layer: 0
   m_Name: ELF_Units_Body_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4295,7 +4310,7 @@ GameObject:
   - component: {fileID: 6886251143453136490}
   m_Layer: 0
   m_Name: ELF_Units_Legs_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4386,7 +4401,7 @@ GameObject:
   - component: {fileID: 6886251143453136500}
   m_Layer: 0
   m_Name: ELF_Units_Arms_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4477,7 +4492,7 @@ GameObject:
   - component: {fileID: 6886251143453136510}
   m_Layer: 0
   m_Name: ELF_Units_Body_E
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4576,7 +4591,7 @@ GameObject:
   - component: {fileID: 6886251143453136504}
   m_Layer: 0
   m_Name: ELF_Units_Head_B
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4663,7 +4678,7 @@ GameObject:
   - component: {fileID: 6886251143453136498}
   m_Layer: 0
   m_Name: ELF_Units_Body_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4762,7 +4777,7 @@ GameObject:
   - component: {fileID: 6886251143453136508}
   m_Layer: 0
   m_Name: ELF_Units_Body_D
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4862,7 +4877,7 @@ GameObject:
   - component: {fileID: 2457018463479379039}
   m_Layer: 0
   m_Name: ELF_weapon_bow
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4945,7 +4960,7 @@ GameObject:
   - component: {fileID: 1904742536728026557}
   m_Layer: 0
   m_Name: ELF_shield_C
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5026,7 +5041,7 @@ GameObject:
   - component: {fileID: 5205021427592405355}
   m_Layer: 0
   m_Name: Quiver_container
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5060,7 +5075,7 @@ GameObject:
   - component: {fileID: 1973230646090015142}
   m_Layer: 0
   m_Name: ELF_weapon_hammer
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5143,7 +5158,7 @@ GameObject:
   - component: {fileID: 956516914288245629}
   m_Layer: 0
   m_Name: ELF_weapon_staff_A
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5226,7 +5241,7 @@ GameObject:
   - component: {fileID: 5111639968248632411}
   m_Layer: 0
   m_Name: ELF_weapon_dagger
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5309,7 +5324,7 @@ GameObject:
   - component: {fileID: 481973587204056824}
   m_Layer: 0
   m_Name: ELF_weapon_spear
-  m_TagString: Untagged
+  m_TagString: Good_Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

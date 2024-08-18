@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 375868583084390092}
   m_Layer: 0
   m_Name: ELF_weapon_sword_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3100068126735125383}
   m_Layer: 0
   m_Name: ELF_Xtra_quiver
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 1485436185586025862}
   m_Layer: 0
   m_Name: ELF_shield_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 711904172462374116}
   m_Layer: 0
   m_Name: ELF_weapon_staff_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 1667373210387993187}
   m_Layer: 0
   m_Name: ELF_weapon_axe
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 6438332282136839197}
   m_Layer: 0
   m_Name: ELF_Xtra_bag
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 3668766024640547853}
   m_Layer: 0
   m_Name: R_hand_container
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 7197111900538565429}
   m_Layer: 0
   m_Name: ELF_Xtra_wood
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 4654099453726701600}
   m_Layer: 0
   m_Name: Bip001 R Calf
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 4654099453726701602}
   m_Layer: 0
   m_Name: Bip001 Pelvis
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 4654099453726701604}
   m_Layer: 0
   m_Name: Bip001 Neck
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 4654099453726701606}
   m_Layer: 0
   m_Name: Bip001 L UpperArm
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 4654099453726701608}
   m_Layer: 0
   m_Name: Bip001 L Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 4654099453726701610}
   m_Layer: 0
   m_Name: Bip001 L Toe0
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 4654099453726701612}
   m_Layer: 0
   m_Name: Bip001 L Thigh
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 4654099453726701614}
   m_Layer: 0
   m_Name: Bip001 L Hand
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 4654099453726701616}
   m_Layer: 0
   m_Name: Bip001 L Forearm
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 7495071748266467698}
   m_Layer: 0
   m_Name: Bip001 L Foot
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 4654099453726701620}
   m_Layer: 0
   m_Name: Bip001 L Clavicle
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 4654099453726701622}
   m_Layer: 0
   m_Name: Bip001 L Calf
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 4654099453726701624}
   m_Layer: 0
   m_Name: Bip001 HeadNub
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 7230839907373619838}
   m_Layer: 0
   m_Name: Bip001 Head
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 4654099453726701628}
   m_Layer: 0
   m_Name: Bip001 Footsteps
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 4654099453726701630}
   m_Layer: 0
   m_Name: Bip001
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1306,11 +1306,12 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 2
   attackCoolTime: 1
-  chaseRange: 5
-  attackRange: 5
+  chaseRange: 15
+  attackRange: 15
   IsAttacking: 0
   IsDie: 0
-  IsCastle: 0
+  IsRangeShort: 0
+  IsRangeLong: 0
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
@@ -1326,7 +1327,7 @@ GameObject:
   - component: {fileID: 4654099453726701578}
   m_Layer: 0
   m_Name: Bone_wood
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1358,7 +1359,7 @@ GameObject:
   - component: {fileID: 4654099453726701580}
   m_Layer: 0
   m_Name: Bone_bag
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1391,7 +1392,7 @@ GameObject:
   - component: {fileID: 7760287618425729329}
   m_Layer: 0
   m_Name: Bip001 Spine
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,7 +1450,7 @@ GameObject:
   - component: {fileID: 4654099453726701584}
   m_Layer: 0
   m_Name: Bip001 R UpperArm
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1481,7 +1482,7 @@ GameObject:
   - component: {fileID: 4654099453726701586}
   m_Layer: 0
   m_Name: Bip001 R Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1512,7 +1513,7 @@ GameObject:
   - component: {fileID: 4654099453726701588}
   m_Layer: 0
   m_Name: Bip001 R Toe0
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,7 +1545,7 @@ GameObject:
   - component: {fileID: 4654099453726701590}
   m_Layer: 0
   m_Name: Bip001 R Thigh
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,7 +1577,7 @@ GameObject:
   - component: {fileID: 4654099453726701592}
   m_Layer: 0
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,7 +1609,7 @@ GameObject:
   - component: {fileID: 4654099453726701594}
   m_Layer: 0
   m_Name: Bip001 R Forearm
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1641,7 +1642,7 @@ GameObject:
   - component: {fileID: 2961941246104652082}
   m_Layer: 0
   m_Name: Bip001 R Foot
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1694,7 +1695,7 @@ GameObject:
   - component: {fileID: 4654099453726701598}
   m_Layer: 0
   m_Name: Bip001 R Clavicle
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1727,7 +1728,7 @@ GameObject:
   - component: {fileID: 4654099453721915106}
   m_Layer: 0
   m_Name: ELF_Units_Head_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1815,7 @@ GameObject:
   - component: {fileID: 4654099453721915108}
   m_Layer: 0
   m_Name: ELF_Units_Body_E
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,7 +1914,7 @@ GameObject:
   - component: {fileID: 4654099453721915110}
   m_Layer: 0
   m_Name: ELF_Units_Body_D
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2012,7 +2013,7 @@ GameObject:
   - component: {fileID: 4654099453721915112}
   m_Layer: 0
   m_Name: ELF_Units_Body_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2111,7 +2112,7 @@ GameObject:
   - component: {fileID: 4654099453721915114}
   m_Layer: 0
   m_Name: ELF_Units_Body_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2210,7 +2211,7 @@ GameObject:
   - component: {fileID: 4654099453721915116}
   m_Layer: 0
   m_Name: ELF_Units_Arms_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2301,7 +2302,7 @@ GameObject:
   - component: {fileID: 4654099453721915118}
   m_Layer: 0
   m_Name: ELF_Units_Arms_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2392,7 +2393,7 @@ GameObject:
   - component: {fileID: 4654099453721915120}
   m_Layer: 0
   m_Name: ELF_Units_Legs_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2483,7 +2484,7 @@ GameObject:
   - component: {fileID: 4654099453721915122}
   m_Layer: 0
   m_Name: ELF_Units_Head_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2570,7 +2571,7 @@ GameObject:
   - component: {fileID: 4654099453721915124}
   m_Layer: 0
   m_Name: ELF_Units_Body_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2670,7 @@ GameObject:
   - component: {fileID: 4654099453721915126}
   m_Layer: 0
   m_Name: ELF_Units_Arms_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2760,7 +2761,7 @@ GameObject:
   - component: {fileID: 4654099453721915076}
   m_Layer: 0
   m_Name: ELF_Units_Head_K
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2847,7 +2848,7 @@ GameObject:
   - component: {fileID: 4654099453721915078}
   m_Layer: 0
   m_Name: ELF_Units_Head_J
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2934,7 +2935,7 @@ GameObject:
   - component: {fileID: 4654099453721915080}
   m_Layer: 0
   m_Name: ELF_Units_Head_I
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3021,7 +3022,7 @@ GameObject:
   - component: {fileID: 4654099453721915082}
   m_Layer: 0
   m_Name: ELF_Units_Head_H
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3108,7 +3109,7 @@ GameObject:
   - component: {fileID: 4654099453721915084}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3195,7 +3196,7 @@ GameObject:
   - component: {fileID: 4654099453721915086}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3282,7 +3283,7 @@ GameObject:
   - component: {fileID: 4654099453721915088}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3369,7 +3370,7 @@ GameObject:
   - component: {fileID: 4654099453721915090}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3470,7 +3471,7 @@ GameObject:
   - component: {fileID: 4654099453721915092}
   m_Layer: 0
   m_Name: ELF_Units_Legs_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3561,7 +3562,7 @@ GameObject:
   - component: {fileID: 4654099453721915094}
   m_Layer: 0
   m_Name: ELF_Units_Legs_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3652,7 +3653,7 @@ GameObject:
   - component: {fileID: 4654099453721915096}
   m_Layer: 0
   m_Name: ELF_Units_Head_G
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3739,7 +3740,7 @@ GameObject:
   - component: {fileID: 4654099453721915098}
   m_Layer: 0
   m_Name: ELF_Units_Head_F
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3826,7 +3827,7 @@ GameObject:
   - component: {fileID: 4654099453721915100}
   m_Layer: 0
   m_Name: ELF_Units_Head_E
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3913,7 +3914,7 @@ GameObject:
   - component: {fileID: 4654099453721915102}
   m_Layer: 0
   m_Name: ELF_Units_Head_D
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4000,7 +4001,7 @@ GameObject:
   - component: {fileID: 4654099453721915104}
   m_Layer: 0
   m_Name: ELF_Units_Head_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4087,7 +4088,7 @@ GameObject:
   - component: {fileID: 4654099453721914938}
   m_Layer: 0
   m_Name: ELF_Units_Head_P
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4174,7 +4175,7 @@ GameObject:
   - component: {fileID: 4654099453721914940}
   m_Layer: 0
   m_Name: ELF_Units_Head_O
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4261,7 +4262,7 @@ GameObject:
   - component: {fileID: 4654099453721914942}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4348,7 +4349,7 @@ GameObject:
   - component: {fileID: 4654099453721915072}
   m_Layer: 0
   m_Name: ELF_Units_Head_M
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4435,7 +4436,7 @@ GameObject:
   - component: {fileID: 4654099453721915074}
   m_Layer: 0
   m_Name: ELF_Units_Head_L
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4523,7 +4524,7 @@ GameObject:
   - component: {fileID: 225425410055407679}
   m_Layer: 0
   m_Name: ELF_weapon_staff_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4606,7 +4607,7 @@ GameObject:
   - component: {fileID: 3151831066306007481}
   m_Layer: 0
   m_Name: ELF_shield_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4687,7 +4688,7 @@ GameObject:
   - component: {fileID: 6536496266263847081}
   m_Layer: 0
   m_Name: L_shield_container
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4723,7 +4724,7 @@ GameObject:
   - component: {fileID: 799529914401089325}
   m_Layer: 0
   m_Name: ELF_weapon_sword_B
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4804,7 +4805,7 @@ GameObject:
   - component: {fileID: 8456284657419595235}
   m_Layer: 0
   m_Name: L_hand_container
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4840,7 +4841,7 @@ GameObject:
   - component: {fileID: 6482508706107878593}
   m_Layer: 0
   m_Name: ELF_weapon_dagger
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4923,7 +4924,7 @@ GameObject:
   - component: {fileID: 1852701599611412066}
   m_Layer: 0
   m_Name: ELF_weapon_spear
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5006,7 +5007,7 @@ GameObject:
   - component: {fileID: 1315179964739634151}
   m_Layer: 0
   m_Name: ELF_weapon_staff_A
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5089,7 +5090,7 @@ GameObject:
   - component: {fileID: 316409708386048316}
   m_Layer: 0
   m_Name: ELF_weapon_hammer
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5172,7 +5173,7 @@ GameObject:
   - component: {fileID: 389929823172683047}
   m_Layer: 0
   m_Name: ELF_shield_C
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5253,7 +5254,7 @@ GameObject:
   - component: {fileID: 6286388790340147697}
   m_Layer: 0
   m_Name: Quiver_container
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5287,7 +5288,7 @@ GameObject:
   - component: {fileID: 4404339442249780421}
   m_Layer: 0
   m_Name: ELF_weapon_bow
-  m_TagString: Untagged
+  m_TagString: Mage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

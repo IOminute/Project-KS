@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7986954746858646102}
   m_Layer: 0
   m_Name: Bip001 HeadNub
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1853153984912373987}
   m_Layer: 0
   m_Name: ELF_weapon_bow
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 9083498029065453757}
   m_Layer: 0
   m_Name: ELF_Units_Head_J
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 4255933712658309284}
   m_Layer: 0
   m_Name: ELF_weapon_axe
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 2506917173052969231}
   m_Layer: 0
   m_Name: ELF_Units_Head_D
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 3405098154096889806}
   m_Layer: 0
   m_Name: ELF_Units_Body_D
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 3878989861871248082}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 5407695976879533356}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 7608343821262662817}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 5316081114749940986}
   m_Layer: 0
   m_Name: Bip001 R Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 2349435974192431736}
   m_Layer: 0
   m_Name: ELF_shield_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 4779324901986758657}
   m_Layer: 0
   m_Name: ELF_Units_Head_I
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1062,11 +1062,12 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 2
   attackCoolTime: 1
-  chaseRange: 5
-  attackRange: 1.5
+  chaseRange: 15
+  attackRange: 4
   IsAttacking: 0
   IsDie: 0
-  IsCastle: 0
+  IsRangeShort: 0
+  IsRangeLong: 0
   animator: {fileID: 1218822572536810718}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
@@ -1082,7 +1083,7 @@ GameObject:
   - component: {fileID: 467606285527662038}
   m_Layer: 0
   m_Name: L_shield_container
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1118,7 @@ GameObject:
   - component: {fileID: 6846296288615679375}
   m_Layer: 0
   m_Name: ELF_Units_Head_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1206,7 @@ GameObject:
   - component: {fileID: 6416311054937081328}
   m_Layer: 0
   m_Name: ELF_weapon_spear
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1287,7 +1288,7 @@ GameObject:
   - component: {fileID: 8891294369060742726}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1375,7 +1376,7 @@ GameObject:
   - component: {fileID: 5994118940444509817}
   m_Layer: 0
   m_Name: ELF_Xtra_quiver
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1457,7 +1458,7 @@ GameObject:
   - component: {fileID: 688107400235711119}
   m_Layer: 0
   m_Name: ELF_Units_Legs_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1548,7 +1549,7 @@ GameObject:
   - component: {fileID: 5738376202421508363}
   m_Layer: 0
   m_Name: ELF_Units_Head_L
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1636,7 @@ GameObject:
   - component: {fileID: 6558424275113681618}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1736,7 +1737,7 @@ GameObject:
   - component: {fileID: 1574234352673827144}
   m_Layer: 0
   m_Name: ELF_Units_Head_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1823,7 +1824,7 @@ GameObject:
   - component: {fileID: 3925840244233408639}
   m_Layer: 0
   m_Name: ELF_Units_Head_M
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1910,7 +1911,7 @@ GameObject:
   - component: {fileID: 3525961664884004843}
   m_Layer: 0
   m_Name: ELF_Units_Body_E
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,7 +2010,7 @@ GameObject:
   - component: {fileID: 7227876373526598243}
   m_Layer: 0
   m_Name: ELF_Units_Head_F
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2096,7 +2097,7 @@ GameObject:
   - component: {fileID: 1624756601027246675}
   m_Layer: 0
   m_Name: ELF_Units_Head_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2184,7 +2185,7 @@ GameObject:
   - component: {fileID: 9215258834036433288}
   m_Layer: 0
   m_Name: ELF_weapon_staff_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2266,7 +2267,7 @@ GameObject:
   - component: {fileID: 4008515775436490741}
   m_Layer: 0
   m_Name: ELF_Units_Body_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2364,7 +2365,7 @@ GameObject:
   - component: {fileID: 6622769914483832507}
   m_Layer: 0
   m_Name: Bip001
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2399,7 +2400,7 @@ GameObject:
   - component: {fileID: 2211634698998582414}
   m_Layer: 0
   m_Name: ELF_weapon_sword_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2481,7 +2482,7 @@ GameObject:
   - component: {fileID: 411251016849886340}
   m_Layer: 0
   m_Name: ELF_Units_Head_O
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2568,7 +2569,7 @@ GameObject:
   - component: {fileID: 2882543955544007756}
   m_Layer: 0
   m_Name: ELF_Units_Head_H
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2655,7 +2656,7 @@ GameObject:
   - component: {fileID: 2081573741894969582}
   m_Layer: 0
   m_Name: ELF_Units_Head_G
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2742,9 +2743,10 @@ GameObject:
   - component: {fileID: 5028495789987174163}
   - component: {fileID: 1199928979281324267}
   - component: {fileID: 3990904008775528011}
+  - component: {fileID: 3205502362409546202}
   m_Layer: 0
   m_Name: ELF_weapon_hammer
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2835,6 +2837,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17557617, y: 0.12079853, z: 0.31971267}
   m_Center: {x: -0.38657647, y: 0.0050413013, z: -0.0065859123}
+--- !u!114 &3205502362409546202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896556345331639166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344a5e543ae94754dbd760de09b2133b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &3906398749789359572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,7 +2861,7 @@ GameObject:
   - component: {fileID: 3133021600452761590}
   m_Layer: 0
   m_Name: Bip001 L Hand
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2879,7 +2894,7 @@ GameObject:
   - component: {fileID: 6542428058458460347}
   m_Layer: 0
   m_Name: Bip001 L Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2910,7 +2925,7 @@ GameObject:
   - component: {fileID: 3765726629003463778}
   m_Layer: 0
   m_Name: Bip001 R UpperArm
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2942,7 +2957,7 @@ GameObject:
   - component: {fileID: 176609405330756702}
   m_Layer: 0
   m_Name: Bip001 Pelvis
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2978,7 +2993,7 @@ GameObject:
   - component: {fileID: 3717816422525925785}
   m_Layer: 0
   m_Name: ELF_weapon_sword_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3059,7 +3074,7 @@ GameObject:
   - component: {fileID: 566347593290344154}
   m_Layer: 0
   m_Name: Bip001 L Clavicle
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3091,7 +3106,7 @@ GameObject:
   - component: {fileID: 8237697547829136743}
   m_Layer: 0
   m_Name: Bip001 L Forearm
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3123,7 +3138,7 @@ GameObject:
   - component: {fileID: 8831931501980861615}
   m_Layer: 0
   m_Name: Bip001 R Calf
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,7 +3171,7 @@ GameObject:
   - component: {fileID: 3870380136570915585}
   m_Layer: 0
   m_Name: ELF_Units_Arms_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3246,7 +3261,7 @@ GameObject:
   - component: {fileID: 6961385598034341448}
   m_Layer: 0
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3279,7 +3294,7 @@ GameObject:
   - component: {fileID: 53119438971473200}
   m_Layer: 0
   m_Name: ELF_Units_Arms_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3369,7 +3384,7 @@ GameObject:
   - component: {fileID: 1650723688991374172}
   m_Layer: 0
   m_Name: Quiver_container
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3401,7 +3416,7 @@ GameObject:
   - component: {fileID: 8991759860896087572}
   m_Layer: 0
   m_Name: Bip001 R Forearm
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3433,7 +3448,7 @@ GameObject:
   - component: {fileID: 431114867542875682}
   m_Layer: 0
   m_Name: Bip001 Neck
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3466,7 +3481,7 @@ GameObject:
   - component: {fileID: 4384168127451373398}
   m_Layer: 0
   m_Name: ELF_Units_Body_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3564,7 +3579,7 @@ GameObject:
   - component: {fileID: 3362696818210104244}
   m_Layer: 0
   m_Name: L_hand_container
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3601,7 +3616,7 @@ GameObject:
   - component: {fileID: 4134231212549835097}
   m_Layer: 0
   m_Name: ELF_weapon_staff_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3682,7 +3697,7 @@ GameObject:
   - component: {fileID: 1751274210407218564}
   m_Layer: 0
   m_Name: Bip001 R Toe0
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3715,7 +3730,7 @@ GameObject:
   - component: {fileID: 5511345238523892287}
   m_Layer: 0
   m_Name: Bip001 L Foot
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3770,7 +3785,7 @@ GameObject:
   - component: {fileID: 1709689953815111379}
   m_Layer: 0
   m_Name: ELF_weapon_dagger
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3852,7 +3867,7 @@ GameObject:
   - component: {fileID: 2884784312542312873}
   m_Layer: 0
   m_Name: ELF_Units_Head_P
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3938,7 +3953,7 @@ GameObject:
   - component: {fileID: 2803531246571440577}
   m_Layer: 0
   m_Name: Bip001 R Clavicle
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3970,7 +3985,7 @@ GameObject:
   - component: {fileID: 8401680570061138569}
   m_Layer: 0
   m_Name: Bip001 L UpperArm
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,7 +4018,7 @@ GameObject:
   - component: {fileID: 166835180945593475}
   m_Layer: 0
   m_Name: ELF_Units_Head_K
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4090,7 +4105,7 @@ GameObject:
   - component: {fileID: 3974702153628586503}
   m_Layer: 0
   m_Name: ELF_Units_Legs_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4180,7 +4195,7 @@ GameObject:
   - component: {fileID: 7442692824205533727}
   m_Layer: 0
   m_Name: Bip001 L Toe0
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4213,7 +4228,7 @@ GameObject:
   - component: {fileID: 620563887975561089}
   m_Layer: 0
   m_Name: ELF_Units_Legs_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4304,7 +4319,7 @@ GameObject:
   - component: {fileID: 4426866944809744252}
   m_Layer: 0
   m_Name: ELF_Units_Body_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4404,7 +4419,7 @@ GameObject:
   - component: {fileID: 6051322262020469116}
   m_Layer: 0
   m_Name: ELF_shield_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4486,7 +4501,7 @@ GameObject:
   - component: {fileID: 6037138374385681003}
   m_Layer: 0
   m_Name: ELF_Units_Arms_C
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4576,7 +4591,7 @@ GameObject:
   - component: {fileID: 4924094773857679863}
   m_Layer: 0
   m_Name: R_hand_container
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4613,7 +4628,7 @@ GameObject:
   - component: {fileID: 7187075437222296554}
   m_Layer: 0
   m_Name: Bip001 Footsteps
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4645,7 +4660,7 @@ GameObject:
   - component: {fileID: 140573450413459720}
   m_Layer: 0
   m_Name: Bip001 Head
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4698,7 +4713,7 @@ GameObject:
   - component: {fileID: 7753184307654371153}
   m_Layer: 0
   m_Name: Bip001 L Calf
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4731,7 +4746,7 @@ GameObject:
   - component: {fileID: 8689717134614849658}
   m_Layer: 0
   m_Name: ELF_Units_Head_E
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4819,7 +4834,7 @@ GameObject:
   - component: {fileID: 8748514201281904099}
   m_Layer: 0
   m_Name: ELF_shield_A
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4901,7 +4916,7 @@ GameObject:
   - component: {fileID: 720009875138593944}
   m_Layer: 0
   m_Name: Bip001 Spine
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4957,7 +4972,7 @@ GameObject:
   - component: {fileID: 3338338475397431767}
   m_Layer: 0
   m_Name: Bip001 L Thigh
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4989,7 +5004,7 @@ GameObject:
   - component: {fileID: 3952788460141124737}
   m_Layer: 0
   m_Name: Bip001 R Thigh
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5022,7 +5037,7 @@ GameObject:
   - component: {fileID: 6692039332254182171}
   m_Layer: 0
   m_Name: Bip001 R Foot
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5077,7 +5092,7 @@ GameObject:
   - component: {fileID: 4453516795807065353}
   m_Layer: 0
   m_Name: ELF_weapon_staff_B
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

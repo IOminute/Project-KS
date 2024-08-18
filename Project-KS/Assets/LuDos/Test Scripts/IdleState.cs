@@ -7,7 +7,7 @@ public class IdleState : BaseState
 
     public override void Enter()
     {
-        Debug.Log("IdleStart");
+        //Debug.Log("IdleStart");
         enemy.animator.SetTrigger("Idle");
     }
 
@@ -49,7 +49,14 @@ public class IdleState : BaseState
 
             if (enemy.IsRangeShort || enemy.IsRangeLong || distanceToTarget <= enemy.attackRange)
             {
-                enemy.ChangeState(new AttackState(enemy, closestTarget.transform));
+                if (enemy.IsRangeLong || enemy.IsRangeShort)
+                {
+                    enemy.ChangeState(new AttackState(enemy, enemy.Castle.transform));
+                }
+                else
+                {
+                    enemy.ChangeState(new AttackState(enemy, closestTarget.transform));
+                }
             }
             else if (!enemy.IsAttacking && distanceToTarget > enemy.attackRange && distanceToTarget <= enemy.chaseRange)
             {

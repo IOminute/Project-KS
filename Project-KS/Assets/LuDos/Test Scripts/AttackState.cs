@@ -15,7 +15,7 @@ public class AttackState : BaseState
 
     public override void Enter()
     {
-        Debug.Log("AttackStart");
+        //Debug.Log("AttackStart");
         enemy.attackCoroutine = enemy.StartCoroutine(AttackCoroutine());
     }
 
@@ -23,16 +23,16 @@ public class AttackState : BaseState
     {
         if (enemy.IsDie) return;
 
-        if (!enemy.IsAttacking && Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange)
+        if (!enemy.IsAttacking && Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 0.5f)
         {
-            Debug.Log("ChangeToChase");
+            //Debug.Log("ChangeToChase");
             enemy.ChangeState(new ChaseState(enemy, target));
         }
     }
 
     public override void Exit()
     {
-        Debug.Log("AttackFin");
+        //Debug.Log("AttackFin");
         enemy.StopAttack();
     }
 

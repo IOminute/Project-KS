@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3285479911546545928}
   m_Layer: 0
   m_Name: L_hand_container
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 176995249463208514}
   m_Layer: 0
   m_Name: L_shield_container
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,9 +81,10 @@ GameObject:
   - component: {fileID: 8253005932844656504}
   - component: {fileID: 6042173450935709126}
   - component: {fileID: 4999308497212221986}
+  - component: {fileID: 4164456042896427915}
   m_Layer: 0
   m_Name: ELF_weapon_sword_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,6 +175,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9, y: 0.074104585, z: 0.20933557}
   m_Center: {x: -0.5286877, y: 0.0021163393, z: -0.050193995}
+--- !u!114 &4164456042896427915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998001274640983291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344a5e543ae94754dbd760de09b2133b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &1494852472035590335
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +201,7 @@ GameObject:
   - component: {fileID: 6620928835595420372}
   m_Layer: 0
   m_Name: ELF_weapon_staff_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +284,7 @@ GameObject:
   - component: {fileID: 8322389478061153106}
   m_Layer: 0
   m_Name: ELF_shield_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,7 +366,7 @@ GameObject:
   - component: {fileID: 1753081466634527855}
   m_Layer: 0
   m_Name: ELF_Units_Legs_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +457,7 @@ GameObject:
   - component: {fileID: 1753081466634527849}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +544,7 @@ GameObject:
   - component: {fileID: 1753081466634527843}
   m_Layer: 0
   m_Name: ELF_Units_Legs_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,7 +635,7 @@ GameObject:
   - component: {fileID: 1753081466634527853}
   m_Layer: 0
   m_Name: ELF_Units_Legs_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,7 +726,7 @@ GameObject:
   - component: {fileID: 1753081466634527851}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +813,7 @@ GameObject:
   - component: {fileID: 1753081466634527765}
   m_Layer: 0
   m_Name: ELF_Units_Shoulderpads_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +900,7 @@ GameObject:
   - component: {fileID: 1753081466634527871}
   m_Layer: 0
   m_Name: ELF_Units_Head_J
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -973,7 +987,7 @@ GameObject:
   - component: {fileID: 1753081466634527865}
   m_Layer: 0
   m_Name: ELF_Units_Head_K
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,7 +1074,7 @@ GameObject:
   - component: {fileID: 1753081466634527859}
   m_Layer: 0
   m_Name: ELF_Units_Head_H
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1147,7 +1161,7 @@ GameObject:
   - component: {fileID: 1753081466634527869}
   m_Layer: 0
   m_Name: ELF_Units_Head_I
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,7 +1248,7 @@ GameObject:
   - component: {fileID: 1753081466634527847}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,7 +1335,7 @@ GameObject:
   - component: {fileID: 1753081466634527841}
   m_Layer: 0
   m_Name: ELF_Units_Head_O
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1408,7 +1422,7 @@ GameObject:
   - component: {fileID: 1753081466634527867}
   m_Layer: 0
   m_Name: ELF_Units_Head_L
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1495,7 +1509,7 @@ GameObject:
   - component: {fileID: 1753081466634527845}
   m_Layer: 0
   m_Name: ELF_Units_Head_M
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1582,7 +1596,7 @@ GameObject:
   - component: {fileID: 1753081466634527767}
   m_Layer: 0
   m_Name: ELF_Units_Head_P
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1668,7 +1682,7 @@ GameObject:
   - component: {fileID: 1753081466646262497}
   m_Layer: 0
   m_Name: Bip001 L UpperArm001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1700,7 +1714,7 @@ GameObject:
   - component: {fileID: 1753081466646262499}
   m_Layer: 0
   m_Name: Bip001 Neck
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,7 +1748,7 @@ GameObject:
   - component: {fileID: 1753081466646262501}
   m_Layer: 0
   m_Name: Bip001 L Toe0Nub001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,7 +1779,7 @@ GameObject:
   - component: {fileID: 1753081466646262503}
   m_Layer: 0
   m_Name: Bip001 L UpperArm
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,7 +1811,7 @@ GameObject:
   - component: {fileID: 1753081466646262505}
   m_Layer: 0
   m_Name: Bip001 Pelvis001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1831,7 +1845,7 @@ GameObject:
   - component: {fileID: 1753081466646262507}
   m_Layer: 0
   m_Name: Bip001 R Calf
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1863,7 +1877,7 @@ GameObject:
   - component: {fileID: 1753081466646262509}
   m_Layer: 0
   m_Name: Bip001 Neck001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1909,7 @@ GameObject:
   - component: {fileID: 1753081466646262511}
   m_Layer: 0
   m_Name: Bip001 Pelvis
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1927,7 +1941,7 @@ GameObject:
   - component: {fileID: 1753081466646262513}
   m_Layer: 0
   m_Name: Bip001 L Hand001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1960,7 +1974,7 @@ GameObject:
   - component: {fileID: 1753081466646262515}
   m_Layer: 0
   m_Name: Bip001 L Thigh
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1992,7 +2006,7 @@ GameObject:
   - component: {fileID: 1753081466646262517}
   m_Layer: 0
   m_Name: Bip001 L Forearm001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2025,7 +2039,7 @@ GameObject:
   - component: {fileID: 1652183184225945853}
   m_Layer: 0
   m_Name: Bip001 L Hand
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2078,7 +2092,7 @@ GameObject:
   - component: {fileID: 1753081466646262521}
   m_Layer: 0
   m_Name: Bip001 L Toe001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2110,7 +2124,7 @@ GameObject:
   - component: {fileID: 1753081466646262523}
   m_Layer: 0
   m_Name: Bip001 L Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2141,7 +2155,7 @@ GameObject:
   - component: {fileID: 1753081466646262525}
   m_Layer: 0
   m_Name: Bip001 L Thigh001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2173,7 +2187,7 @@ GameObject:
   - component: {fileID: 1753081466646262527}
   m_Layer: 0
   m_Name: Bip001 L Toe0
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2205,7 +2219,7 @@ GameObject:
   - component: {fileID: 1753081466646262401}
   m_Layer: 0
   m_Name: Bip001 R Hand001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2237,7 +2251,7 @@ GameObject:
   - component: {fileID: 1753081466646262403}
   m_Layer: 0
   m_Name: Bip001 R Thigh
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2269,7 +2283,7 @@ GameObject:
   - component: {fileID: 1753081466646262405}
   m_Layer: 0
   m_Name: Bip001 R Forearm001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2302,7 +2316,7 @@ GameObject:
   - component: {fileID: 1803561869461588476}
   m_Layer: 0
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2355,7 +2369,7 @@ GameObject:
   - component: {fileID: 1753081466646262409}
   m_Layer: 0
   m_Name: Bip001 R Toe001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2387,7 +2401,7 @@ GameObject:
   - component: {fileID: 1753081466646262411}
   m_Layer: 0
   m_Name: Bip001 R Toe0Nub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2418,7 +2432,7 @@ GameObject:
   - component: {fileID: 1753081466646262413}
   m_Layer: 0
   m_Name: Bip001 R Thigh001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2450,7 +2464,7 @@ GameObject:
   - component: {fileID: 1753081466646262415}
   m_Layer: 0
   m_Name: Bip001 R Toe0
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2482,7 +2496,7 @@ GameObject:
   - component: {fileID: 1753081466646262417}
   m_Layer: 0
   m_Name: Bip001 R Clavicle001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2514,7 +2528,7 @@ GameObject:
   - component: {fileID: 1753081466646262419}
   m_Layer: 0
   m_Name: Bip001 R Finger0
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2546,7 +2560,7 @@ GameObject:
   - component: {fileID: 1753081466646262421}
   m_Layer: 0
   m_Name: Bip001 R Calf001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2578,7 +2592,7 @@ GameObject:
   - component: {fileID: 1753081466646262423}
   m_Layer: 0
   m_Name: Bip001 R Clavicle
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2610,7 +2624,7 @@ GameObject:
   - component: {fileID: 1753081466646262425}
   m_Layer: 0
   m_Name: Bip001 R Foot001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2642,7 +2656,7 @@ GameObject:
   - component: {fileID: 1753081466646262427}
   m_Layer: 0
   m_Name: Bip001 R Forearm
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2674,7 +2688,7 @@ GameObject:
   - component: {fileID: 1753081466646262429}
   m_Layer: 0
   m_Name: Bip001 R Finger0Nub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2706,7 +2720,7 @@ GameObject:
   - component: {fileID: 9201170558942360003}
   m_Layer: 0
   m_Name: Bip001 R Foot
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2759,7 +2773,7 @@ GameObject:
   - component: {fileID: 1753081466646262465}
   m_Layer: 0
   m_Name: Bip001 L Clavicle001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2791,7 +2805,7 @@ GameObject:
   - component: {fileID: 1753081466646262467}
   m_Layer: 0
   m_Name: Bip001 L Finger0
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2823,7 +2837,7 @@ GameObject:
   - component: {fileID: 1753081466646262469}
   m_Layer: 0
   m_Name: Bip001 L Calf001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2855,7 +2869,7 @@ GameObject:
   - component: {fileID: 1753081466646262471}
   m_Layer: 0
   m_Name: Bip001 L Clavicle
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2887,7 +2901,7 @@ GameObject:
   - component: {fileID: 1753081466646262473}
   m_Layer: 0
   m_Name: Bip001 L Foot001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,7 +2933,7 @@ GameObject:
   - component: {fileID: 1753081466646262475}
   m_Layer: 0
   m_Name: Bip001 L Forearm
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,7 +2965,7 @@ GameObject:
   - component: {fileID: 1753081466646262477}
   m_Layer: 0
   m_Name: Bip001 L Finger0Nub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2983,7 +2997,7 @@ GameObject:
   - component: {fileID: 9022973417465380723}
   m_Layer: 0
   m_Name: Bip001 L Foot
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3036,7 +3050,7 @@ GameObject:
   - component: {fileID: 1753081466646262481}
   m_Layer: 0
   m_Name: Bip001 Footsteps001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3067,7 +3081,7 @@ GameObject:
   - component: {fileID: 1753081466646262483}
   m_Layer: 0
   m_Name: Bip001 Head
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,7 +3113,7 @@ GameObject:
   - component: {fileID: 1753081466646262485}
   m_Layer: 0
   m_Name: Bip001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3132,7 +3146,7 @@ GameObject:
   - component: {fileID: 1753081466646262487}
   m_Layer: 0
   m_Name: Bip001 Footsteps
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3163,7 +3177,7 @@ GameObject:
   - component: {fileID: 1753081466646262489}
   m_Layer: 0
   m_Name: Bip001 HeadNub001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3194,7 +3208,7 @@ GameObject:
   - component: {fileID: 1753081466646262491}
   m_Layer: 0
   m_Name: Bip001 L Calf
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,7 +3241,7 @@ GameObject:
   - component: {fileID: 6560649278998362747}
   m_Layer: 0
   m_Name: Bip001 Head001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3280,7 +3294,7 @@ GameObject:
   - component: {fileID: 1753081466646262495}
   m_Layer: 0
   m_Name: Bip001 HeadNub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3311,7 +3325,7 @@ GameObject:
   - component: {fileID: 1753081466646262433}
   m_Layer: 0
   m_Name: Bone_wood
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3342,7 +3356,7 @@ GameObject:
   - component: {fileID: 1753081466646262437}
   m_Layer: 0
   m_Name: Bip002
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3375,7 +3389,7 @@ GameObject:
   - component: {fileID: 1753081466646262439}
   m_Layer: 0
   m_Name: Bone_bag
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3500,8 +3514,8 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 5
   attackCoolTime: 1
-  chaseRange: 5
-  attackRange: 2
+  chaseRange: 15
+  attackRange: 5
   IsAttacking: 0
   IsDie: 0
   IsRangeShort: 0
@@ -3548,7 +3562,7 @@ GameObject:
   - component: {fileID: 1753081466646262449}
   m_Layer: 0
   m_Name: Bip001 R UpperArm001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3581,7 +3595,7 @@ GameObject:
   - component: {fileID: 4247657100498296441}
   m_Layer: 0
   m_Name: Bip001 Spine
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3638,7 +3652,7 @@ GameObject:
   - component: {fileID: 1753081466646262453}
   m_Layer: 0
   m_Name: Bip001 R Toe0Nub001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3669,7 +3683,7 @@ GameObject:
   - component: {fileID: 1753081466646262455}
   m_Layer: 0
   m_Name: Bip001 R UpperArm
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3701,7 +3715,7 @@ GameObject:
   - component: {fileID: 1753081466646262457}
   m_Layer: 0
   m_Name: Bip001 Tail1
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3733,7 +3747,7 @@ GameObject:
   - component: {fileID: 1753081466646262459}
   m_Layer: 0
   m_Name: Bip001 TailNub
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3764,7 +3778,7 @@ GameObject:
   - component: {fileID: 1753081466646262461}
   m_Layer: 0
   m_Name: Bip001 Spine001
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3801,7 +3815,7 @@ GameObject:
   - component: {fileID: 1753081466646262463}
   m_Layer: 0
   m_Name: Bip001 Tail
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3834,7 +3848,7 @@ GameObject:
   - component: {fileID: 1753081466634527823}
   m_Layer: 0
   m_Name: ELF_Units_Head_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3921,7 +3935,7 @@ GameObject:
   - component: {fileID: 1753081466634527817}
   m_Layer: 0
   m_Name: ELF_Units_Head_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4008,7 +4022,7 @@ GameObject:
   - component: {fileID: 1753081466634527811}
   m_Layer: 0
   m_Name: ELF_Units_Body_F
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4109,7 +4123,7 @@ GameObject:
   - component: {fileID: 1753081466634527821}
   m_Layer: 0
   m_Name: ELF_Units_Head_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4196,7 +4210,7 @@ GameObject:
   - component: {fileID: 1753081466634527863}
   m_Layer: 0
   m_Name: ELF_Units_Head_F
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4283,7 +4297,7 @@ GameObject:
   - component: {fileID: 1753081466634527857}
   m_Layer: 0
   m_Name: ELF_Units_Head_G
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4370,7 +4384,7 @@ GameObject:
   - component: {fileID: 1753081466634527819}
   m_Layer: 0
   m_Name: ELF_Units_Head_D
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4457,7 +4471,7 @@ GameObject:
   - component: {fileID: 1753081466634527861}
   m_Layer: 0
   m_Name: ELF_Units_Head_E
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4544,7 +4558,7 @@ GameObject:
   - component: {fileID: 1753081466634527839}
   m_Layer: 0
   m_Name: ELF_Units_Arms_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4635,7 +4649,7 @@ GameObject:
   - component: {fileID: 1753081466634527833}
   m_Layer: 0
   m_Name: ELF_Units_Body_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4734,7 +4748,7 @@ GameObject:
   - component: {fileID: 1753081466634527827}
   m_Layer: 0
   m_Name: ELF_Units_Arms_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4825,7 +4839,7 @@ GameObject:
   - component: {fileID: 1753081466634527837}
   m_Layer: 0
   m_Name: ELF_Units_Arms_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4916,7 +4930,7 @@ GameObject:
   - component: {fileID: 1753081466634527815}
   m_Layer: 0
   m_Name: ELF_Units_Body_D
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5015,7 +5029,7 @@ GameObject:
   - component: {fileID: 1753081466634527809}
   m_Layer: 0
   m_Name: ELF_Units_Body_E
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5114,7 +5128,7 @@ GameObject:
   - component: {fileID: 1753081466634527835}
   m_Layer: 0
   m_Name: ELF_Units_Body_B
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5213,7 +5227,7 @@ GameObject:
   - component: {fileID: 1753081466634527813}
   m_Layer: 0
   m_Name: ELF_Units_Body_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5313,7 +5327,7 @@ GameObject:
   - component: {fileID: 7340242758423479854}
   m_Layer: 0
   m_Name: ELF_weapon_bow
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5395,7 +5409,7 @@ GameObject:
   - component: {fileID: 8509831430195182326}
   m_Layer: 0
   m_Name: ELF_Horse
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5503,7 +5517,7 @@ GameObject:
   - component: {fileID: 6676164721494234071}
   m_Layer: 0
   m_Name: ELF_weapon_hammer
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5586,7 +5600,7 @@ GameObject:
   - component: {fileID: 6749721144333742028}
   m_Layer: 0
   m_Name: ELF_shield_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5667,7 +5681,7 @@ GameObject:
   - component: {fileID: 1152677178434229018}
   m_Layer: 0
   m_Name: Quiver_container
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5701,7 +5715,7 @@ GameObject:
   - component: {fileID: 4716538526187885705}
   m_Layer: 0
   m_Name: ELF_weapon_spear
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5784,7 +5798,7 @@ GameObject:
   - component: {fileID: 86944808497751594}
   m_Layer: 0
   m_Name: ELF_weapon_dagger
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5867,7 +5881,7 @@ GameObject:
   - component: {fileID: 5369110650175424780}
   m_Layer: 0
   m_Name: ELF_weapon_staff_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5950,7 +5964,7 @@ GameObject:
   - component: {fileID: 5846707607468881423}
   m_Layer: 0
   m_Name: ELF_weapon_staff_C
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6033,7 +6047,7 @@ GameObject:
   - component: {fileID: 5503338073991188333}
   m_Layer: 0
   m_Name: ELF_shield_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6116,7 +6130,7 @@ GameObject:
   - component: {fileID: 5755934149983639688}
   m_Layer: 0
   m_Name: ELF_weapon_axe
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6197,7 +6211,7 @@ GameObject:
   - component: {fileID: 5918648228531098692}
   m_Layer: 0
   m_Name: Bone_Mount
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6231,7 +6245,7 @@ GameObject:
   - component: {fileID: 8342701759079350636}
   m_Layer: 0
   m_Name: ELF_Xtra_quiver
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6314,7 +6328,7 @@ GameObject:
   - component: {fileID: 6770536387864443943}
   m_Layer: 0
   m_Name: ELF_weapon_sword_A
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6396,7 +6410,7 @@ GameObject:
   - component: {fileID: 4560339838850150271}
   m_Layer: 0
   m_Name: ELF_horse_Seat
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6482,7 +6496,7 @@ GameObject:
   - component: {fileID: 7649522055704315622}
   m_Layer: 0
   m_Name: R_hand_container
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6522,7 +6536,7 @@ GameObject:
   - component: {fileID: 4143475724939907080}
   m_Layer: 0
   m_Name: ELF_weapon_lance
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

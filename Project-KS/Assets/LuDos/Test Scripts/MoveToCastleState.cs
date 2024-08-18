@@ -7,7 +7,7 @@ public class MoveToCastleState : BaseState
 
     public override void Enter()
     {
-        Debug.Log("MopveToCastleStart");
+       // Debug.Log("MopveToCastleStart");
     }
 
     public override void Update()

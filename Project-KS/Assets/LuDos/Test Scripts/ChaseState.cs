@@ -11,7 +11,7 @@ public class ChaseState : BaseState
 
     public override void Enter()
     {
-        Debug.Log("ChaseStart");
+        //Debug.Log("ChaseStart");
     }
 
     public override void Update()

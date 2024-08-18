@@ -17,9 +17,11 @@ TagManager:
   - Hammer
   - Mage
   - Spear
-  - Good_Kight
   - Range_Short
   - Range_Long
+  - Missile
+  - Good_Knight
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
