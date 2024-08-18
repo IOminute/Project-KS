@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 2131573815166177661}
   m_Layer: 0
   m_Name: Enemy_Cavalry_Sword
-  m_TagString: Untagged
+  m_TagString: Cavarly_Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3424,7 +3424,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1753081466646262485}
@@ -3498,17 +3498,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 10
-  moveSpeed: 2
+  moveSpeed: 5
   attackCoolTime: 1
   chaseRange: 5
   attackRange: 2
   IsAttacking: 0
   IsDie: 0
-  IsCastle: 0
+  IsRangeShort: 0
+  IsRangeLong: 0
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 0}
+  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
 --- !u!54 &2131573815166177661
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3624,8 +3625,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6, y: 1.1, z: 0.9}
-  m_Center: {x: -0.4, y: -0.2, z: 0}
+  m_Size: {x: 1.1380311, y: 0.97386414, z: 0.9}
+  m_Center: {x: -0.16901399, y: -0.14251915, z: 0.000000050963465}
 --- !u!1 &1753081466646097749
 GameObject:
   m_ObjectHideFlags: 0

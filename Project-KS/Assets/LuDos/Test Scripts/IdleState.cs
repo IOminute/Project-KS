@@ -47,7 +47,7 @@ public class IdleState : BaseState
 
             float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
 
-            if (enemy.IsCastle || distanceToTarget <= enemy.attackRange || enemy.IsCastle)
+            if (enemy.IsRangeShort || enemy.IsRangeLong || distanceToTarget <= enemy.attackRange)
             {
                 enemy.ChangeState(new AttackState(enemy, closestTarget.transform));
             }

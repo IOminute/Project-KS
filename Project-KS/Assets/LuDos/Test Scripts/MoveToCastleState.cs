@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MoveToCastleState : BaseState
 {
@@ -17,7 +18,7 @@ public class MoveToCastleState : BaseState
 
         enemy.MoveTo(castleTransform.position);
 
-        if (enemy.IsCastle)
+        if (enemy.IsRangeShort || enemy.IsRangeLong)
         {
             enemy.ChangeState(new AttackState(enemy, castleTransform));
         }

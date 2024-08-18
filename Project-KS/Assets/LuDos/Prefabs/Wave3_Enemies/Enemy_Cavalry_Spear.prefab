@@ -991,8 +991,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6, y: 1.1, z: 0.9}
-  m_Center: {x: -0.4, y: -0.2, z: 0}
+  m_Size: {x: 1.1118816, y: 0.89105594, z: 0.9}
+  m_Center: {x: -0.15593828, y: -0.13284104, z: 0.000000055955088}
 --- !u!1 &3075340329877348906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 456791036818259064}
   m_Layer: 0
   m_Name: Enemy_Cavalry_Spear
-  m_TagString: Untagged
+  m_TagString: Spear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3075340329877127086}
@@ -1218,17 +1218,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 10
-  moveSpeed: 2
+  moveSpeed: 5
   attackCoolTime: 1
   chaseRange: 5
   attackRange: 2.5
   IsAttacking: 0
   IsDie: 0
-  IsCastle: 0
+  IsRangeShort: 0
+  IsRangeLong: 0
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 0}
+  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
 --- !u!1 &3075340329877348922
 GameObject:
   m_ObjectHideFlags: 0

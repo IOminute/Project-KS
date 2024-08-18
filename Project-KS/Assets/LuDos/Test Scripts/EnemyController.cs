@@ -15,13 +15,16 @@ public class EnemyController : MonoBehaviour
     [HideInInspector]
     public bool IsDie;
     [HideInInspector]
-    public bool IsCastle;
+    public bool IsRangeShort;
+    [HideInInspector]
+    public bool IsRangeLong;
 
     [HideInInspector]
     public Animator animator;
     [HideInInspector]
     public Rigidbody Rb;
 
+    [HideInInspector]
     public GameObject Castle;
 
     private StateMachine stateMachine;
@@ -37,6 +40,7 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         Rb= GetComponent<Rigidbody>();
         AssignSoulIndexBasedOnTag();
+        Castle = GameObject.FindWithTag("Castle");
     }
 
     private void AssignSoulIndexBasedOnTag()
@@ -84,7 +88,8 @@ public class EnemyController : MonoBehaviour
         stateMachine.Initialize(new MoveToCastleState(this));
         IsAttacking = false;
         IsDie = false;
-        IsCastle = false;
+        IsRangeShort = false;
+        IsRangeLong = false;
     }
 
     private void Update()
@@ -108,7 +113,7 @@ public class EnemyController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 15f); // 회전 속도
         }
 
-        if (!IsCastle)
+        if (!IsRangeShort)
         {
             Vector3 newPosition = transform.position + direction * moveSpeed * Time.deltaTime;
             newPosition.y = 0f;
@@ -196,10 +201,17 @@ public class EnemyController : MonoBehaviour
                 TakeDamage(weapon.damage);
             }
         }
-        else if (other.CompareTag("Castle"))
+        else if (other.CompareTag("Range_Long"))
         {
-            Debug.Log("Castle");
-            IsCastle = true;
+            if (soulIndex == 0 || soulIndex == 2 || soulIndex == 3 || soulIndex == 7)
+            {
+                IsRangeLong = true;
+
+            }
+        }
+        else if (other.CompareTag("Range_Short"))
+        {
+            IsRangeShort = true;
         }
     }
 

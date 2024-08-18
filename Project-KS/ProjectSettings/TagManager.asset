@@ -18,6 +18,8 @@ TagManager:
   - Mage
   - Spear
   - Good_Kight
+  - Range_Short
+  - Range_Long
   layers:
   - Default
   - TransparentFX
