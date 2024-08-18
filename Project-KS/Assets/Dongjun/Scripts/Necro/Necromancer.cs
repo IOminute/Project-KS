@@ -70,7 +70,7 @@ public class Necromancer : MonoBehaviour
         StartCoroutine(UIManager.instance.SkillInitiated("Feeling Spirits Of Death...", 3f, 300));
         ManageMana(-300f);
         yield return waitThreeSec;
-        StartCoroutine(UIManager.instance.SkillInitiated("Rushing In To The Deep Death.", 3f, 0));
+        StartCoroutine(UIManager.instance.SkillInitiated("Rushing In To The Deep Death.", 30f, 0));
         float time = 0f;
         while (time <= 30f)
         {
@@ -111,11 +111,12 @@ public class Necromancer : MonoBehaviour
         Vector3 spawnAllyPos = soul.transform.position;
 
         // 스폰 포지션에 아군 소환하기
-        Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
+        GameObject ally = Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
 
         spirits.Remove(soul);
 
         // 소환된 아군 리스트에 저장하기
+        allies.Add(ally);
     }
 
     void ManageKindredPoint(int amount)
