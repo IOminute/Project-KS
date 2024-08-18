@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4164456042896427915}
   m_Layer: 0
   m_Name: ELF_weapon_sword_B
-  m_TagString: Cavarly_Sword
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,8 +173,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9, y: 0.074104585, z: 0.20933557}
-  m_Center: {x: -0.5286877, y: 0.0021163393, z: -0.050193995}
+  m_Size: {x: 0.8999999, y: 0.58717173, z: 0.20933554}
+  m_Center: {x: -0.52868766, y: 0.010704585, z: -0.050194703}
 --- !u!114 &4164456042896427915
 MonoBehaviour:
   m_ObjectHideFlags: 0

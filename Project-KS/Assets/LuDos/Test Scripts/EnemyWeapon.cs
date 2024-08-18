@@ -7,6 +7,11 @@ public class EnemyWeapon : MonoBehaviour
 
     private void Start()
     {
-        damage = GetComponent<EnemyController>().damage;
+        EnemyController enemyController = GetComponentInParent<EnemyController>();
+
+        if (enemyController != null)
+        {
+            damage = enemyController.damage;
+        }
     }
 }

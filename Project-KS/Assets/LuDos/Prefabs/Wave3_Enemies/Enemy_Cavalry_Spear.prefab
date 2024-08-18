@@ -1221,7 +1221,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackCoolTime: 1
   chaseRange: 15
-  attackRange: 8
+  attackRange: 8.5
   IsAttacking: 0
   IsDie: 0
   IsRangeShort: 0
@@ -6041,8 +6041,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34437078, y: 0.1304685, z: 0.12636925}
-  m_Center: {x: -1.6756996, y: 0.0013846828, z: -0.00038746328}
+  m_Size: {x: 0.34437078, y: 0.5673138, z: 0.12636925}
+  m_Center: {x: -1.6756846, y: -0.0018653523, z: -0.00038882694}
 --- !u!114 &9022714146467432446
 MonoBehaviour:
   m_ObjectHideFlags: 0

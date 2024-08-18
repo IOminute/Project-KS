@@ -1495,7 +1495,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackCoolTime: 1
   chaseRange: 15
-  attackRange: 8
+  attackRange: 8.5
   IsAttacking: 0
   IsDie: 0
   IsSelected: 0
@@ -4626,7 +4626,7 @@ GameObject:
   - component: {fileID: 4314465704090968176}
   m_Layer: 0
   m_Name: UD_weapon_lance
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4715,8 +4715,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.39753866, y: 0.05917102, z: 0.09498204}
-  m_Center: {x: -1.660524, y: -0.0010003982, z: 0.0027309465}
+  m_Size: {x: 0.39753866, y: 0.5348535, z: 0.09498204}
+  m_Center: {x: -1.6604956, y: 0.0033563601, z: 0.0027311412}
 --- !u!114 &4314465704090968176
 MonoBehaviour:
   m_ObjectHideFlags: 0

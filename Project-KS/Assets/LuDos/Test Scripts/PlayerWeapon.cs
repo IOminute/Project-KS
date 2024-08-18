@@ -7,6 +7,11 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Start()
     {
-        damage = GetComponent<UnitController>().damage;
+        UnitController unitController = GetComponentInParent<UnitController>();
+
+        if (unitController != null)
+        {
+            damage = unitController.damage;
+        }
     }
 }

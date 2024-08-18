@@ -676,8 +676,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.29578564, y: 0.12504879, z: 0.12474697}
-  m_Center: {x: -1.6520733, y: 0.0004968943, z: -0.0033233764}
+  m_Size: {x: 0.29578564, y: 0.61976457, z: 0.12474697}
+  m_Center: {x: -1.6520567, y: -0.005273181, z: -0.0033249545}
 --- !u!114 &7118347049616537791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackCoolTime: 1
   chaseRange: 15
-  attackRange: 8
+  attackRange: 8.5
   IsAttacking: 0
   IsDie: 0
   IsRangeShort: 0

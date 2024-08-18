@@ -188,7 +188,7 @@ public class EnemyController : MonoBehaviour
         Soul soulComponent = soul.GetComponent<Soul>();
         soulComponent.soulIndex = soulIndex;
 
-        Necromancer.AddSpirit(soul); // 소울 추가
+        // Necromancer.AddSpirit(soul); // 소울 추가
     }
 
     private void OnTriggerEnter(Collider other)
