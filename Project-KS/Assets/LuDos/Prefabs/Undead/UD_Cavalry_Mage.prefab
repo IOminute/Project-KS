@@ -3653,7 +3653,7 @@ GameObject:
   - component: {fileID: 3830755503923796274}
   m_Layer: 0
   m_Name: UD_Cavalry_Mage
-  m_TagString: Untagged
+  m_TagString: PlayerUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5185,8 +5185,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.68051517, y: 1.9392145, z: 1.0588149}
-  m_Center: {x: -0.0000043809414, y: -0.30164874, z: 1.1543393}
+  m_Size: {x: 0.5217795, y: 1.2678434, z: 0.5711862}
+  m_Center: {x: 0.015544146, y: -0.057578087, z: 1.0847943}
 --- !u!1 &7061267829236414011
 GameObject:
   m_ObjectHideFlags: 0

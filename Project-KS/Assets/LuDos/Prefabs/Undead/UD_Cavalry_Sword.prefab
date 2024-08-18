@@ -3571,7 +3571,7 @@ GameObject:
   - component: {fileID: 3777544391139139430}
   m_Layer: 0
   m_Name: UD_Cavalry_Sword
-  m_TagString: Untagged
+  m_TagString: PlayerUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3916,9 +3916,10 @@ GameObject:
   - component: {fileID: 4544071644392519595}
   - component: {fileID: 3004752140983715547}
   - component: {fileID: 2129231776420012267}
+  - component: {fileID: 9214642404842854407}
   m_Layer: 0
   m_Name: UD_weapon_Sword_C
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3988,6 +3989,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9214642404842854407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574844418709069420}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9819686, y: 0.083629444, z: 0.13648254}
+  m_Center: {x: -0.6048592, y: 0.0048217564, z: 0.0065740366}
 --- !u!1 &4737747287799267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,8 +5207,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.68051517, y: 1.910041, z: 0.9064348}
-  m_Center: {x: -0.0000043809414, y: -0.2505769, z: 1.2112956}
+  m_Size: {x: 0.68051517, y: 1.2303865, z: 0.5278378}
+  m_Center: {x: -0.0000043809414, y: -0.015934825, z: 1.0982386}
 --- !u!1 &6970361541083902063
 GameObject:
   m_ObjectHideFlags: 0
