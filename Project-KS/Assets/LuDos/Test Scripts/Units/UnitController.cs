@@ -137,6 +137,15 @@ public class UnitController : MonoBehaviour
                 TakeDamage(weapon.damage);
             }
         }
+        else if (other.CompareTag("EnemyWeapon_Projectile"))
+        {
+            EnemyWeapon_Projectile weapon = other.GetComponent<EnemyWeapon_Projectile>();
+            if (weapon != null)
+            {
+                TakeDamage(weapon.damage);
+                Destroy(other.gameObject);
+            }
+        }
     }
 
     private void TakeDamage(float damageAmount)
@@ -144,6 +153,7 @@ public class UnitController : MonoBehaviour
         if (!IsDie)
         {
             health -= damageAmount;
+            Debug.Log("Unit: " + health);
 
             if (health <= 0)
             {

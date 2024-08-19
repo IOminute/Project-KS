@@ -3838,12 +3838,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15969981, y: 0.30450603, z: 0.30147013}
-  m_Center: {x: -0.38925487, y: -0.005514396, z: -0.004820171}
+  m_Size: {x: 0.15969981, y: 0.39147472, z: 0.30147013}
+  m_Center: {x: -0.38925585, y: 0.0035960095, z: -0.0048201685}
 --- !u!1 &6047493476928102442
 GameObject:
   m_ObjectHideFlags: 0

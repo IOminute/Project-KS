@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
+using TreeEditor;
 
 public class EnemyController : MonoBehaviour
 {
@@ -33,6 +35,8 @@ public class EnemyController : MonoBehaviour
 
     int soulIndex;
     public GameObject soulPrefab;
+    public GameObject Projectile;
+    public Transform WeaponPosition;
 
     private void Awake()
     {
@@ -132,10 +136,11 @@ public class EnemyController : MonoBehaviour
         Rb.velocity = Vector3.zero;
     }
 
-    public virtual void Attack(Vector3 targetPosition)
+    public virtual void Attack(Transform targetTransform)
     {
         Stop();
 
+        Vector3 targetPosition = targetTransform.position;
         targetPosition.y = 0f;
 
         Vector3 direction = (targetPosition - transform.position).normalized;
@@ -147,7 +152,31 @@ public class EnemyController : MonoBehaviour
         }
 
         animator.SetTrigger("Attack");
+
+        Vector3 tmp = targetTransform.position;
+        tmp.y += 2.5f;
+
+        StartCoroutine(FireProjectileWithDelay(targetTransform, (tmp - WeaponPosition.position).normalized));
     }
+
+    private IEnumerator FireProjectileWithDelay(Transform targetTransform, Vector3 direction)
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        if (soulIndex == 0 || soulIndex == 2 || soulIndex == 3 || soulIndex == 7)
+        {
+            Quaternion projectileRotation = Quaternion.LookRotation(direction);
+            GameObject projectile = Instantiate(Projectile, WeaponPosition.position + direction, projectileRotation);
+
+            EnemyWeapon_Projectile projectileScript = projectile.GetComponent<EnemyWeapon_Projectile>();
+
+            if (projectileScript != null)
+            {
+                projectileScript.Initialize(targetTransform, gameObject);
+            }
+        }
+    }
+
 
     public void StopAttack()
     {
@@ -206,7 +235,7 @@ public class EnemyController : MonoBehaviour
             if (soulIndex == 0 || soulIndex == 2 || soulIndex == 3 || soulIndex == 7)
             {
                 IsRangeLong = true;
-
+                transform.position = transform.position;
             }
         }
         else if (other.CompareTag("Range_Short"))
@@ -220,6 +249,7 @@ public class EnemyController : MonoBehaviour
         if (!IsDie)
         {
             health -= damageAmount;
+            Debug.Log("Enemy: " + health);
 
             if (health <= 0)
             {

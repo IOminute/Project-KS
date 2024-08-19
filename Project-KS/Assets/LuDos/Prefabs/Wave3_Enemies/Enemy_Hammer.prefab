@@ -1401,7 +1401,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
+  soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
+  Projectile: {fileID: 0}
 --- !u!54 &1041302958189658919
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4737,8 +4738,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20000002, y: 0.41406277, z: 0.31971267}
-  m_Center: {x: -0.3999974, y: 0.008694042, z: -0.0065858415}
+  m_Size: {x: 0.20000002, y: 0.4693584, z: 0.31971267}
+  m_Center: {x: -0.39999723, y: 0.00996407, z: -0.0065858415}
 --- !u!114 &588496471952294556
 MonoBehaviour:
   m_ObjectHideFlags: 0

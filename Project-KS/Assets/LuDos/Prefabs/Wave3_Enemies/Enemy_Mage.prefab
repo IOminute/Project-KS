@@ -3988,6 +3988,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4340750587338232693}
   - {fileID: 1959645154584441773}
   - {fileID: 1959645154584441575}
   - {fileID: 1959645154584441599}
@@ -4068,7 +4069,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
+  soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
+  Projectile: {fileID: 190666, guid: dcd53774bd6840540979c5e147c20a21, type: 3}
+  WeaponPosition: {fileID: 4340750587338232693}
 --- !u!54 &3045131358747613411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4966,6 +4969,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5687556771059399751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4340750587338232693}
+  m_Layer: 0
+  m_Name: WeaponPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4340750587338232693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687556771059399751}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.097, y: 1.0540001, z: 0.47100002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1959645154584441755}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6327433116168781002
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,6 @@ public class ChaseState : BaseState
 
         enemy.ChaseTarget(target);
 
-        Vector3 targetPosition = target.position;
-        targetPosition.y = 0f;
-
-        Vector3 enemyPosition = enemy.transform.position;
-        enemyPosition.y = 0f;
-
         if (Vector3.Distance(enemy.transform.position, target.position) <= enemy.attackRange)
         {
             enemy.ChangeState(new AttackState(enemy, target));

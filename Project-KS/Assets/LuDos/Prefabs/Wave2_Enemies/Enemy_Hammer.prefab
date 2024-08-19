@@ -2109,7 +2109,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
+  soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
 --- !u!54 &8060958798969485886
 Rigidbody:
   m_ObjectHideFlags: 0

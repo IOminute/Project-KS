@@ -1840,7 +1840,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   Rb: {fileID: 0}
   Castle: {fileID: 0}
-  soulPrefab: {fileID: 1841903857946417465, guid: a94c1afd365cc704a9874bc2fc51b3b5, type: 3}
+  soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
 --- !u!1 &131690
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,8 +6591,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3930904, y: 0.6067468, z: 0.12698092}
-  m_Center: {x: -1.6507534, y: -0.0023896946, z: 0.00819165}
+  m_Size: {x: 0.3930904, y: 0.7352557, z: 0.12698092}
+  m_Center: {x: -1.6507453, y: -0.0032314719, z: 0.008190838}
 --- !u!114 &6061061565592694534
 MonoBehaviour:
   m_ObjectHideFlags: 0

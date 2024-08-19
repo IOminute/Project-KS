@@ -25,7 +25,7 @@ public class AttackState : BaseState
 
         if (!enemy.IsAttacking && Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 0.5f)
         {
-            //Debug.Log("ChangeToChase");
+            Debug.Log("ChangeToChase");
             enemy.ChangeState(new ChaseState(enemy, target));
         }
     }
@@ -40,9 +40,9 @@ public class AttackState : BaseState
     {
         enemy.IsAttacking = true;
 
-        enemy.Attack(target.position);
+        enemy.Attack(target);
         
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         yield return new WaitForSeconds(enemy.attackCoolTime);
 
         enemy.IsAttacking = false;
