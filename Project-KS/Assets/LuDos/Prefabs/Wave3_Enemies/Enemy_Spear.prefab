@@ -1860,8 +1860,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.85, y: 0.3, z: 0.38}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2, y: 0.3, z: 0.38}
+  m_Center: {x: -0.13, y: 0, z: 0}
 --- !u!1 &5813656353286812971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,8 +2277,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.37, z: 0.2}
-  m_Center: {x: 0, y: 0.1, z: -0.03}
+  m_Size: {x: 0.04, y: 0.37, z: 0.2}
+  m_Center: {x: -0.1, y: 0.1, z: -0.03}
 --- !u!1 &5813656353286812989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,8 +2717,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.37, z: 0.2}
-  m_Center: {x: 0, y: 0.1, z: 0.03}
+  m_Size: {x: 0.04, y: 0.37, z: 0.2}
+  m_Center: {x: -0.1, y: 0.1, z: 0.03}
 --- !u!1 &5813656353286813015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,7 +2824,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5813656353287039357}
-  - component: {fileID: 4120682251296249650}
   m_Layer: 0
   m_Name: Bip001 Head
   m_TagString: Spear
@@ -2848,27 +2847,6 @@ Transform:
   - {fileID: 5813656353287039359}
   m_Father: {fileID: 5813656353287039331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4120682251296249650
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5813656353286813021}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.24, z: 0.2}
-  m_Center: {x: -0.13, y: -0.05, z: 0}
 --- !u!1 &5813656353286813023
 GameObject:
   m_ObjectHideFlags: 0
