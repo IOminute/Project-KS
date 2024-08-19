@@ -13,7 +13,6 @@ public class UnitChaseState : UnitBaseState
 
     public override void Enter()
     {
-        Debug.Log("ChaseStart");
     }
 
     public override void Update()

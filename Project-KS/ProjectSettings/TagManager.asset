@@ -22,6 +22,7 @@ TagManager:
   - Missile
   - Good_Knight
   - EnemyWeapon
+  - EnemyWeapon_Projectile
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,6 @@ public class UnitAttackState : UnitBaseState
 
     public override void Enter()
     {
-        Debug.Log("AttackStart");
         unit.attackCoroutine = unit.StartCoroutine(AttackCoroutine());
     }
 
@@ -28,14 +27,12 @@ public class UnitAttackState : UnitBaseState
 
         if (!unit.IsAttacking && Vector3.Distance(unit.transform.position, target.position) > unit.attackRange + 0.5f)
         {
-            Debug.Log("ChangeToChase");
             unit.ChangeState(new UnitChaseState(unit, target));
         }
     }
 
     public override void Exit()
     {
-        Debug.Log("AttackFin");
         unit.StopAttack();
     }
 
