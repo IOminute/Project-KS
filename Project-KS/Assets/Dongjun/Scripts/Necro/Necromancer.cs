@@ -10,12 +10,15 @@ public class Necromancer : MonoBehaviour
 
     static List<GameObject> spirits;
     static List<GameObject> allies;
+    private List<GameObject> boomList;
 
     public float maxMana = 1000;
     public float mana = 1000; //Temporary Value, It will be replaced with PlayerManager's Variable.
 
     private bool isSkillDoing;
     private bool isRushing;
+
+    public GameObject boomer;
 
     private WaitForSeconds waitOneSec;
     private WaitForSeconds waitHalfSec;
@@ -32,6 +35,7 @@ public class Necromancer : MonoBehaviour
     {
         spirits = new List<GameObject>();
         allies = new List<GameObject>();
+        boomList = new List<GameObject>();
         isSkillDoing = false;
         isRushing = false;
         waitOneSec = new WaitForSeconds(1f);
@@ -106,12 +110,24 @@ public class Necromancer : MonoBehaviour
         yield return waitOneSec;
         for (int i = 0; i < allies.Count; i++)
         {
-            //아군 킬
-            //아군 터진 자리에 데미지
+            GameObject boom = Instantiate(boomer, allies[i].transform.position, Quaternion.identity);
+            boomList.Add(boom);
+            allies[i].GetComponent<UnitController>().Die();
             allies.Remove(allies[i]);
         }
         isSkillDoing = false;
+        for (int i = 0; i < boomList.Count; i++)
+        {
+            StartCoroutine(DestroyBoom(boomList[i]));
+            boomList.Remove(boomList[i]);
+        }
         yield return null;
+    }
+
+    IEnumerator DestroyBoom(GameObject boomToDestroy)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(boomToDestroy);
     }
 
     void Revive(GameObject soul)

@@ -5769,6 +5769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMana: 1000
   mana: 1000
+  boomer: {fileID: 1012187174338727982, guid: 70d9022c4ac7dd84abaff3cd28e9d9ee, type: 3}
   Units:
   - {fileID: 8785228798272375996, guid: e7d535ab07379f6468669150ecccbfaf, type: 3}
   - {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
