@@ -23,6 +23,11 @@ public class Necromancer : MonoBehaviour
 
     public List<GameObject> Units;
 
+    private int enforceAmount = 0;
+    private int enforceAmountHealth = 0;
+    private int requireKindredPointToEnforce = 10;
+    private int requireKindredPointToOverMaxBodies = 100;
+
     void Start()
     {
         spirits = new List<GameObject>();
@@ -45,6 +50,9 @@ public class Necromancer : MonoBehaviour
             else if (UIManager.instance.GetCurrentBehaviourIndex() == 1) StartCoroutine(Rush());
             else if (UIManager.instance.GetCurrentBehaviourIndex() == 2) StartCoroutine(Explode());
         }
+
+        if (Input.GetKeyDown(KeyCode.Z)) Enforce();
+        if (Input.GetKeyDown(KeyCode.C)) OverMaxBodies();
     }
 
     IEnumerator Rise()
@@ -112,7 +120,8 @@ public class Necromancer : MonoBehaviour
 
         // 스폰 포지션에 아군 소환하기
         GameObject ally = Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
-
+        ally.GetComponent<UnitController>().damage += enforceAmount;
+        ally.GetComponent<UnitController>().health += enforceAmountHealth;
         spirits.Remove(soul);
 
         // 소환된 아군 리스트에 저장하기
@@ -164,5 +173,26 @@ public class Necromancer : MonoBehaviour
     public static void AllyDies(GameObject ally)
     {
         allies.Remove(ally);
+    }
+
+    void Enforce()
+    {
+        if (kindredPoint < requireKindredPointToEnforce)
+        {
+            print("Not enough Kindred Points!");
+            return;
+        }
+        enforceAmount += 5;
+        if (enforceAmount % 10 == 0) enforceAmountHealth += 50;
+    }
+
+    void OverMaxBodies()
+    {
+        if (kindredPoint < requireKindredPointToOverMaxBodies)
+        {
+            print("Not enough Kindred Points!");
+            return;
+        }
+        maxBodies += 10;
     }
 }
