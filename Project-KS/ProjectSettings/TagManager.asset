@@ -23,6 +23,7 @@ TagManager:
   - Good_Knight
   - EnemyWeapon
   - EnemyWeapon_Projectile
+  - PlayerWeapon_Projectile
   layers:
   - Default
   - TransparentFX

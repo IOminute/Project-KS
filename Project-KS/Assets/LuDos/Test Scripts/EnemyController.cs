@@ -156,6 +156,10 @@ public class EnemyController : MonoBehaviour
         Vector3 tmp = targetTransform.position;
         tmp.y += 2.5f;
 
+        if (WeaponPosition == null)
+        {
+            WeaponPosition = gameObject.transform;
+        }
         StartCoroutine(FireProjectileWithDelay(targetTransform, (tmp - WeaponPosition.position).normalized));
     }
 
@@ -228,6 +232,15 @@ public class EnemyController : MonoBehaviour
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
+            }
+        }
+        else if (other.CompareTag("PlayerWeapon_Projectile"))
+        {
+            PlayerWeapon_Projectile weapon = other.GetComponent<PlayerWeapon_Projectile>();
+            if (weapon != null)
+            {
+                TakeDamage(weapon.damage);
+                Destroy(other.gameObject);
             }
         }
         else if (other.CompareTag("Range_Long"))

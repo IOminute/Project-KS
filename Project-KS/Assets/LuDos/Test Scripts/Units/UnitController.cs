@@ -29,6 +29,9 @@ public class UnitController : MonoBehaviour
     [HideInInspector]
     public Coroutine attackCoroutine;
 
+    public GameObject Projectile;
+    public Transform WeaponPosition;
+
     private void Awake()
     {
         stateMachine = new UnitStateMachine();
@@ -85,10 +88,13 @@ public class UnitController : MonoBehaviour
         Rb.velocity = Vector3.zero;
     }
 
-    public virtual void Attack(Vector3 targetPosition)
+    public virtual void Attack(Transform targetTransform)
     {
         Stop();
 
+        animator.SetTrigger("Attack");
+
+        Vector3 targetPosition = targetTransform.position;
         targetPosition.y = 0f;
 
         Vector3 direction = (targetPosition - transform.position).normalized;
@@ -100,6 +106,32 @@ public class UnitController : MonoBehaviour
         }
 
         animator.SetTrigger("Attack");
+
+        Vector3 tmp = targetTransform.position;
+        tmp.y += 2.5f;
+
+        if (WeaponPosition == null)
+        {
+            WeaponPosition = gameObject.transform;
+        }
+        StartCoroutine(FireProjectileWithDelay(targetTransform, (tmp - WeaponPosition.position).normalized));
+    }
+    private IEnumerator FireProjectileWithDelay(Transform targetTransform, Vector3 direction)
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        if (Projectile != null)
+        {
+            Quaternion projectileRotation = Quaternion.LookRotation(direction);
+            GameObject projectile = Instantiate(Projectile, WeaponPosition.position + direction, projectileRotation);
+
+            PlayerWeapon_Projectile projectileScript = projectile.GetComponent<PlayerWeapon_Projectile>();
+
+            if (projectileScript != null)
+            {
+                projectileScript.Initialize(targetTransform, gameObject);
+            }
+        }
     }
 
     public void StopAttack()

@@ -40,9 +40,9 @@ public class UnitAttackState : UnitBaseState
     {
         unit.IsAttacking = true;
 
-        unit.Attack(target.position);
+        unit.Attack(target);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
         yield return new WaitForSeconds(unit.attackCoolTime);
 
         unit.IsAttacking = false;

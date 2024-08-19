@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 198161944035608776}
   - component: {fileID: 199708145313222842}
   - component: {fileID: 82090615308768026}
-  - component: {fileID: 6020272395655176931}
-  - component: {fileID: -5886283826384466571}
+  - component: {fileID: 5188689983653399573}
+  - component: {fileID: 291448276822216345}
   m_Layer: 0
-  m_Name: EnemyWeapon_Projectile
-  m_TagString: EnemyWeapon_Projectile
+  m_Name: UnitWeapon_Projectile
+  m_TagString: PlayerWeapon_Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4458906101981424}
@@ -4920,7 +4920,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!65 &6020272395655176931
+--- !u!65 &5188689983653399573
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4939,9 +4939,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.12857932, y: 0.11858198, z: 0.78846955}
-  m_Center: {x: 0.008312836, y: 0.00028673, z: -0.30119428}
---- !u!114 &-5886283826384466571
+  m_Size: {x: 0.1466357, y: 0.14294408, z: 0.7965266}
+  m_Center: {x: -0.0047066137, y: -0.008772679, z: -0.2925706}
+--- !u!114 &291448276822216345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550477657380252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc09e641b155ed849b2a2aae93dde2b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 354c27eece0b09741aa66d8af2bf781e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
@@ -9751,7 +9751,7 @@ Transform:
   m_GameObject: {fileID: 1983811055577964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.139, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9911,7 +9911,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.7931032, b: 1, a: 1}
+      maxColor: {r: 0.2627451, g: 0.9372549, b: 0.54509807, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
