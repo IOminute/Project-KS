@@ -3350,7 +3350,7 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 2
   attackCoolTime: 1
-  chaseRange: 15
+  chaseRange: 30
   attackRange: 5
   IsAttacking: 0
   IsDie: 0
@@ -3360,6 +3360,8 @@ MonoBehaviour:
   Rb: {fileID: 0}
   Castle: {fileID: 0}
   soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
+  Projectile: {fileID: 0}
+  WeaponPosition: {fileID: 0}
 --- !u!1 &191808
 GameObject:
   m_ObjectHideFlags: 0

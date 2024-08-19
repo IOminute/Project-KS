@@ -24,7 +24,15 @@ public class UnitChaseState : UnitBaseState
             unit.ChangeState(new UnitSelectedState(unit));
         }
 
-        unit.ChaseTarget(target);
+        if (target != null)
+        {
+            unit.ChaseTarget(target);
+        }
+        else
+        {
+            unit.ChangeState(new UnitIdleState(unit));
+            return;
+        }
 
         Vector3 targetPosition = target.position;
         targetPosition.y = 0f;

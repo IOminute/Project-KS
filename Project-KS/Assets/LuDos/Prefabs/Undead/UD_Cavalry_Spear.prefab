@@ -1494,7 +1494,7 @@ MonoBehaviour:
   damage: 10
   moveSpeed: 5
   attackCoolTime: 1
-  chaseRange: 15
+  chaseRange: 30
   attackRange: 8.5
   IsAttacking: 0
   IsDie: 0
@@ -1502,6 +1502,8 @@ MonoBehaviour:
   ClickedPosition: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   Rb: {fileID: 0}
+  Projectile: {fileID: 0}
+  WeaponPosition: {fileID: 0}
 --- !u!1 &3458686545696285281
 GameObject:
   m_ObjectHideFlags: 0

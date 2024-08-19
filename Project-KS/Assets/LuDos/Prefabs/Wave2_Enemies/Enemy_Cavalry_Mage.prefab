@@ -3896,9 +3896,9 @@ MonoBehaviour:
   health: 100
   damage: 10
   moveSpeed: 5
-  attackCoolTime: 1
-  chaseRange: 15
-  attackRange: 15
+  attackCoolTime: 2
+  chaseRange: 30
+  attackRange: 30
   IsAttacking: 0
   IsDie: 0
   IsRangeShort: 0

@@ -23,11 +23,13 @@ public class EnemyWeapon_Projectile : MonoBehaviour
     }
     private void Start()
     {
-        Vector3 tmp = targetTransform.position;
-        tmp.y += 2.5f;
-
-        direction = (tmp - transform.position).normalized;
-        // direction.y = targetTransform.position.y;
+        if (targetTransform != null)
+        {
+            Vector3 tmp = targetTransform.position;
+            tmp.y += 2.5f;
+            direction = (tmp - transform.position).normalized;
+            Destroy(gameObject, 5.0f);
+        }
     }
 
     private void Update()
@@ -37,7 +39,9 @@ public class EnemyWeapon_Projectile : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        else
+        {
         transform.position += direction * speed * Time.deltaTime;
+        }
     }
 }

@@ -31,6 +31,7 @@ public class Castle : MonoBehaviour
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
+                Destroy(other.gameObject);
             }
         }
         else if (other.CompareTag("PlayerWeapon_Projectile"))
@@ -39,6 +40,7 @@ public class Castle : MonoBehaviour
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
+                Destroy(other.gameObject);
             }
         }
     }

@@ -18,7 +18,15 @@ public class ChaseState : BaseState
     {
         if (enemy.IsDie) return;
 
-        enemy.ChaseTarget(target);
+        if (target != null)
+        {
+            enemy.ChaseTarget(target);
+        }
+        else
+        {
+            enemy.ChangeState(new MoveToCastleState(enemy));
+            return;
+        }
 
         if (Vector3.Distance(enemy.transform.position, target.position) <= enemy.attackRange)
         {
