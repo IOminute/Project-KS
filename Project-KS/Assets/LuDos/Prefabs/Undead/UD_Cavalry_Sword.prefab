@@ -128,7 +128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5126416807252997654}
   - component: {fileID: 7265145050835071301}
-  - component: {fileID: 1039034037146681077}
   m_Layer: 0
   m_Name: UD_Units_body_F
   m_TagString: PlayerUnit
@@ -222,27 +221,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.077982634, y: 0.082648546, z: 0.011294872}
     m_Extent: {x: 0.5145639, y: 0.2938417, z: 0.4455311}
   m_DirtyAABB: 0
---- !u!65 &1039034037146681077
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108236991377948271}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.4217452, y: 0.72367585, z: 0.89881504}
-  m_Center: {x: 0.00084112585, y: -0.108113736, z: 1.3662014}
 --- !u!1 &210228825555665669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,8 +2055,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34596875, y: 0.46647143, z: 0.23925766}
-  m_Center: {x: -0.06388043, y: 0.28480205, z: -0.03020694}
+  m_Size: {x: 0.3459687, y: 0.101198345, z: 0.23925766}
+  m_Center: {x: -0.06388041, y: 0.46743807, z: -0.030206967}
 --- !u!1 &3777544391146564798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,8 +2205,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.54309213, y: 0.30037978, z: 0.25487462}
-  m_Center: {x: -0.16512574, y: -0.06594617, z: -0.022919467}
+  m_Size: {x: 0.078640044, y: 0.30037978, z: 0.25487462}
+  m_Center: {x: -0.39735228, y: -0.065946095, z: -0.022919605}
 --- !u!1 &3777544391146564806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,8 +2869,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3200589, y: 0.48181695, z: 0.29409507}
-  m_Center: {x: -0.054764055, y: 0.28292167, z: 0.04639569}
+  m_Size: {x: 0.3200589, y: 0.08391085, z: 0.29409507}
+  m_Center: {x: -0.054764476, y: 0.48187557, z: 0.04639571}
 --- !u!1 &3777544391146564846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,8 +3018,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49044126, y: 0.3280458, z: 0.2873113}
-  m_Center: {x: -0.20281135, y: -0.023310209, z: -0.011406}
+  m_Size: {x: 0.09411351, y: 0.3280458, z: 0.2873113}
+  m_Center: {x: -0.40097424, y: -0.023310186, z: -0.01140605}
 --- !u!1 &3777544391146564854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,8 +3947,8 @@ GameObject:
   - component: {fileID: 4544071644392519595}
   - component: {fileID: 3004752140983715547}
   - component: {fileID: 2129231776420012267}
-  - component: {fileID: 9214642404842854407}
   - component: {fileID: 7030373282214831621}
+  - component: {fileID: 2746562089894115888}
   m_Layer: 0
   m_Name: UD_weapon_Sword_C
   m_TagString: PlayerWeapon
@@ -4043,7 +4021,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9214642404842854407
+--- !u!114 &7030373282214831621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574844418709069420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7919b95145230478e517a4bb01bd74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+--- !u!65 &2746562089894115888
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4058,25 +4049,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.98196834, y: 0.55448014, z: 0.13648254}
-  m_Center: {x: -0.6048589, y: 0.011764088, z: 0.006575185}
---- !u!114 &7030373282214831621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4574844418709069420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7919b95145230478e517a4bb01bd74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
+  m_Size: {x: 0.9872611, y: 0.083629504, z: 0.4395395}
+  m_Center: {x: -0.60220784, y: 0.0048174825, z: -0.010234918}
 --- !u!1 &4737747287799267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,8 +5252,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.68051517, y: 1.2303865, z: 0.5278378}
-  m_Center: {x: -0.0000043809414, y: -0.015934825, z: 1.0982386}
+  m_Size: {x: 0.68051517, y: 1.4031796, z: 0.9374695}
+  m_Center: {x: -0.0000043710074, y: -0.102331676, z: 1.3030554}
 --- !u!1 &6970361541083902063
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5528,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5979239273879860675}
   - component: {fileID: 8563343399291783490}
-  - component: {fileID: 6460235748351337332}
   m_Layer: 0
   m_Name: UD_Units_head_D
   m_TagString: PlayerUnit
@@ -5627,27 +5604,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.14204668, y: -0.0080964565, z: -0.00000010430813}
     m_Extent: {x: 0.15389921, y: 0.15426287, z: 0.22649482}
   m_DirtyAABB: 0
---- !u!65 &6460235748351337332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7133287932967192537}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.46462768, y: 0.39109346, z: 0.37809563}
-  m_Center: {x: 0.032373115, y: -0.20172916, z: 2.031555}
 --- !u!1 &7804967506273945807
 GameObject:
   m_ObjectHideFlags: 0

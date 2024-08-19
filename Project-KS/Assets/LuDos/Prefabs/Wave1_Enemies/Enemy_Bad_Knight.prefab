@@ -325,8 +325,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49937296, y: 0.43579546, z: 0.77360445}
-  m_Center: {x: 0.0016076267, y: 0.043089062, z: 0.8732225}
+  m_Size: {x: 0.49937296, y: 0.43579546, z: 1.0564286}
+  m_Center: {x: 0.0016076168, y: 0.043089047, z: 1.0146343}
 --- !u!1 &110266
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +410,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.4230777, z: 0.19364955}
-  m_Center: {x: -0.050000012, y: 0.10244571, z: 0.027487978}
+  m_Size: {x: 0.036476612, y: 0.4230777, z: 0.19364955}
+  m_Center: {x: -0.081761725, y: 0.10244568, z: 0.027487995}
 --- !u!1 &117596
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +574,6 @@ GameObject:
   m_Component:
   - component: {fileID: 483498}
   - component: {fileID: 13750334}
-  - component: {fileID: 410222586046290838}
   m_Layer: 0
   m_Name: ELF_Units_Head_B
   m_TagString: Bad_Knight
@@ -652,27 +651,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.4745103, y: -0.045533545, z: -0.000000074505806}
     m_Extent: {x: 0.23005271, y: 0.21630093, z: 0.13331826}
   m_DirtyAABB: 0
---- !u!65 &410222586046290838
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120958}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.23284608, y: 0.4020964, z: 0.37809762}
-  m_Center: {x: -0.00000072784553, y: -0.0791308, z: -0.07501213}
 --- !u!1 &120972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,8 +2265,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.100002855, y: 0.4222987, z: 0.18058045}
-  m_Center: {x: -0.05000144, y: 0.10899209, z: -0.031544883}
+  m_Size: {x: 0.049690448, y: 0.42229864, z: 0.18058044}
+  m_Center: {x: -0.07515761, y: 0.10899206, z: -0.031544883}
 --- !u!1 &152538
 GameObject:
   m_ObjectHideFlags: 0

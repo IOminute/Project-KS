@@ -170,8 +170,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5396451, y: 0.34222686, z: 0.25501716}
-  m_Center: {x: -0.18007512, y: -0.020301795, z: 0.029100172}
+  m_Size: {x: 0.09121374, y: 0.34222686, z: 0.25501716}
+  m_Center: {x: -0.4042896, y: -0.020301772, z: 0.029100113}
 --- !u!1 &105388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,8 +1697,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3082209, y: 0.45049784, z: 0.24074222}
-  m_Center: {x: -0.05430072, y: 0.2931618, z: 0.023002218}
+  m_Size: {x: 0.30822092, y: 0.09289347, z: 0.24074224}
+  m_Center: {x: -0.054301597, y: 0.47196501, z: 0.023002243}
 --- !u!1 &129968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,7 +2316,6 @@ GameObject:
   m_Component:
   - component: {fileID: 430362}
   - component: {fileID: 13748832}
-  - component: {fileID: 4068806605358839026}
   m_Layer: 0
   m_Name: ELF_Units_Head_I
   m_TagString: Cavarly_Spear
@@ -2394,27 +2393,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5489837, y: 0.008306697, z: -0.009559706}
     m_Extent: {x: 0.2889161, y: 0.21811813, z: 0.17712095}
   m_DirtyAABB: 0
---- !u!65 &4068806605358839026
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138082}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.4112371, y: 0.5859041, z: 0.5517349}
-  m_Center: {x: 0.030042645, y: 0.5312693, z: 0.14414492}
 --- !u!1 &140938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2839,6 @@ GameObject:
   m_Component:
   - component: {fileID: 444282}
   - component: {fileID: 13760850}
-  - component: {fileID: 8453581866557690648}
   m_Layer: 0
   m_Name: ELF_Units_Body_C
   m_TagString: Cavarly_Spear
@@ -2951,27 +2928,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.07081261, y: 0.04722187, z: 0.009581685}
     m_Extent: {x: 0.61909115, y: 0.389021, z: 0.5338906}
   m_DirtyAABB: 0
---- !u!65 &8453581866557690648
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152382}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.49260372, y: 0.9409848, z: 1.050411}
-  m_Center: {x: 0.057674795, y: -0.07401028, z: 1.3133969}
 --- !u!1 &154996
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,8 +3342,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.30709213, y: 0.49725497, z: 0.22575894}
-  m_Center: {x: -0.06423086, y: 0.2683444, z: -0.03004834}
+  m_Size: {x: 0.33767286, y: 0.070762016, z: 0.22575894}
+  m_Center: {x: -0.048939973, y: 0.48158598, z: -0.030048473}
 --- !u!1 &161312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4588,8 +4544,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.52165914, y: 0.3425646, z: 0.26146615}
-  m_Center: {x: -0.1740302, y: -0.0062363027, z: -0.00038502537}
+  m_Size: {x: 0.08097106, y: 0.3425646, z: 0.26146615}
+  m_Center: {x: -0.3943749, y: -0.006236238, z: -0.000385152}
 --- !u!1 &185354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,8 +5559,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.769881, y: 1.3270097, z: 0.6638486}
-  m_Center: {x: -0.0003972451, y: -0.03068324, z: 1.0149277}
+  m_Size: {x: 0.769881, y: 1.3270097, z: 1.131416}
+  m_Center: {x: -0.0003972451, y: -0.03068324, z: 1.2487125}
 --- !u!1 &3447125404764593915
 GameObject:
   m_ObjectHideFlags: 0

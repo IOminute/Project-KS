@@ -470,7 +470,6 @@ GameObject:
   m_Component:
   - component: {fileID: 499088}
   - component: {fileID: 13712612}
-  - component: {fileID: 164832368408381635}
   m_Layer: 0
   m_Name: ELF_Units_Head_L
   m_TagString: Cavarly_Sword
@@ -548,27 +547,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5225744, y: 0.007186979, z: -0.011301681}
     m_Extent: {x: 0.26057506, y: 0.21790141, z: 0.17561969}
   m_DirtyAABB: 0
---- !u!65 &164832368408381635
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108896}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.4065069, y: 0.5377201, z: 0.5390625}
-  m_Center: {x: 0.03031413, y: 0.50913864, z: 0.13741425}
 --- !u!1 &108992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,8 +1820,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33302012, y: 0.48824835, z: 0.258443}
-  m_Center: {x: -0.049776807, y: 0.2703582, z: -0.024453366}
+  m_Size: {x: 0.33302012, y: 0.09545644, z: 0.258443}
+  m_Center: {x: -0.04977675, y: 0.46675134, z: -0.024453392}
 --- !u!1 &135562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,8 +1969,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.43492824, y: 0.38007277, z: 0.20435734}
-  m_Center: {x: -0.21442126, y: -0.012611408, z: -0.01682944}
+  m_Size: {x: 0.107680656, y: 0.38007277, z: 0.20435736}
+  m_Center: {x: -0.37804574, y: -0.012611351, z: -0.016829534}
 --- !u!1 &144630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,8 +2502,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33589345, y: 0.43781167, z: 0.25854924}
-  m_Center: {x: -0.07608436, y: 0.28109488, z: 0.026326103}
+  m_Size: {x: 0.33589345, y: 0.09934026, z: 0.25854924}
+  m_Center: {x: -0.07608527, y: 0.45033154, z: 0.026326098}
 --- !u!1 &161500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,8 +2774,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4601581, y: 0.3266489, z: 0.26760817}
-  m_Center: {x: -0.26992115, y: 0.011145094, z: 0.012125246}
+  m_Size: {x: 0.115752436, y: 0.3266489, z: 0.2676082}
+  m_Center: {x: -0.44212127, y: 0.011145108, z: 0.012125202}
 --- !u!1 &165774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4334,7 +4312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 460814}
   - component: {fileID: 13779434}
-  - component: {fileID: 5700310736318930297}
   m_Layer: 0
   m_Name: ELF_Units_Body_E
   m_TagString: Cavarly_Sword
@@ -4424,27 +4401,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.07125312, y: 0.049401924, z: 0.009291232}
     m_Extent: {x: 0.6134929, y: 0.39846128, z: 0.546869}
   m_DirtyAABB: 0
---- !u!65 &5700310736318930297
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194458}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5490948, y: 0.9581456, z: 1.1804764}
-  m_Center: {x: 0.0041147918, y: -0.07610899, z: 1.3834124}
 --- !u!1 &194856
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,8 +5834,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.769881, y: 1.2218655, z: 0.63467294}
-  m_Center: {x: -0.0003972451, y: 0.04433566, z: 1.0546304}
+  m_Size: {x: 0.769881, y: 1.4467555, z: 1.067771}
+  m_Center: {x: -0.0003972451, y: -0.06810947, z: 1.2711798}
 --- !u!1 &6263563026691313950
 GameObject:
   m_ObjectHideFlags: 0

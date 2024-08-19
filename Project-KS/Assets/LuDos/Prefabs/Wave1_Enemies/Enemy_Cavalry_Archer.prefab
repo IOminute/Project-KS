@@ -1667,7 +1667,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1262434180125028452}
   - component: {fileID: 1262434180122208174}
-  - component: {fileID: 936508986826401915}
   m_Layer: 0
   m_Name: ELF_Units_Head_C
   m_TagString: Cavarly_Archer
@@ -1745,27 +1744,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.47819608, y: 0.032522127, z: -0.007851452}
     m_Extent: {x: 0.19716458, y: 0.18358468, z: 0.17093517}
   m_DirtyAABB: 0
---- !u!65 &936508986826401915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262434180125322308}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.43491596, y: 0.4760605, z: 0.5204503}
-  m_Center: {x: 0.03120812, y: 0.5555121, z: 0.18880048}
 --- !u!1 &1262434180125322310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,7 +2660,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1262434180125028474}
   - component: {fileID: 1262434180122208188}
-  - component: {fileID: 7279501065853653562}
   m_Layer: 0
   m_Name: ELF_Units_Body_B
   m_TagString: Cavarly_Archer
@@ -2772,27 +2749,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.080809504, y: 0.047755703, z: 0.009581685}
     m_Extent: {x: 0.6201097, y: 0.38699532, z: 0.5338906}
   m_DirtyAABB: 0
---- !u!65 &7279501065853653562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262434180125322330}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.44380453, y: 0.9372521, z: 1.0898163}
-  m_Center: {x: 0.025157645, y: -0.07316378, z: 1.3423433}
 --- !u!1 &1262434180125322332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,8 +3627,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.35034665, y: 0.5489743, z: 0.21923843}
-  m_Center: {x: -0.07416195, y: 0.2533374, z: -0.017690409}
+  m_Size: {x: 0.35034665, y: 0.0928913, z: 0.21923843}
+  m_Center: {x: -0.074161716, y: 0.48137516, z: -0.017690454}
 --- !u!1 &1262434180125322506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,8 +4029,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3842327, y: 0.33208692, z: 0.20812616}
-  m_Center: {x: -0.23850499, y: -0.010892564, z: 0.029554226}
+  m_Size: {x: 0.070655204, y: 0.37528148, z: 0.2907964}
+  m_Center: {x: -0.3952901, y: -0.03248966, z: -0.0069038114}
 --- !u!1 &1262434180125322562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,8 +4434,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.30375254, y: 0.4929717, z: 0.21528898}
-  m_Center: {x: -0.07008988, y: 0.2713486, z: 0.0038363305}
+  m_Size: {x: 0.32644787, y: 0.079396516, z: 0.21528898}
+  m_Center: {x: -0.058743697, y: 0.4807847, z: 0.003836301}
 --- !u!1 &1262434180125322586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,8 +4842,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.485483, y: 0.27799553, z: 0.28609607}
-  m_Center: {x: -0.2003936, y: 0.01237865, z: 0.014426925}
+  m_Size: {x: 0.09000326, y: 0.3337661, z: 0.28609607}
+  m_Center: {x: -0.39813468, y: -0.034106873, z: 0.014426809}
 --- !u!1 &1262434180125322610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,8 +5642,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.769881, y: 1.9501393, z: 1.0223163}
-  m_Center: {x: -0.00039723516, y: -0.32121706, z: 1.2508414}
+  m_Size: {x: 0.769881, y: 1.4946513, z: 1.0223163}
+  m_Center: {x: -0.0003972451, y: -0.09347315, z: 1.2508414}
 --- !u!1 &3751105768359188301
 GameObject:
   m_ObjectHideFlags: 0

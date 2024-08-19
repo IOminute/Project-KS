@@ -1336,8 +1336,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5290208, y: 0.51419514, z: 1.0701835}
-  m_Center: {x: 0.0104907155, y: 0.024859399, z: 0.68450224}
+  m_Size: {x: 0.5290208, y: 0.51419514, z: 1.4545504}
+  m_Center: {x: 0.0104907155, y: 0.024859408, z: 0.8766863}
 --- !u!1 &130208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,8 +1572,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11, y: 0.4409929, z: 0.1954116}
-  m_Center: {x: -0.05000001, y: 0.093826495, z: 0.024029935}
+  m_Size: {x: 0.033889186, y: 0.4409929, z: 0.1954116}
+  m_Center: {x: -0.08805554, y: 0.093826495, z: 0.024029944}
 --- !u!1 &138698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,8 +1626,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1000032, y: 0.3968085, z: 0.2199482}
-  m_Center: {x: -0.050001606, y: 0.09610355, z: -0.016858554}
+  m_Size: {x: 0.035233468, y: 0.39680848, z: 0.2199482}
+  m_Center: {x: -0.08238643, y: 0.09610352, z: -0.01685855}
 --- !u!1 &142224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1924,6 @@ GameObject:
   m_Component:
   - component: {fileID: 482660}
   - component: {fileID: 13764122}
-  - component: {fileID: 6453732435769386673}
   m_Layer: 0
   m_Name: ELF_Units_Head_N
   m_TagString: Mage
@@ -2002,27 +2001,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.55780923, y: 0.0060095787, z: -0.000000044703484}
     m_Extent: {x: 0.27072173, y: 0.19078104, z: 0.13331826}
   m_DirtyAABB: 0
---- !u!65 &6453732435769386673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155672}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.23284611, y: 0.47309068, z: 0.33358288}
-  m_Center: {x: -0.0000007854923, y: -0.0064244866, z: -0.029943224}
 --- !u!1 &156850
 GameObject:
   m_ObjectHideFlags: 0
