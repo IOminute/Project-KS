@@ -243,6 +243,14 @@ public class EnemyController : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.CompareTag("KnightWeapon"))
+        {
+            KnightWeapon weapon = other.GetComponent<KnightWeapon>();
+            if (weapon != null)
+            {
+                TakeDamage(weapon.damage);
+            }
+        }
         else if (other.CompareTag("Range_Long"))
         {
             if (soulIndex == 0 || soulIndex == 2 || soulIndex == 3 || soulIndex == 7)

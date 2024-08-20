@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
+
 public class KnightController : MonoBehaviour
 {
+    public float damage = 20f;
     private float runSpeed = 10f;
     private float dashSpeed = 30f;
     private float dashDuration = 0.4f;
@@ -13,6 +15,8 @@ public class KnightController : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody rb;
     private Animator animator;
+
+    public Transform cameraTransform; // 카메라의 Transform 참조
 
     private void Start()
     {
@@ -34,40 +38,36 @@ public class KnightController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        moveDirection = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
+        forward.y = 0f;
+        right.y = 0f;
 
-        // Shift 키를 눌렀을 때 대쉬 실행
+        forward.Normalize();
+        right.Normalize();
+
+        moveDirection = (forward * moveVertical + right * moveHorizontal).normalized;
+
+        // 대쉬 입력 처리
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
         {
             StartCoroutine(Dash());
             return;
         }
 
-        // WASD 키를 눌렀을 때 Run 애니메이션 실행
+        // 이동 입력이 있을 때 즉시 이동하고 애니메이션 변경
         if (moveDirection.magnitude > 0.1f)
         {
-            print("Run");
             animator.SetTrigger("Run");
+            transform.rotation = Quaternion.LookRotation(moveDirection);
+            Vector3 velocity = moveDirection * runSpeed;
+            rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
         }
         else
         {
-            print("Idle");
             animator.SetTrigger("Idle");
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
-
-        // 캐릭터 이동 처리
-        float currentSpeed = runSpeed;
-
-        Vector3 velocity = moveDirection * currentSpeed;
-        rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
-
-        if (moveDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
-            rb.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1440 * Time.deltaTime);
-        }
-
-        animator.SetFloat("Speed", rb.velocity.magnitude);
     }
 
     private IEnumerator Dash()
@@ -79,7 +79,7 @@ public class KnightController : MonoBehaviour
         Vector3 dashDirection = moveDirection;
         rb.velocity = dashDirection * dashSpeed;
 
-        animator.SetTrigger("Dash");  // Dash 애니메이션 트리거 설정
+        animator.SetTrigger("Dash");
 
         while (Time.time < startTime + dashDuration)
         {
@@ -93,8 +93,7 @@ public class KnightController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            animator.SetTrigger("Attack");  // Attack 애니메이션 트리거 설정
-            // 공격 로직 추가
+            animator.SetTrigger("Attack");
         }
     }
 
@@ -102,8 +101,7 @@ public class KnightController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            animator.SetTrigger("Skill");  // Skill 애니메이션 트리거 설정
-            // 스킬 로직 추가
+            animator.SetTrigger("Skill");
         }
     }
 }
