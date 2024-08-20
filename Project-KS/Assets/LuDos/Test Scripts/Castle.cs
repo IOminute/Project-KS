@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class Castle : MonoBehaviour
 {
+    public Image hpBar;
+
     bool isGameOver = false;
     float health = 1000;
 
@@ -13,7 +17,7 @@ public class Castle : MonoBehaviour
         if (!isGameOver)
         {
             health -= damageAmount;
-
+            hpBar.DOFillAmount(health / 1000, 0.2f).SetEase(Ease.OutSine);
             if (health <= 0)
             {
                 health = 0;
