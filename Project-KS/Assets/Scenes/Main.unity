@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6481052154504245072, guid: 202457bb2e5a21245ba287859b535486, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -432,6 +436,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: 1041302958189658919, guid: aec1cb62dd6da6947bd8bb44ef7639e8, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 1080574828725025252, guid: aec1cb62dd6da6947bd8bb44ef7639e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.35
@@ -1336,6 +1344,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (4)
@@ -1457,6 +1469,10 @@ PrefabInstance:
     - target: {fileID: 3458686545696285279, guid: 0441a214a59e0c640ac53d9af05e5c3d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431239078477877111, guid: 0441a214a59e0c640ac53d9af05e5c3d, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1629,6 +1645,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (3)
@@ -1695,6 +1715,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (5)
@@ -1761,6 +1785,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -6781329228077100508, guid: 4982beab906956d4c8cabb0c4d362265, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 3777544391146139922, guid: 4982beab906956d4c8cabb0c4d362265, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.14344609
@@ -1831,6 +1859,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (5)
@@ -1897,6 +1929,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (3)
@@ -2172,6 +2208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -2263950396960541483, guid: 68992a8297640a042980e16e66f4185b, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 1468075056679145672, guid: 68992a8297640a042980e16e66f4185b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.556555
@@ -2238,6 +2278,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (4)
@@ -2340,6 +2384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: 1441160326870981332, guid: f8661d7fe80c0e94394e262bf9877693, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8117393667442548512, guid: f8661d7fe80c0e94394e262bf9877693, type: 3}
       propertyPath: m_Name
       value: Enemy_Bad_Knight
@@ -2695,6 +2743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864806121125088685, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2788,6 +2840,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight
@@ -2982,6 +3038,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (1)
@@ -3679,6 +3739,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (1)
@@ -3824,6 +3888,10 @@ PrefabInstance:
     - target: {fileID: 3648576076233091207, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: attackCoolTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730285227058226446, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 6305222034549825873, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: m_Size.x
@@ -4100,6 +4168,10 @@ PrefabInstance:
     - target: {fileID: 3648576076233091207, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: attackCoolTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730285227058226446, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 6305222034549825873, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: m_Size.x
@@ -4520,6 +4592,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (6)
@@ -4586,6 +4662,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: 4644912863326036136, guid: 5281ecd7e41fec246b7bc17d734c64e0, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 9138527073741717334, guid: 5281ecd7e41fec246b7bc17d734c64e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.04345
@@ -4691,6 +4771,10 @@ PrefabInstance:
     - target: {fileID: 3648576076233091207, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: attackCoolTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730285227058226446, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 6305222034549825873, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: m_Size.x
@@ -5838,6 +5922,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: 1759756363732540210, guid: e7d535ab07379f6468669150ecccbfaf, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8785228798272016540, guid: e7d535ab07379f6468669150ecccbfaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.243446
@@ -6293,6 +6381,10 @@ PrefabInstance:
     - target: {fileID: 3648576076233091207, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: attackCoolTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730285227058226446, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 6305222034549825873, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: m_Size.x
@@ -6998,6 +7090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864806121125088685, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7575,6 +7671,10 @@ PrefabInstance:
     - target: {fileID: 1959645154584670203, guid: ef6c1105d99c34c40bf879744476c03b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045131358747613411, guid: ef6c1105d99c34c40bf879744476c03b, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9066,6 +9166,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -4028841045406856900, guid: d093c8c88279907438e6a0e895401b3e, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 1697098614858557764, guid: d093c8c88279907438e6a0e895401b3e, type: 3}
       propertyPath: damage
       value: 20
@@ -9381,6 +9485,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864806121125088685, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9399,6 +9507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (2)
@@ -9823,6 +9935,10 @@ PrefabInstance:
     - target: {fileID: 3458686545696285279, guid: 0441a214a59e0c640ac53d9af05e5c3d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431239078477877111, guid: 0441a214a59e0c640ac53d9af05e5c3d, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10491,6 +10607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -6942897506928916910, guid: 75d24d0f3cd3fe240ab08a614b7dbb0e, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: -419992371670834098, guid: 75d24d0f3cd3fe240ab08a614b7dbb0e, type: 3}
       propertyPath: chaseRange
       value: 30
@@ -11491,6 +11611,10 @@ PrefabInstance:
       propertyPath: attackCoolTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5730285227058226446, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 6305222034549825873, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
       propertyPath: m_Size.x
       value: 1.1405575
@@ -11744,6 +11868,10 @@ PrefabInstance:
     - target: {fileID: 7153411807026905221, guid: 5efd882302fab3a40b982f8a8bf8acfe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.142
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002311892663902690, guid: 5efd882302fab3a40b982f8a8bf8acfe, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12876,6 +13004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (7)
@@ -13676,6 +13808,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8431239078477877111, guid: 0441a214a59e0c640ac53d9af05e5c3d, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14045,6 +14181,10 @@ PrefabInstance:
     - target: {fileID: 3075340329877348918, guid: fcb1725292bb9da4491ffc426c5d7ca1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260302402183815509, guid: fcb1725292bb9da4491ffc426c5d7ca1, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14582,6 +14722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864806121125088685, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14850,6 +14994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (7)
@@ -15452,6 +15600,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight
@@ -15513,6 +15665,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: 8121163979398113359, guid: 152fb8f7fcbb4514ab128ab402881178, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 9086196562348728789, guid: 152fb8f7fcbb4514ab128ab402881178, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9
@@ -17029,6 +17185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -2213572955503199877, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 8534261130956806706, guid: bf32c08e5259e0b4b9a4689d33582183, type: 3}
       propertyPath: m_Name
       value: Enemy_Good_Knight (6)
@@ -17616,6 +17776,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964308385}
     m_Modifications:
+    - target: {fileID: -9073865781488641225, guid: 8c88df8fd6f7e5e4aa6c355791fb3371, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 127006851977033125, guid: 8c88df8fd6f7e5e4aa6c355791fb3371, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9999995
@@ -17701,6 +17865,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1770308269}
     m_Modifications:
+    - target: {fileID: -5935058777239919665, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4970290565428668003, guid: 6f76ed4370028b64b8078b1b2b8ad72a, type: 3}
       propertyPath: m_Name
       value: UD_Bad_Knight (2)
@@ -17898,6 +18066,10 @@ PrefabInstance:
     - target: {fileID: 3830755503916906310, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864806121125088685, guid: d2d9cfc0ade9db94785d4138479289f9, type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
