@@ -12341,6 +12341,14 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 712743017}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: swordSpawnPoint
+      value: 
+      objectReference: {fileID: 1369823725}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: swordSlashPrefab
+      value: 
+      objectReference: {fileID: 3011490376764965999, guid: af7b7d290e73cb847ae1dd4bea432abe, type: 3}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.900658
@@ -12393,6 +12401,11 @@ PrefabInstance:
 --- !u!4 &1369823724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+  m_PrefabInstance: {fileID: 1369823723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1369823725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1315514073102066161, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
   m_PrefabInstance: {fileID: 1369823723}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381319546

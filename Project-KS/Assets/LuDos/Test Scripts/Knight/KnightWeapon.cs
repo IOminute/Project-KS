@@ -15,5 +15,9 @@ public class KnightWeapon : MonoBehaviour
         {
             damage = knightController.damage;
         }
+        else
+        {
+            damage = 20f;
+        }
     }
 }

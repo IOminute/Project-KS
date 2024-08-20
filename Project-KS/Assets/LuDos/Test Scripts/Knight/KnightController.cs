@@ -4,15 +4,18 @@ using System.Collections;
 public class KnightController : MonoBehaviour
 {
     public float damage = 20f;
-    private float runSpeed = 15f;
+    private float runSpeed = 20f;
     private float dashSpeed = 40f;
     private float dashDuration = 0.4f;
     private float dashCooldown = 1f;
     private float attackCooldown = 3f;
+    private float skillCooldown = 2f;
     private float lastAttackTime;
+    private float lastSkillTime;
 
     private bool isDashing;
     private bool isAttacking;
+    private bool isUsingSkill;
     private float lastDashTime;
 
     private Vector3 moveDirection;
@@ -21,11 +24,15 @@ public class KnightController : MonoBehaviour
 
     public Transform cameraTransform;
 
+    public GameObject swordSlashPrefab;
+    public Transform swordSpawnPoint;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         lastAttackTime = -attackCooldown;
+        lastSkillTime = -skillCooldown;
     }
 
     private void Update()
@@ -37,7 +44,7 @@ public class KnightController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (isDashing || isAttacking) return;
+        if (isDashing || isAttacking || isUsingSkill) return;
 
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
@@ -76,6 +83,8 @@ public class KnightController : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        if (isUsingSkill) yield break;
+
         isDashing = true;
         float startTime = Time.time;
         lastDashTime = Time.time;
@@ -96,7 +105,7 @@ public class KnightController : MonoBehaviour
 
     private void HandleAttack()
     {
-        if (isDashing || Time.time < lastAttackTime + attackCooldown) return;
+        if (isDashing || isUsingSkill || Time.time < lastAttackTime + attackCooldown) return;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -149,16 +158,35 @@ public class KnightController : MonoBehaviour
 
     private void HandleSkill()
     {
+        if (Time.time < lastSkillTime + skillCooldown || isAttacking || isDashing) return;
+
         if (Input.GetMouseButtonDown(1))
         {
-            animator.SetBool("isUsingSkill", true);
-            StartCoroutine(ResetSkillTrigger());
+            rb.velocity = Vector3.zero;
+            lastSkillTime = Time.time;
+            StartCoroutine(LaunchSwordSlash());
         }
     }
 
-    private IEnumerator ResetSkillTrigger()
+    private IEnumerator LaunchSwordSlash()
     {
+        isUsingSkill = true;
+        animator.SetBool("IsUsingSkill", true);
+
+        yield return new WaitForSeconds(0.7f);
+
+        Quaternion rotation = transform.rotation * Quaternion.Euler(0, -90f, 0);
+        GameObject swordSlash = Instantiate(swordSlashPrefab, swordSpawnPoint.position, rotation);
+
+        SwordSlash slashScript = swordSlash.GetComponent<SwordSlash>();
+
+        if (slashScript != null)
+        {
+            slashScript.Initialize(transform.forward);
+        }
+
         yield return new WaitForSeconds(0.5f);
-        animator.SetBool("isUsingSkill", false);
+        animator.SetBool("IsUsingSkill", false);
+        isUsingSkill = false;
     }
 }
