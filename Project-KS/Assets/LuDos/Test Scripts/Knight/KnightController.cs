@@ -117,7 +117,7 @@ public class KnightController : MonoBehaviour
 
             if (i == 0)
             {
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.4f);
             }
             if (i == 1)
             {
@@ -132,7 +132,17 @@ public class KnightController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(1.5f);
+        Vector3 jumpDirection = transform.forward * 30f + Vector3.up * 10f;
+        rb.velocity = jumpDirection;
+
+        yield return new WaitForSeconds(0.4f);
+
+        rb.velocity = new Vector3(rb.velocity.x, -30f, rb.velocity.z);
+        yield return new WaitForSeconds(0.1f);
+
+        rb.velocity = Vector3.zero;
+
+        yield return new WaitForSeconds(0.2f);
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
     }
