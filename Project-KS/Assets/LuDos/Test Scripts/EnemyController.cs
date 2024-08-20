@@ -270,7 +270,7 @@ public class EnemyController : MonoBehaviour
         if (!IsDie)
         {
             health -= damageAmount;
-            Debug.Log("Enemy: " + health);
+            // Debug.Log("Enemy: " + health);
 
             if (health <= 0)
             {

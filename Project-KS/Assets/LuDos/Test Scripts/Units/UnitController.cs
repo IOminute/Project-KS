@@ -185,7 +185,7 @@ public class UnitController : MonoBehaviour
         if (!IsDie)
         {
             health -= damageAmount;
-            Debug.Log("Unit: " + health);
+            // Debug.Log("Unit: " + health);
 
             if (health <= 0)
             {
