@@ -4,6 +4,11 @@ using System.Collections;
 public class KnightController : MonoBehaviour
 {
     public float damage = 20f;
+
+    public float maxHealth = 100f;
+    private float currentHealth;
+    private bool isPossessed = true;
+
     private float runSpeed = 20f;
     private float dashSpeed = 40f;
     private float dashDuration = 0.4f;
@@ -16,6 +21,7 @@ public class KnightController : MonoBehaviour
     private bool isDashing;
     private bool isAttacking;
     private bool isUsingSkill;
+    private bool isDead;
     private float lastDashTime;
 
     private Vector3 moveDirection;
@@ -31,15 +37,60 @@ public class KnightController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
         lastAttackTime = -attackCooldown;
         lastSkillTime = -skillCooldown;
     }
 
     private void Update()
     {
+        if (isDead) return;
+
         HandleMovement();
         HandleAttack();
         HandleSkill();
+
+        CheckHealthAndPossession();
+    }
+
+    private void CheckHealthAndPossession()
+    {
+        if (currentHealth <= 0 || !isPossessed)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+        rb.velocity = Vector3.zero;
+        animator.SetTrigger("Death");
+
+        enabled = false; // 빙의 시 다시 켜줘야함
+        // 기사 카메라 비활성화 및 네크로 카메라 활성화
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (isDead) return;
+
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+    }
+
+    public void EndPossession()
+    {
+        if (isDead) return;
+
+        isPossessed = false;
+        Die();
     }
 
     private void HandleMovement()
