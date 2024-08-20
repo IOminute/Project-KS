@@ -39,7 +39,6 @@ public class SceneManagement : MonoBehaviour
         bool wave1boss = false;
         bool wave2boss = false;
         bool wave3boss = false;
-        bool isCleared = false;
         while (true)
         {
             if (!isBossFighting)
@@ -111,7 +110,6 @@ public class SceneManagement : MonoBehaviour
                     time = 180f;
                     intervalTime = 0f;
                     wave1boss = true;
-                    isBossFighting = false;
                 }
             }
             else if (time >= 180f && time < 210f && wave1boss)
@@ -175,118 +173,14 @@ public class SceneManagement : MonoBehaviour
                 SummonBoss(toSummon, whiteEnemies);
                 if (enemies.Count == 0)
                 {
-                    time = 360f;
+                    time = 180f;
                     intervalTime = 0f;
                     wave2boss = true;
-                    isBossFighting = false;
-                }
-            }
-            else if (time >= 360f && time < 390f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 6 }; // 검정 망치든애
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 390f && time < 420f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 6, 7, 1 }; // 검정 망치든애, 검정 정예기사, 검정 기사
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 420f && time < 450f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 6, 7, 1, 0 }; // 검정 망치든애, 검정 정예기사, 검정 기사, 검정 궁수
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 450f && time < 480f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 6, 7, 1, 0, 2}; // 검정 망치든애, 검정 정예기사, 검정 기사, 검정 궁수, 검정 기마궁수
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 480f && time < 510f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 9, 1 }; // 검정 메이지, 검정 정예기사
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 510f && time < 540f && wave1boss && wave2boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 9, 1, 0 }; // 검정 메이지, 검정 정예기사, 검정 궁수
-                    IntervalSummon(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 540f && wave2boss && wave1boss && !wave3boss)
-            {
-                isBossFighting = true;
-                List<int> toSummon = new List<int>() { 4, 5, 2, 3 }; // 검정 기마창술사, 검정 기마기사, 검정 기마궁수, 검정 기마메이지
-                SummonBoss(toSummon, blackEnemies);
-                if (enemies.Count == 0)
-                {
-                    time = 540f;
-                    intervalTime = 0f;
-                    wave3boss = true;
-                    isBossFighting = false;
-                }
-            }
-            else if (time >= 540f && time < 560f && wave1boss && wave2boss && wave3boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 4, 2, 3 }; // 초록 기마 창술사, 초록 기마궁수, 초록 메이지, 석궁(없음)
-                    SummonBoss(toSummon, greenEnemies);
-                }
-            }
-            else if (time >= 560f && time < 580f && wave1boss && wave2boss && wave3boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 9, 4, 3 }; // 흰색 정예기사, 흰색 기마창술사, 흰색 메이지, 석궁(없음)
-                    SummonBoss(toSummon, whiteEnemies);
-                }
-            }
-            else if (time >= 580f && time < 600f && wave1boss && wave2boss && wave3boss)
-            {
-                if (intervalTime > summonInterval)
-                {
-                    intervalTime = 0f;
-                    List<int> toSummon = new List<int>() { 4, 5, 2, 3 }; // 검정 기마창술사, 검정 기마기사, 검정 기마궁수, 검정 기마메이지
-                    SummonBoss(toSummon, blackEnemies);
-                }
-            }
-            else if (time >= 600f && wave1boss && wave2boss && wave3boss) 
-            {
-                if (enemies.Count == 0)
-                {
-                    print("Clear!");
-                    yield break;
                 }
             }
             yield return null;
         }
     }
-
 
     void SummonEnemy(GameObject enemyToSummon)
     {
