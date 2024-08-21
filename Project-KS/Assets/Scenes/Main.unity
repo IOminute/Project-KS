@@ -17054,7 +17054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1985310258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17067,7 +17067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6eab54f2b4b324ca33fe076ca1d5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castle: {fileID: 0}
+  castle: {fileID: 755268992}
   summonInterval: 5
   greenEnemies:
   - {fileID: 138126, guid: 409544da275155c43959f94076b5f387, type: 3}
