@@ -31,6 +31,9 @@ public class Necromancer : MonoBehaviour
     private int requireKindredPointToEnforce = 10;
     private int requireKindredPointToOverMaxBodies = 100;
 
+    public Camera necroCamera;
+    public Camera knightCamera;
+
     void Start()
     {
         spirits = new List<GameObject>();

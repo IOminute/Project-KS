@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
     public Image progressBar;
     public Image manaBar;
 
+    public Image possessionBar;
+
     private string[] manas;
 
     
@@ -176,5 +178,15 @@ public class UIManager : MonoBehaviour
     {
         settingsContainer.SetActive(false);
         isSettingsOn = false;
+    }
+
+    public void DoPossess()
+    {
+        possessionBar.fillAmount = 0f;
+    }
+
+    public void GenPossess()
+    {
+        possessionBar.DOFillAmount(1f, 20f).SetEase(Ease.Linear);
     }
 }
