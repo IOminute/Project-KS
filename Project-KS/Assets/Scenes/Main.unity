@@ -6992,7 +6992,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 755268993}
-  - component: {fileID: 755268994}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Castle
@@ -7020,21 +7019,9 @@ Transform:
   - {fileID: 115296844}
   - {fileID: 1032401623}
   - {fileID: 640614642}
+  - {fileID: 1042338757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &755268994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755268992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65ef14f79b1d004fb047b4a192e1e22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1057007967}
 --- !u!1001 &757625189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9435,8 +9422,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.0224943, y: 6.770049, z: 6.8048925}
-  m_Center: {x: 0.015974045, y: 2.8850245, z: -0.10290909}
+  m_Size: {x: 6.074902, y: 6.0604653, z: 6.027929}
+  m_Center: {x: -0.00730443, y: 2.5302327, z: 0.010589361}
 --- !u!1001 &997663791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9669,6 +9656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042338757}
   - component: {fileID: 1042338756}
+  - component: {fileID: 1042338758}
   m_Layer: 0
   m_Name: CastleWall
   m_TagString: Untagged
@@ -9705,13 +9693,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042338755}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.03, y: 3.62, z: -0.11}
   m_LocalScale: {x: 11.835776, y: 11.835776, z: 11.835776}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 755268993}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042338758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042338755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ef14f79b1d004fb047b4a192e1e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1057007967}
 --- !u!1 &1051430620
 GameObject:
   m_ObjectHideFlags: 0
@@ -10446,8 +10447,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 13.757549, y: 6.770049, z: 12.961358}
-  m_Center: {x: 0.12039471, y: 2.8850245, z: 0.027033329}
+  m_Size: {x: 13.757549, y: 5.961796, z: 12.961358}
+  m_Center: {x: 0.12039471, y: 2.480898, z: 0.027033329}
 --- !u!1 &1126692904
 GameObject:
   m_ObjectHideFlags: 0
@@ -12552,11 +12553,11 @@ PrefabInstance:
       objectReference: {fileID: 712743017}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000038146973
+      value: 11.66
       objectReference: {fileID: 0}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14916,7 +14917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1760855366
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18252,7 +18253,6 @@ SceneRoots:
   - {fileID: 401258408}
   - {fileID: 930632542}
   - {fileID: 755268993}
-  - {fileID: 1042338757}
   - {fileID: 1964308385}
   - {fileID: 1770308269}
   - {fileID: 1760855370}

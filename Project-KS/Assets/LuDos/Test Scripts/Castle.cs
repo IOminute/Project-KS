@@ -28,18 +28,17 @@ public class Castle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PlayerWeapon"))
+        if (other.CompareTag("EnemyWeapon"))
         {
-            PlayerWeapon weapon = other.GetComponent<PlayerWeapon>();
+            EnemyWeapon weapon = other.GetComponent<EnemyWeapon>();
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
-                Destroy(other.gameObject);
             }
         }
-        else if (other.CompareTag("PlayerWeapon_Projectile"))
+        else if (other.CompareTag("EnemyWeapon_Projectile"))
         {
-            PlayerWeapon weapon = other.GetComponent<PlayerWeapon>();
+            EnemyWeapon_Projectile weapon = other.GetComponent<EnemyWeapon_Projectile>();
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
