@@ -25,6 +25,8 @@ TagManager:
   - EnemyWeapon_Projectile
   - PlayerWeapon_Projectile
   - KnightWeapon
+  - Necromancer
+  - PlayerKnight
   layers:
   - Default
   - TransparentFX

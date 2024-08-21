@@ -8,7 +8,6 @@ public class KnightController : MonoBehaviour
 
     public float maxHealth = 100f;
     private float currentHealth;
-    private bool isPossessed = true;
 
     private float runSpeed = 20f;
     private float dashSpeed = 40f;
@@ -34,6 +33,9 @@ public class KnightController : MonoBehaviour
     public GameObject swordSlashPrefab;
     public Transform swordSpawnPoint;
 
+    public Camera necroCamera;
+    public Camera knightCamera;
+
     public Image clock;
     public Image healthBar;
 
@@ -57,16 +59,6 @@ public class KnightController : MonoBehaviour
         HandleMovement();
         HandleAttack();
         HandleSkill();
-
-        CheckHealthAndPossession();
-    }
-
-    private void CheckHealthAndPossession()
-    {
-        if (currentHealth <= 0 || !isPossessed)
-        {
-            Die();
-        }
     }
 
     private void Die()
@@ -77,8 +69,9 @@ public class KnightController : MonoBehaviour
         rb.velocity = Vector3.zero;
         animator.SetTrigger("Death");
 
-        enabled = false; // 빙의 시 다시 켜줘야함
-        // 기사 카메라 비활성화 및 네크로 카메라 활성화
+        necroCamera.gameObject.SetActive(true);
+        knightCamera.gameObject.SetActive(false);
+        enabled = false;
     }
 
     public void TakeDamage(float damage)
@@ -96,8 +89,6 @@ public class KnightController : MonoBehaviour
     public void EndPossession()
     {
         if (isDead) return;
-
-        isPossessed = false;
         Die();
     }
 
@@ -249,15 +240,11 @@ public class KnightController : MonoBehaviour
         isUsingSkill = false;
     }
 
-    public IEnumerator ClockStart() // 논의할 함수
+    public IEnumerator ClockStart()
     {
-        enabled = true; // 바로 캐치 나잖아
-        isPossessed = true;
         float realTime = 0f;
-        print(lifeTime);
         while (realTime < lifeTime)
         {
-            print(realTime);
             if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 yield break;
@@ -267,5 +254,26 @@ public class KnightController : MonoBehaviour
             yield return null;
         }
         EndPossession();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyWeapon"))
+        {
+            EnemyWeapon weapon = other.GetComponent<EnemyWeapon>();
+            if (weapon != null)
+            {
+                TakeDamage(weapon.damage);
+            }
+        }
+        else if (other.CompareTag("EnemyWeapon_Projectile"))
+        {
+            EnemyWeapon_Projectile weapon = other.GetComponent<EnemyWeapon_Projectile>();
+            if (weapon != null)
+            {
+                TakeDamage(weapon.damage);
+                Destroy(other.gameObject);
+            }
+        }
     }
 }

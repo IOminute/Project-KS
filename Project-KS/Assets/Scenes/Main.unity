@@ -8458,6 +8458,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869528611}
   m_CullTransparentMesh: 1
+--- !u!20 &870696644 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1023723093260768258, guid: 7fa3811fb6bfdae48b7f8257fa3dbe93, type: 3}
+  m_PrefabInstance: {fileID: 712743016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &886378434
 GameObject:
   m_ObjectHideFlags: 0
@@ -9256,11 +9261,11 @@ GameObject:
   - component: {fileID: 991585343}
   m_Layer: 0
   m_Name: Necro
-  m_TagString: Untagged
+  m_TagString: Necromancer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &991585343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9287,6 +9292,8 @@ MonoBehaviour:
   - {fileID: 7153411807026814117, guid: 5efd882302fab3a40b982f8a8bf8acfe, type: 3}
   - {fileID: 1468075056679570664, guid: 68992a8297640a042980e16e66f4185b, type: 3}
   - {fileID: 7960111902202459338, guid: 12e812f24d1d1cf4aa1da9be4ccdb036, type: 3}
+  necroCamera: {fileID: 1475844010}
+  knightCamera: {fileID: 870696644}
 --- !u!4 &991585344
 Transform:
   m_ObjectHideFlags: 0
@@ -9296,7 +9303,7 @@ Transform:
   m_GameObject: {fileID: 991585342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1165.8848, y: -64.847435, z: 1645.0841}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9652,6 +9659,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4680251571939812, guid: c44079fbf7091444bb884a0ccf7d84ac, type: 3}
   m_PrefabInstance: {fileID: 1032401622}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1042338755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042338757}
+  - component: {fileID: 1042338756}
+  m_Layer: 0
+  m_Name: CastleWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1042338756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042338755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.79913086, z: 1}
+  m_Center: {x: 0, y: 0.10043461, z: 0}
+--- !u!4 &1042338757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042338755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 3.62, z: -0.11}
+  m_LocalScale: {x: 11.835776, y: 11.835776, z: 11.835776}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051430620
 GameObject:
   m_ObjectHideFlags: 0
@@ -12479,12 +12539,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1369776720}
     - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: necroCamera
+      value: 
+      objectReference: {fileID: 1475844010}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: knightCamera
+      value: 
+      objectReference: {fileID: 870696644}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 712743017}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.900658
+      value: -17.9
       objectReference: {fileID: 0}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12492,7 +12560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.06323
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12524,6 +12592,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9015092884256043153, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_Name
+      value: PlayerKnight
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015092884256043153, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: m_TagString
       value: PlayerKnight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14844,7 +14916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1760855366
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14962,7 +15034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1770308269
 Transform:
   m_ObjectHideFlags: 0
@@ -16933,7 +17005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1964308385
 Transform:
   m_ObjectHideFlags: 0
@@ -17630,6 +17702,7 @@ MonoBehaviour:
   progressBarContainer: {fileID: 2040623540}
   progressBar: {fileID: 681903510}
   manaBar: {fileID: 1490419252}
+  possessionBar: {fileID: 0}
   gameTime: {fileID: 1706770654}
   pauseContainer: {fileID: 2130296254}
   settingsContainer: {fileID: 337543792}
@@ -18179,6 +18252,7 @@ SceneRoots:
   - {fileID: 401258408}
   - {fileID: 930632542}
   - {fileID: 755268993}
+  - {fileID: 1042338757}
   - {fileID: 1964308385}
   - {fileID: 1770308269}
   - {fileID: 1760855370}

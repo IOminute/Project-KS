@@ -30,7 +30,7 @@ public class MoveToCastleState : BaseState
 
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("PlayerUnit")) // 아군 tag
+            if (hitCollider.CompareTag("PlayerUnit") || hitCollider.CompareTag("PlayerKnight")) // 아군 tag
             {
                 Vector3 targetPosition = hitCollider.transform.position;
                 targetPosition.y = 0f;

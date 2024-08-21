@@ -15,7 +15,12 @@ public class IdleState : BaseState
     {
         if (enemy.IsDie) return;
 
-        GameObject[] potentialTargets = GameObject.FindGameObjectsWithTag("PlayerUnit");
+        GameObject[] playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+        GameObject[] playerKnights = GameObject.FindGameObjectsWithTag("PlayerKnight");
+
+        GameObject[] potentialTargets = new GameObject[playerUnits.Length + playerKnights.Length];
+        playerUnits.CopyTo(potentialTargets, 0);
+        playerKnights.CopyTo(potentialTargets, playerUnits.Length);
 
         GameObject closestTarget = null;
         float closestDistance = Mathf.Infinity;

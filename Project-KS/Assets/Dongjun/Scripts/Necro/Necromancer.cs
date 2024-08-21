@@ -34,6 +34,8 @@ public class Necromancer : MonoBehaviour
     public Camera necroCamera;
     public Camera knightCamera;
 
+    private GameObject playerKnight;
+
     void Start()
     {
         spirits = new List<GameObject>();
@@ -44,6 +46,10 @@ public class Necromancer : MonoBehaviour
         waitOneSec = new WaitForSeconds(1f);
         waitHalfSec = new WaitForSeconds(0.5f);
         waitThreeSec = new WaitForSeconds(3f);
+
+        playerKnight = GameObject.FindWithTag("PlayerKnight");
+        playerKnight.GetComponent<KnightController>().enabled = false;
+
         StartCoroutine(ManaRegen());
     }
 
@@ -213,5 +219,12 @@ public class Necromancer : MonoBehaviour
             return;
         }
         maxBodies += 10;
+    }
+
+    void Possession()
+    {
+        playerKnight.GetComponent<KnightController>().enabled = true;
+        necroCamera.gameObject.SetActive(false);
+        knightCamera.gameObject.SetActive(true);
     }
 }
