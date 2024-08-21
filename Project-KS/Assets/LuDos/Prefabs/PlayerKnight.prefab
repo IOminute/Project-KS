@@ -3070,9 +3070,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  maxHealth: 100
   cameraTransform: {fileID: 0}
-  swordSlashPrefab: {fileID: 0}
-  swordSpawnPoint: {fileID: 0}
+  swordSlashPrefab: {fileID: 3011490376764965999, guid: af7b7d290e73cb847ae1dd4bea432abe, type: 3}
+  swordSpawnPoint: {fileID: 1315514073102066161}
+  clock: {fileID: 0}
+  healthBar: {fileID: 0}
+  lifeTime: 30
 --- !u!1 &9077852987072303098
 GameObject:
   m_ObjectHideFlags: 0

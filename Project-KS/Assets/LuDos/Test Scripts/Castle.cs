@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Castle : MonoBehaviour
 {
     bool isGameOver = false;
     float health = 1000;
 
+    public Image healthBar;
     private void TakeDamage(float damageAmount)
     {
         if (!isGameOver)
         {
             health -= damageAmount;
+            healthBar.fillAmount = health / 1000f;
 
             if (health <= 0)
             {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class KnightController : MonoBehaviour
@@ -32,6 +33,11 @@ public class KnightController : MonoBehaviour
 
     public GameObject swordSlashPrefab;
     public Transform swordSpawnPoint;
+
+    public Image clock;
+    public Image healthBar;
+
+    public float lifeTime;
 
     private void Start()
     {
@@ -76,8 +82,8 @@ public class KnightController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (isDead) return;
-
         currentHealth -= damage;
+        healthBar.fillAmount = currentHealth / maxHealth;
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -239,5 +245,21 @@ public class KnightController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("IsUsingSkill", false);
         isUsingSkill = false;
+    }
+
+    public IEnumerator ClockStart() // 논의할 함수
+    {
+        enabled = true; // 바로 캐치 나잖아
+        isPossessed = true;
+        float realTime = 0f;
+        while (realTime < lifeTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Backspace))
+            {
+                yield break;
+            }
+            realTime += Time.deltaTime;
+        }
+        isPossessed = false;
     }
 }

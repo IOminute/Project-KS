@@ -3493,7 +3493,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -7030,6 +7030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65ef14f79b1d004fb047b4a192e1e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 1057007967}
 --- !u!1001 &757625189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12466,17 +12467,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: clock
+      value: 
+      objectReference: {fileID: 438097124}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1369776720}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 712743017}
-    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
-      propertyPath: swordSpawnPoint
-      value: 
-      objectReference: {fileID: 1369823725}
-    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
-      propertyPath: swordSlashPrefab
-      value: 
-      objectReference: {fileID: 3011490376764965999, guid: af7b7d290e73cb847ae1dd4bea432abe, type: 3}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.900658
@@ -12529,11 +12530,6 @@ PrefabInstance:
 --- !u!4 &1369823724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
-  m_PrefabInstance: {fileID: 1369823723}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1369823725 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1315514073102066161, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
   m_PrefabInstance: {fileID: 1369823723}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381319546
