@@ -31,6 +31,7 @@ public class UnitController : MonoBehaviour
 
     public GameObject Projectile;
     public Transform WeaponPosition;
+    public Collider weaponCollider;
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class UnitController : MonoBehaviour
         stateMachine.Initialize(new UnitIdleState(this));
         IsAttacking = false;
         IsDie = false;
+        DisabledWeaponCollider();
     }
 
     private void Update()
@@ -54,6 +56,21 @@ public class UnitController : MonoBehaviour
         if (IsSelected)
         {
             // ClickedPosition = ; // 우클릭 포지션 업데이트
+        }
+    }
+
+    public void EnabledWeaponCollider()
+    {
+        if (weaponCollider != null)
+        {
+            weaponCollider.enabled = true;
+        }
+    }
+    public void DisabledWeaponCollider()
+    {
+        if (weaponCollider != null)
+        {
+            weaponCollider.enabled = false;
         }
     }
 
@@ -92,8 +109,6 @@ public class UnitController : MonoBehaviour
     {
         Stop();
 
-        animator.SetTrigger("Attack");
-
         Vector3 targetPosition = targetTransform.position;
         targetPosition.y = 0f;
 
@@ -105,7 +120,8 @@ public class UnitController : MonoBehaviour
             transform.rotation = lookRotation;
         }
 
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
+        //EnabledWeaponCollider();
 
         Vector3 tmp = targetTransform.position;
         tmp.y += 2.5f;

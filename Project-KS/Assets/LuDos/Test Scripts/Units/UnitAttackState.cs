@@ -42,7 +42,14 @@ public class UnitAttackState : UnitBaseState
 
         unit.Attack(target);
 
-        yield return new WaitForSeconds(0.3f);
+        unit.animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(0.6f);
+        unit.EnabledWeaponCollider();
+
+        yield return new WaitForSeconds(0.4f);
+
+        unit.DisabledWeaponCollider();
+
         yield return new WaitForSeconds(unit.attackCoolTime);
 
         unit.IsAttacking = false;

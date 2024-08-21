@@ -37,6 +37,7 @@ public class EnemyController : MonoBehaviour
     public GameObject soulPrefab;
     public GameObject Projectile;
     public Transform WeaponPosition;
+    public Collider weaponCollider;
 
     private void Awake()
     {
@@ -94,11 +95,26 @@ public class EnemyController : MonoBehaviour
         IsDie = false;
         IsRangeShort = false;
         IsRangeLong = false;
+        DisabledWeaponCollider();
     }
 
     private void Update()
     {
         stateMachine.Update();
+    }
+    public void EnabledWeaponCollider()
+    {
+        if (weaponCollider != null)
+        {
+            weaponCollider.enabled = true;
+        }
+    }
+    public void DisabledWeaponCollider()
+    {
+        if (weaponCollider != null)
+        {
+            weaponCollider.enabled = false;
+        }
     }
 
     public void MoveTo(Vector3 targetPosition)
@@ -151,7 +167,8 @@ public class EnemyController : MonoBehaviour
             transform.rotation = lookRotation;
         }
 
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
+        //EnabledWeaponCollider();
 
         Vector3 tmp = targetTransform.position;
         tmp.y += 2.5f;

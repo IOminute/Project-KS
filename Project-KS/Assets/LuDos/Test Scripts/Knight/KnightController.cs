@@ -33,6 +33,9 @@ public class KnightController : MonoBehaviour
     public GameObject swordSlashPrefab;
     public Transform swordSpawnPoint;
 
+    public Collider weaponColliderL;
+    public Collider weaponColliderR;
+
     public Camera necroCamera;
     public Camera knightCamera;
 
@@ -49,6 +52,8 @@ public class KnightController : MonoBehaviour
         lastAttackTime = -attackCooldown;
         lastSkillTime = -skillCooldown;
 
+        DisabledWeaponCollider();
+
         StartCoroutine(ClockStart());
     }
 
@@ -59,6 +64,29 @@ public class KnightController : MonoBehaviour
         HandleMovement();
         HandleAttack();
         HandleSkill();
+    }
+
+    void EnabledWeaponCollider()
+    {
+        if (weaponColliderL != null)
+        {
+            weaponColliderL.enabled = true;
+        }
+        if (weaponColliderR != null)
+        {
+            weaponColliderR.enabled = true;
+        }
+    }
+    void DisabledWeaponCollider()
+    {
+        if (weaponColliderL != null)
+        {
+            weaponColliderL.enabled = false;
+        }
+        if (weaponColliderR != null)
+        {
+            weaponColliderR.enabled = false;
+        }
     }
 
     private void Die()
@@ -177,15 +205,21 @@ public class KnightController : MonoBehaviour
 
             if (i == 0)
             {
+                EnabledWeaponCollider();
                 yield return new WaitForSeconds(0.4f);
+                DisabledWeaponCollider();
             }
             if (i == 1)
             {
+                EnabledWeaponCollider();
                 yield return new WaitForSeconds(0.1f);
+                DisabledWeaponCollider();
             }
             if (i == 2)
             {
+                EnabledWeaponCollider();
                 yield return new WaitForSeconds(0.4f);
+                DisabledWeaponCollider();
             }
 
             rb.velocity = Vector3.zero;
@@ -197,12 +231,14 @@ public class KnightController : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
+        EnabledWeaponCollider();
         rb.velocity = new Vector3(rb.velocity.x, -30f, rb.velocity.z);
         yield return new WaitForSeconds(0.1f);
 
         rb.velocity = Vector3.zero;
 
         yield return new WaitForSeconds(0.2f);
+        DisabledWeaponCollider();
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
     }

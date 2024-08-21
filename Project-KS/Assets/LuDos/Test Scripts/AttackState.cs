@@ -41,8 +41,15 @@ public class AttackState : BaseState
         enemy.IsAttacking = true;
 
         enemy.Attack(target);
-        
-        yield return new WaitForSeconds(0.3f);
+
+        enemy.animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(0.6f);
+        enemy.EnabledWeaponCollider();
+
+        yield return new WaitForSeconds(0.4f);
+
+        enemy.DisabledWeaponCollider();
+
         yield return new WaitForSeconds(enemy.attackCoolTime);
 
         enemy.IsAttacking = false;

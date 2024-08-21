@@ -4762,6 +4762,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9156574227163100893, guid: c32520594d2bbba4887e753504fbbad5, type: 3}
   m_PrefabInstance: {fileID: 722924413}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &729297107 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4320662281121344697, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+  m_PrefabInstance: {fileID: 1369823723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &729566667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1959645154584441755, guid: ef6c1105d99c34c40bf879744476c03b, type: 3}
@@ -8468,6 +8473,14 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 712743017}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: weaponColliderL
+      value: 
+      objectReference: {fileID: 729297107}
+    - target: {fileID: 3385717790462499237, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: weaponColliderR
+      value: 
+      objectReference: {fileID: 1779835433}
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8507,6 +8520,10 @@ PrefabInstance:
     - target: {fileID: 7919329712260826813, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411862334917145917, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9015092884256043153, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
       propertyPath: m_Name
@@ -10095,6 +10112,11 @@ Transform:
   - {fileID: 662605718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1779835433 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2004362634413748586, guid: ae2360b8ce6bd0c479ebc43a00f52f75, type: 3}
+  m_PrefabInstance: {fileID: 1369823723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780397493
 PrefabInstance:
   m_ObjectHideFlags: 0
