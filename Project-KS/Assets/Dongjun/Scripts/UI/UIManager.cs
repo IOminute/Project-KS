@@ -41,6 +41,9 @@ public class UIManager : MonoBehaviour
 
     private WaitForSeconds waitPointOne;
 
+    public Canvas necroCanvas;
+    public Canvas knightCanvas;
+
     void Awake()
     {
         if (instance == null)

@@ -33,7 +33,7 @@ public class Necromancer : MonoBehaviour
 
     public Camera necroCamera;
     public Camera knightCamera;
-
+    public static bool isPossessioning;
     private GameObject playerKnight;
 
     void Start()
@@ -55,17 +55,21 @@ public class Necromancer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab)) StartCoroutine(UIManager.instance.ChangeBehaviour());
-
-        if (Input.GetKeyDown(KeyCode.Space) && !isSkillDoing)
+        if (!isPossessioning)
         {
-            if (UIManager.instance.GetCurrentBehaviourIndex() == 0) StartCoroutine(Rise());
-            else if (UIManager.instance.GetCurrentBehaviourIndex() == 1) StartCoroutine(Rush());
-            else if (UIManager.instance.GetCurrentBehaviourIndex() == 2) StartCoroutine(Explode());
-        }
+            if (Input.GetKeyDown(KeyCode.Tab)) StartCoroutine(UIManager.instance.ChangeBehaviour());
 
-        if (Input.GetKeyDown(KeyCode.Z)) Enforce();
-        if (Input.GetKeyDown(KeyCode.C)) OverMaxBodies();
+            if (Input.GetKeyDown(KeyCode.Space) && !isSkillDoing)
+            {
+                if (UIManager.instance.GetCurrentBehaviourIndex() == 0) StartCoroutine(Rise());
+                else if (UIManager.instance.GetCurrentBehaviourIndex() == 1) StartCoroutine(Rush());
+                else if (UIManager.instance.GetCurrentBehaviourIndex() == 2) StartCoroutine(Explode());
+            }
+
+            if (Input.GetKeyDown(KeyCode.Z)) Enforce();
+            if (Input.GetKeyDown(KeyCode.C)) OverMaxBodies();
+            if (Input.GetKeyDown(KeyCode.F)) Possession();
+        }
     }
 
     IEnumerator Rise()
@@ -223,8 +227,20 @@ public class Necromancer : MonoBehaviour
 
     void Possession()
     {
+        UIManager.instance.DoPossess();
+        UIManager.instance.necroCanvas.gameObject.SetActive(false);
+        UIManager.instance.knightCanvas.gameObject.SetActive(true);
+        isPossessioning = true;
         playerKnight.GetComponent<KnightController>().enabled = true;
         necroCamera.gameObject.SetActive(false);
         knightCamera.gameObject.SetActive(true);
+    }
+
+    public static void EndPossesion()
+    {
+        isPossessioning = false;
+        UIManager.instance.GenPossess();
+        UIManager.instance.necroCanvas.gameObject.SetActive(false);
+        UIManager.instance.knightCanvas.gameObject.SetActive(true);
     }
 }

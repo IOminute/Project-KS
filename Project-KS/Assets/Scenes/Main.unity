@@ -17707,6 +17707,8 @@ MonoBehaviour:
   gameTime: {fileID: 1706770654}
   pauseContainer: {fileID: 2130296254}
   settingsContainer: {fileID: 337543792}
+  necroCanvas: {fileID: 1424024938}
+  knightCanvas: {fileID: 436831908}
 --- !u!4 &2062127121
 Transform:
   m_ObjectHideFlags: 0

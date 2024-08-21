@@ -89,6 +89,7 @@ public class KnightController : MonoBehaviour
     public void EndPossession()
     {
         if (isDead) return;
+        Necromancer.EndPossesion();
         Die();
     }
 
