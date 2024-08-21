@@ -46,6 +46,8 @@ public class KnightController : MonoBehaviour
         currentHealth = maxHealth;
         lastAttackTime = -attackCooldown;
         lastSkillTime = -skillCooldown;
+
+        StartCoroutine(ClockStart());
     }
 
     private void Update()
@@ -252,14 +254,18 @@ public class KnightController : MonoBehaviour
         enabled = true; // 바로 캐치 나잖아
         isPossessed = true;
         float realTime = 0f;
+        print(lifeTime);
         while (realTime < lifeTime)
         {
+            print(realTime);
             if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 yield break;
             }
             realTime += Time.deltaTime;
+            clock.fillAmount = realTime / lifeTime;
+            yield return null;
         }
-        isPossessed = false;
+        EndPossession();
     }
 }
