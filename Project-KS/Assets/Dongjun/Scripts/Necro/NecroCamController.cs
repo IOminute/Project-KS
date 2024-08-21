@@ -20,11 +20,11 @@ public class NecroCamController : MonoBehaviour
 
         if (mousePosition.y <= 0) // 아래쪽 모서리
         {
-            transform.position += new Vector3(0, -1, -1) * moveSpeed * Time.deltaTime;
+            transform.position += new Vector3(0, 0, -1) * moveSpeed * Time.deltaTime;
         }
         else if (mousePosition.y >= Screen.height) // 위쪽 모서리
         {
-            transform.position += new Vector3(0, 1, 1) * moveSpeed * Time.deltaTime;
+            transform.position += new Vector3(0, 0, 1) * moveSpeed * Time.deltaTime;
         }
     }
 }
