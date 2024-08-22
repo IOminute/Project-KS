@@ -18,6 +18,8 @@ public class KnightController : MonoBehaviour
     private float skillCooldown = 2f;
     private float lastAttackTime;
     private float lastSkillTime;
+    private float comboResetTime = 1.0f;
+    private int comboStep = 0;
 
     private bool isDashing;
     private bool isAttacking;
