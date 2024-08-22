@@ -12663,9 +12663,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 438097124}
     - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
+      propertyPath: damage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1369776720}
+    - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
       propertyPath: necroCamera
       value: 

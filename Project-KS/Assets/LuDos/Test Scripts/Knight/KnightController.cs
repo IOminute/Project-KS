@@ -57,7 +57,10 @@ public class KnightController : MonoBehaviour
 
     private void OnEnable()
     {
-        animator.SetBool("IsIdle", true);
+        if (animator!= null)
+        {
+            animator.SetBool("IsIdle", true);
+        }
         isDead = false;
     }
 
