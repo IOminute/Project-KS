@@ -216,7 +216,7 @@ public class SceneManagement : MonoBehaviour
     Vector3 GetRandomPosition()
     {
         // 무작위 방향과 거리 생성
-        Vector3 randomDirection = Random.insideUnitSphere * 50;
+        Vector3 randomDirection = Random.insideUnitSphere * 150;
         // 기준 좌표에 추가하여 랜덤 좌표 계산
         return castle.transform.position + randomDirection;
     }
