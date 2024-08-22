@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class KnightController : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class KnightController : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
 
-    private float runSpeed = 20f;
+    private float runSpeed = 17f;
     private float dashSpeed = 40f;
     private float dashDuration = 0.4f;
     private float dashCooldown = 1f;
@@ -41,6 +42,10 @@ public class KnightController : MonoBehaviour
 
     public Image clock;
     public Image healthBar;
+
+    public List<GameObject> skillEffectPrefabs;
+    public GameObject WeaponL;
+    public GameObject WeaponR;
 
     public float lifeTime;
 
@@ -140,6 +145,10 @@ public class KnightController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
         {
+            Vector3 effectPosition = transform.position;
+            effectPosition.y += 3.0f;
+            GameObject effectInstance = Instantiate(skillEffectPrefabs[4], effectPosition, transform.rotation);
+            Destroy(effectInstance, 1.0f);
             StartCoroutine(Dash());
             return;
         }
@@ -203,23 +212,45 @@ public class KnightController : MonoBehaviour
             Vector3 dashDirection = transform.forward;
             rb.velocity = dashDirection * 30f;
 
+            GameObject effectInstance = null;
+
             if (i == 0)
             {
                 EnabledWeaponCollider();
-                yield return new WaitForSeconds(0.4f);
-                DisabledWeaponCollider();
-            }
-            if (i == 1)
-            {
-                EnabledWeaponCollider();
+                yield return new WaitForSeconds(0.3f);
+                Quaternion rotation = WeaponR.transform.rotation * Quaternion.Euler(0, 180f, 0);
+
+                effectInstance = Instantiate(skillEffectPrefabs[1], WeaponR.transform.position, rotation);
+
                 yield return new WaitForSeconds(0.1f);
                 DisabledWeaponCollider();
             }
-            if (i == 2)
+            else if (i == 1)
             {
                 EnabledWeaponCollider();
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.15f);
+                Quaternion rotation = WeaponL.transform.rotation * Quaternion.Euler(0, 180f, 0);
+
+                effectInstance = Instantiate(skillEffectPrefabs[1], WeaponL.transform.position, rotation);
+
                 DisabledWeaponCollider();
+            }
+            else if(i == 2)
+            {
+                EnabledWeaponCollider();
+                yield return new WaitForSeconds(0.25f);
+                Vector3 effectPosition = transform.position;
+                effectPosition.y += 3.0f;
+
+                effectInstance = Instantiate(skillEffectPrefabs[2], effectPosition, transform.rotation);
+
+                yield return new WaitForSeconds(0.15f);
+                DisabledWeaponCollider();
+            }
+
+            if (effectInstance != null)
+            {
+                Destroy(effectInstance, 1.0f);
             }
 
             rb.velocity = Vector3.zero;
@@ -232,6 +263,10 @@ public class KnightController : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         EnabledWeaponCollider();
+
+        GameObject effect = Instantiate(skillEffectPrefabs[3], transform.position, transform.rotation);
+        Destroy(effect, 1.0f);
+
         rb.velocity = new Vector3(rb.velocity.x, -30f, rb.velocity.z);
         yield return new WaitForSeconds(0.1f);
 
@@ -260,9 +295,16 @@ public class KnightController : MonoBehaviour
         isUsingSkill = true;
         animator.SetBool("IsUsingSkill", true);
 
-        yield return new WaitForSeconds(0.7f);
-
         Quaternion rotation = transform.rotation * Quaternion.Euler(0, -90f, 0);
+
+        Vector3 effectPosition = transform.position;
+        effectPosition += transform.forward * 2.5f;
+        effectPosition.y += 3.0f;
+
+        yield return new WaitForSeconds(0.7f);
+        GameObject effect = Instantiate(skillEffectPrefabs[0], effectPosition, rotation);
+        Destroy(effect, 1.0f);
+
         GameObject swordSlash = Instantiate(swordSlashPrefab, swordSpawnPoint.position, rotation);
 
         SwordSlash slashScript = swordSlash.GetComponent<SwordSlash>();
