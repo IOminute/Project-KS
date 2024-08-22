@@ -232,6 +232,7 @@ public class Necromancer : MonoBehaviour
         UIManager.instance.knightCanvas.gameObject.SetActive(true);
         isPossessioning = true;
         playerKnight.GetComponent<KnightController>().enabled = true;
+        StartCoroutine(playerKnight.GetComponent<KnightController>().ClockStart());
         necroCamera.gameObject.SetActive(false);
         knightCamera.gameObject.SetActive(true);
     }
@@ -240,7 +241,7 @@ public class Necromancer : MonoBehaviour
     {
         isPossessioning = false;
         UIManager.instance.GenPossess();
-        UIManager.instance.necroCanvas.gameObject.SetActive(false);
-        UIManager.instance.knightCanvas.gameObject.SetActive(true);
+        UIManager.instance.necroCanvas.gameObject.SetActive(true);
+        UIManager.instance.knightCanvas.gameObject.SetActive(false);
     }
 }

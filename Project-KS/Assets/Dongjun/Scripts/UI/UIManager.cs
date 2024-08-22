@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -181,6 +180,20 @@ public class UIManager : MonoBehaviour
     {
         settingsContainer.SetActive(false);
         isSettingsOn = false;
+    }
+
+    public void BackToTitle()
+    {
+        SceneManagement.Instance.SceneLoad("StartScene");
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 
     public void DoPossess()
