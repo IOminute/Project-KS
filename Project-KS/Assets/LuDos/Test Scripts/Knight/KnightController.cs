@@ -285,7 +285,7 @@ public class KnightController : MonoBehaviour
 
     private IEnumerator DisableColliderAfterDelay()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.7f);
         DisabledWeaponCollider();
     }
     private IEnumerator AttackStart(float time)
@@ -323,12 +323,12 @@ public class KnightController : MonoBehaviour
         animator.SetBool("IsUsingSkill", true);
         EnabledWeaponCollider();
 
-        Vector3 jumpDirection = transform.forward * 60f + Vector3.up * 40f;
+        Vector3 jumpDirection = transform.forward * 30f + Vector3.up * 20f;
         rb.velocity = jumpDirection;
 
         yield return new WaitForSeconds(0.4f);
 
-        rb.velocity = new Vector3(rb.velocity.x, -140f, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, -60f, rb.velocity.z);
         yield return new WaitForSeconds(0.1f);
 
         rb.velocity = Vector3.zero;
