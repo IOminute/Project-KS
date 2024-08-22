@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class KnightController : MonoBehaviour
 {
@@ -14,17 +15,20 @@ public class KnightController : MonoBehaviour
     private float dashSpeed = 40f;
     private float dashDuration = 0.4f;
     private float dashCooldown = 1f;
-    private float attackCooldown = 3f;
     private float skillCooldown = 2f;
     private float lastAttackTime;
     private float lastSkillTime;
-    private float comboResetTime = 1.0f;
+
+    private float attackCooldown = 0.1f;
+    private float comboResetTime = 0.5f;
     private int comboStep = 0;
+    Coroutine attackStart;
 
     private bool isDashing;
     private bool isAttacking;
     private bool isUsingSkill;
     private bool isDead;
+    private bool canCombo = false;
     private float lastDashTime;
 
     private Vector3 moveDirection;
@@ -51,6 +55,12 @@ public class KnightController : MonoBehaviour
 
     public float lifeTime;
 
+    private void OnEnable()
+    {
+        animator.SetBool("IsIdle", true);
+        isDead = false;
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -60,8 +70,6 @@ public class KnightController : MonoBehaviour
         lastSkillTime = -skillCooldown;
 
         DisabledWeaponCollider();
-
-        StartCoroutine(ClockStart());
     }
 
     private void Update()
@@ -71,6 +79,39 @@ public class KnightController : MonoBehaviour
         HandleMovement();
         HandleAttack();
         HandleSkill();
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Idle01"))
+        {
+            canCombo = true;
+        }
+    }
+
+    public void TriggerEffect1_R()
+    {
+        Quaternion rotation = WeaponR.transform.rotation * Quaternion.Euler(0,180f, 0);
+        GameObject effectInstance = Instantiate(skillEffectPrefabs[1], WeaponR.transform.position, rotation);
+        Destroy(effectInstance, 1.0f);
+    }
+    public void TriggerEffect1_L()
+    {
+        Quaternion rotation = WeaponL.transform.rotation * Quaternion.Euler(0, 180f, 0);
+        GameObject effectInstance = Instantiate(skillEffectPrefabs[1], WeaponL.transform.position, rotation);
+        Destroy(effectInstance, 1.0f);
+    }
+    public void TriggerEffect2()
+    {
+        Vector3 effectPosition = transform.position;
+        effectPosition.y += 3.0f;
+        GameObject effectInstance = Instantiate(skillEffectPrefabs[2], effectPosition, transform.rotation);
+        Destroy(effectInstance, 1.0f);
+    }
+    public void TriggerEffect3()
+    {
+        Vector3 effectPosition = transform.position;
+        effectPosition.y += 3.0f;
+        GameObject effectInstance = Instantiate(skillEffectPrefabs[3], transform.position, transform.rotation);
+        Destroy(effectInstance, 1.0f);
     }
 
     void EnabledWeaponCollider()
@@ -103,6 +144,7 @@ public class KnightController : MonoBehaviour
         isDead = true;
         rb.velocity = Vector3.zero;
         animator.SetTrigger("Death");
+        animator.SetBool("IsIdle", false);
 
         necroCamera.gameObject.SetActive(true);
         knightCamera.gameObject.SetActive(false);
@@ -121,7 +163,7 @@ public class KnightController : MonoBehaviour
         }
     }
 
-    public void EndPossession()
+    public void EndPossess()
     {
         if (isDead) return;
         Necromancer.EndPossesion();
@@ -130,7 +172,7 @@ public class KnightController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (isDashing || isAttacking || isUsingSkill) return;
+        if (isDashing  || isUsingSkill) return;
 
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
@@ -199,85 +241,62 @@ public class KnightController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            isAttacking = true;
-            rb.velocity = Vector3.zero;
             lastAttackTime = Time.time;
-            animator.SetBool("IsAttacking", true);
-            StartCoroutine(AttackAndDash());
+
+            if (canCombo &&  comboStep < 3)
+            {
+                isAttacking = true;
+                if (attackStart != null)
+                {
+                    StopCoroutine(attackStart);
+                }
+                attackStart = StartCoroutine(AttackStart(comboResetTime));
+                StartCoroutine(ExecuteComboAttack(comboStep++));
+            }
         }
     }
 
-    private IEnumerator AttackAndDash()
+    private IEnumerator ExecuteComboAttack(int step)
     {
-        for (int i = 0; i < 3; i++)
+        switch (step)
         {
-            Vector3 dashDirection = transform.forward;
-            rb.velocity = dashDirection * 30f;
-
-            GameObject effectInstance = null;
-
-            if (i == 0)
-            {
+            case 0:
+                animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                yield return new WaitForSeconds(0.3f);
-                Quaternion rotation = WeaponR.transform.rotation * Quaternion.Euler(0, 180f, 0);
-
-                effectInstance = Instantiate(skillEffectPrefabs[1], WeaponR.transform.position, rotation);
-
-                yield return new WaitForSeconds(0.1f);
-                DisabledWeaponCollider();
-            }
-            else if (i == 1)
-            {
+                StartCoroutine(DisableColliderAfterDelay());
+                break;
+            case 1:
+                animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                yield return new WaitForSeconds(0.15f);
-                Quaternion rotation = WeaponL.transform.rotation * Quaternion.Euler(0, 180f, 0);
-
-                effectInstance = Instantiate(skillEffectPrefabs[1], WeaponL.transform.position, rotation);
-
-                DisabledWeaponCollider();
-            }
-            else if(i == 2)
-            {
+                StartCoroutine(DisableColliderAfterDelay());
+                break;
+            case 2:
+                animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                yield return new WaitForSeconds(0.25f);
-                Vector3 effectPosition = transform.position;
-                effectPosition.y += 3.0f;
-
-                effectInstance = Instantiate(skillEffectPrefabs[2], effectPosition, transform.rotation);
-
-                yield return new WaitForSeconds(0.15f);
-                DisabledWeaponCollider();
-            }
-
-            if (effectInstance != null)
-            {
-                Destroy(effectInstance, 1.0f);
-            }
-
-            rb.velocity = Vector3.zero;
-            yield return new WaitForSeconds(0.1f);
+                StartCoroutine(DisableColliderAfterDelay());
+                break;
         }
 
-        Vector3 jumpDirection = transform.forward * 30f + Vector3.up * 10f;
-        rb.velocity = jumpDirection;
+        yield return null;
+    }
 
-        yield return new WaitForSeconds(0.4f);
-
-        EnabledWeaponCollider();
-
-        GameObject effect = Instantiate(skillEffectPrefabs[3], transform.position, transform.rotation);
-        Destroy(effect, 1.0f);
-
-        rb.velocity = new Vector3(rb.velocity.x, -30f, rb.velocity.z);
-        yield return new WaitForSeconds(0.1f);
-
-        rb.velocity = Vector3.zero;
-
-        yield return new WaitForSeconds(0.2f);
+    private IEnumerator DisableColliderAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
         DisabledWeaponCollider();
+    }
+    private IEnumerator AttackStart(float time)
+    {
+        yield return new WaitForSeconds(time);
+        ResetCombo();
+    }
+
+    private void ResetCombo()
+    {
+        comboStep = 0;
+        animator.SetTrigger("ResetCombo");
+        canCombo = false;
         isAttacking = false;
-        animator.SetBool("IsAttacking", false);
     }
 
     private void HandleSkill()
@@ -286,9 +305,12 @@ public class KnightController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            rb.velocity = Vector3.zero;
-            lastSkillTime = Time.time;
-            StartCoroutine(LaunchSwordSlash());
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || animator.GetCurrentAnimatorStateInfo(0).IsName("Idle01"))
+            {
+                rb.velocity = Vector3.zero;
+                lastSkillTime = Time.time;
+                StartCoroutine(LaunchSwordSlash());
+            }
         }
     }
 
@@ -296,6 +318,17 @@ public class KnightController : MonoBehaviour
     {
         isUsingSkill = true;
         animator.SetBool("IsUsingSkill", true);
+        EnabledWeaponCollider();
+
+        Vector3 jumpDirection = transform.forward * 60f + Vector3.up * 40f;
+        rb.velocity = jumpDirection;
+
+        yield return new WaitForSeconds(0.4f);
+
+        rb.velocity = new Vector3(rb.velocity.x, -140f, rb.velocity.z);
+        yield return new WaitForSeconds(0.1f);
+
+        rb.velocity = Vector3.zero;
 
         Quaternion rotation = transform.rotation * Quaternion.Euler(0, -90f, 0);
 
@@ -303,7 +336,9 @@ public class KnightController : MonoBehaviour
         effectPosition += transform.forward * 2.5f;
         effectPosition.y += 3.0f;
 
-        yield return new WaitForSeconds(0.7f);
+        DisableColliderAfterDelay();
+
+        yield return new WaitForSeconds(0.2f);
         GameObject effect = Instantiate(skillEffectPrefabs[0], effectPosition, rotation);
         Destroy(effect, 1.0f);
 
@@ -328,13 +363,13 @@ public class KnightController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Backspace))
             {
-                yield break;
+                break;
             }
             realTime += Time.deltaTime;
             clock.fillAmount = realTime / lifeTime;
             yield return null;
         }
-        EndPossession();
+        EndPossess();
     }
 
     private void OnTriggerEnter(Collider other)
