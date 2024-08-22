@@ -1720,6 +1720,7 @@ MonoBehaviour:
   Rb: {fileID: 0}
   Projectile: {fileID: 0}
   WeaponPosition: {fileID: 0}
+  weaponCollider: {fileID: 6348285420885752433}
 --- !u!1 &1468075056679570772
 GameObject:
   m_ObjectHideFlags: 0

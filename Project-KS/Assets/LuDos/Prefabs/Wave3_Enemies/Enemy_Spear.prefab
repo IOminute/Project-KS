@@ -2041,6 +2041,7 @@ MonoBehaviour:
   soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
   Projectile: {fileID: 0}
   WeaponPosition: {fileID: 0}
+  weaponCollider: {fileID: 3576212179766581013}
 --- !u!54 &6481052154504245072
 Rigidbody:
   m_ObjectHideFlags: 0
