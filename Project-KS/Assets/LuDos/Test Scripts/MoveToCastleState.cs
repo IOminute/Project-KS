@@ -23,28 +23,30 @@ public class MoveToCastleState : BaseState
             enemy.ChangeState(new AttackState(enemy, castleTransform));
         }
 
-        Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, enemy.chaseRange);
+        GameObject[] playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+        GameObject[] playerKnights = GameObject.FindGameObjectsWithTag("PlayerKnight");
 
-        Collider closestTarget = null;
+        GameObject[] potentialTargets = new GameObject[playerUnits.Length + playerKnights.Length];
+        playerUnits.CopyTo(potentialTargets, 0);
+        playerKnights.CopyTo(potentialTargets, playerUnits.Length);
+
+        GameObject closestTarget = null;
         float closestDistance = Mathf.Infinity;
 
-        foreach (var hitCollider in hitColliders)
+        foreach (var potentialTarget in potentialTargets)
         {
-            if (hitCollider.CompareTag("PlayerUnit") || hitCollider.CompareTag("PlayerKnight")) // ¾Æ±º tag
+            Vector3 targetPosition = potentialTarget.transform.position;
+            targetPosition.y = 0f;
+
+            Vector3 enemyPosition = enemy.transform.position;
+            enemyPosition.y = 0f;
+
+            float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
+
+            if (distanceToTarget < closestDistance)
             {
-                Vector3 targetPosition = hitCollider.transform.position;
-                targetPosition.y = 0f;
-
-                Vector3 enemyPosition = enemy.transform.position;
-                enemyPosition.y = 0f;
-
-                float distanceToTarget = Vector3.Distance(enemyPosition, targetPosition);
-
-                if (distanceToTarget < closestDistance)
-                {
-                    closestDistance = distanceToTarget;
-                    closestTarget = hitCollider;
-                }
+                closestDistance = distanceToTarget;
+                closestTarget = potentialTarget;
             }
         }
 
