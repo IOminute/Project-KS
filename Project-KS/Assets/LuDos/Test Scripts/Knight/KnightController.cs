@@ -55,6 +55,8 @@ public class KnightController : MonoBehaviour
 
     public float lifeTime;
     private AudioSource swordAudioSource;
+    public AudioClip runSound;
+    public AudioClip rightClickSound;
 
     private void OnEnable()
     {
@@ -267,19 +269,19 @@ public class KnightController : MonoBehaviour
         {
             case 0:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.Play();
+                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 1:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.Play();
+                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 2:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.Play();
+                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
@@ -332,6 +334,7 @@ public class KnightController : MonoBehaviour
         rb.velocity = jumpDirection;
 
         yield return new WaitForSeconds(0.4f);
+        swordAudioSource.PlayOneShot(rightClickSound);
 
         rb.velocity = new Vector3(rb.velocity.x, -60f, rb.velocity.z);
         yield return new WaitForSeconds(0.1f);

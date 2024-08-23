@@ -6023,6 +6023,7 @@ MonoBehaviour:
   - {fileID: 7960111902202459338, guid: 12e812f24d1d1cf4aa1da9be4ccdb036, type: 3}
   necroCamera: {fileID: 1475844010}
   knightCamera: {fileID: 870696644}
+  explosion: {fileID: 1789005739015704, guid: 1381b64ff1936ac4e80c3a00687081f3, type: 3}
 --- !u!4 &991585344
 Transform:
   m_ObjectHideFlags: 0
@@ -11868,6 +11869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castle: {fileID: 755268992}
   summonInterval: 10
+  enemies: []
   greenEnemies:
   - {fileID: 138126, guid: 409544da275155c43959f94076b5f387, type: 3}
   - {fileID: 191458, guid: 303b099eb47c8e4459022ad06e50e48f, type: 3}
@@ -12653,6 +12655,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
+      propertyPath: runSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b922f17afb0c0924597fbefd480fd278, type: 3}
+    - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1369776720}
@@ -12672,6 +12678,10 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 712743017}
+    - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
+      propertyPath: rightClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69f173240082b054a9f410133271a419, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

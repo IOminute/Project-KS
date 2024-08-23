@@ -36,6 +36,7 @@ public class Necromancer : MonoBehaviour
     public Camera knightCamera;
     public static bool isPossessioning;
     private GameObject playerKnight;
+    public GameObject explosion;
 
     void Start()
     {
@@ -151,6 +152,8 @@ public class Necromancer : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
+            GameObject explosionvfx = Instantiate(explosion, allies[0].transform.position, Quaternion.identity);
+            Destroy(explosionvfx, 3.0f);
             boomList.Add(boom);
             allies[0].GetComponent<UnitController>().Die();
             allies.Remove(allies[0]);
