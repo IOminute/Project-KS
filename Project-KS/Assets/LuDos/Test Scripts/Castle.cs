@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // 씬 관리에 필요한 네임스페이스 추가
 
 public class Castle : MonoBehaviour
 {
@@ -11,7 +10,6 @@ public class Castle : MonoBehaviour
     float health = 1000;
 
     public Image healthBar;
-
     private void TakeDamage(float damageAmount)
     {
         if (!isGameOver)
@@ -23,9 +21,7 @@ public class Castle : MonoBehaviour
             {
                 health = 0;
                 isGameOver = true;
-
-                // 게임 오버 씬으로 전환
-                SceneManager.LoadScene("GameOver");
+                // 성 무너지는 애니메이션?
             }
         }
     }
