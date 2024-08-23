@@ -168,7 +168,10 @@ public class Necromancer : MonoBehaviour
     IEnumerator DestroyBoom(GameObject boomToDestroy)
     {
         yield return new WaitForSeconds(0.2f);
-        Destroy(boomToDestroy);
+        if(boomToDestroy != null)
+        {
+            Destroy(boomToDestroy);
+        }
     }
 
     void Revive(GameObject soul)
