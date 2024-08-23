@@ -20,7 +20,7 @@ public class KnightController : MonoBehaviour
     private float lastSkillTime;
 
     private float attackCooldown = 0.1f;
-    private float comboResetTime = 0.5f;
+    private float comboResetTime = 0.4f;
     private int comboStep = 0;
     Coroutine attackStart;
 
