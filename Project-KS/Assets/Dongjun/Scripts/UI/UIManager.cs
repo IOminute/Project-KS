@@ -155,7 +155,7 @@ public class UIManager : MonoBehaviour
 
     public void ManaBarAnim(float mana, float maxMana)
     {
-        manaBar.DOFillAmount(mana/maxMana, 0.1f);
+        manaBar.fillAmount = mana / maxMana;
     }
 
 
