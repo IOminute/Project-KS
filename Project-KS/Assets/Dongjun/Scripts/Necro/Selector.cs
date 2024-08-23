@@ -122,7 +122,8 @@ public class Selector : MonoBehaviour
     IEnumerator Move(GameObject obj, Vector3 targetPos)
     {
         obj.transform.DOKill();
-        obj.transform.DOMove(targetPos, 20f).SetSpeedBased().SetEase(Ease.Linear).OnStart(() => obj.GetComponent<UnitController>().IsSelected = true).OnComplete(() => obj.GetComponent<UnitController>().IsSelected = false) ;
+        obj.GetComponent<UnitController>().IsSelected = true;
+        obj.transform.DOMove(targetPos, 20f).SetSpeedBased().SetEase(Ease.Linear).OnComplete(() => obj.GetComponent<UnitController>().IsSelected = false) ;
         //while (true)
         //{
         //    obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetPos, 20 * Time.deltaTime);
