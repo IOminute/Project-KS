@@ -20,7 +20,7 @@ public class KnightController : MonoBehaviour
     private float lastSkillTime;
 
     private float attackCooldown = 0.1f;
-    private float comboResetTime = 0.4f;
+    private float comboResetTime = 0.5f;
     private int comboStep = 0;
     Coroutine attackStart;
 
@@ -54,6 +54,7 @@ public class KnightController : MonoBehaviour
     public GameObject WeaponR;
 
     public float lifeTime;
+    private AudioSource swordAudioSource;
 
     private void OnEnable()
     {
@@ -71,6 +72,7 @@ public class KnightController : MonoBehaviour
         currentHealth = maxHealth;
         lastAttackTime = -attackCooldown;
         lastSkillTime = -skillCooldown;
+        swordAudioSource = GetComponent<AudioSource>();
 
         DisabledWeaponCollider();
     }
@@ -265,16 +267,19 @@ public class KnightController : MonoBehaviour
         {
             case 0:
                 animator.SetTrigger("ComboAttack");
+                swordAudioSource.Play();
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 1:
                 animator.SetTrigger("ComboAttack");
+                swordAudioSource.Play();
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 2:
                 animator.SetTrigger("ComboAttack");
+                swordAudioSource.Play();
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;

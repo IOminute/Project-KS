@@ -25,9 +25,12 @@ public class UnitAttackState : UnitBaseState
             unit.ChangeState(new UnitSelectedState(unit));
         }
 
-        if (!unit.IsAttacking && Vector3.Distance(unit.transform.position, target.position) > unit.attackRange + 0.5f)
+        if (unit != null)
         {
-            unit.ChangeState(new UnitChaseState(unit, target));
+            if (!unit.IsAttacking && Vector3.Distance(unit.transform.position, target.position) > unit.attackRange + 0.5f)
+            {
+                unit.ChangeState(new UnitChaseState(unit, target));
+            }
         }
     }
 
