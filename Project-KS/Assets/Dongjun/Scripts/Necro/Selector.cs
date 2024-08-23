@@ -99,7 +99,7 @@ public class Selector : MonoBehaviour
 
     void Select()
     {
-        if (triggered.Count == 0) { print("nothing"); transform.localScale = Vector3.zero; return; }
+        if (triggered.Count == 0) { transform.localScale = Vector3.zero; return; }
         currentPos = transform.position;
         selected = triggered;
         transform.localScale = Vector3.zero;
@@ -134,7 +134,7 @@ public class Selector : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "test") triggered.Add(other.gameObject);
-        print(triggered);
+        if (other.gameObject.tag == "PlayerUnit") triggered.Add(other.gameObject);
+        // print(triggered);
     }
 }
