@@ -15,7 +15,7 @@ public class UnitSelectedState : UnitBaseState
     {
         if (unit.IsDie) return;
 
-        unit.MoveTo(unit.ClickedPosition);
+        // unit.MoveTo(unit.ClickedPosition);
 
         if (!unit.IsSelected || Vector3.Distance(unit.transform.position, unit.ClickedPosition) <= 1.5f)
         {

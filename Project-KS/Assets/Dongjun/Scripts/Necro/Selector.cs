@@ -123,22 +123,30 @@ public class Selector : MonoBehaviour
     {
         obj.transform.DOKill();
         obj.GetComponent<UnitController>().IsSelected = true;
-        obj.transform.DOMove(targetPos, 20f).SetSpeedBased().SetEase(Ease.Linear).OnComplete(() => obj.GetComponent<UnitController>().IsSelected = false) ;
-        //while (true)
-        //{
-        //    obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetPos, 20 * Time.deltaTime);
-        //    if (obj.transform.position == targetPos) break;
-        //    yield return null;
-        //}
+        obj.GetComponent<UnitController>().animator.SetTrigger("Run");
+
+        obj.transform.DOLookAt(targetPos, 0.5f);
+
+        obj.transform.DOMove(targetPos, 5f).SetSpeedBased().SetEase(Ease.Linear).OnComplete(() =>
+        {
+            obj.GetComponent<UnitController>().IsSelected = false;
+            obj.GetComponent<UnitController>().animator.SetTrigger("Idle");
+        });
+
         yield return null;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerUnit")
+        GameObject rootObject = other.transform.root.gameObject;
+
+        if (rootObject.CompareTag("PlayerUnit"))
         {
-            triggered.Add(other.gameObject);
+            if (!triggered.Contains(rootObject))
+            {
+                triggered.Add(rootObject);
+            }
+            print(rootObject);
         }
-        print(other.gameObject);
     }
 }

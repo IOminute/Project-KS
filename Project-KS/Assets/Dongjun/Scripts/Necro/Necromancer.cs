@@ -177,6 +177,7 @@ public class Necromancer : MonoBehaviour
     void Revive(GameObject soul)
     {
         Vector3 spawnAllyPos = soul.transform.position;
+        spawnAllyPos.y = 0;
 
         // 스폰 포지션에 아군 소환하기
         GameObject ally = Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);

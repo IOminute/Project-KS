@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using TreeEditor;
 
 public class EnemyController : MonoBehaviour
 {
