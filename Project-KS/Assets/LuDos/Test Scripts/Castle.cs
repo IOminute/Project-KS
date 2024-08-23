@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement; // 씬 관리에 필요한 네임스페이스 추가
 public class Castle : MonoBehaviour
 {
     bool isGameOver = false;
-    float health = 10;
+    float health = 1000;
 
     public Image healthBar;
 
