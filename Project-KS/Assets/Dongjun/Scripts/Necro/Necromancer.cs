@@ -13,8 +13,8 @@ public class Necromancer : MonoBehaviour
     static List<GameObject> allies;
     private List<GameObject> boomList;
 
-    public float maxMana = 1000;
-    public float mana = 1000; //Temporary Value, It will be replaced with PlayerManager's Variable.
+    public float maxMana;
+    public float mana; //Temporary Value, It will be replaced with PlayerManager's Variable.
 
     private bool isSkillDoing;
     private bool isRushing;
@@ -40,6 +40,8 @@ public class Necromancer : MonoBehaviour
 
     void Start()
     {
+        maxMana = 1000;
+        mana = 1000;    
         maxBodies = 20;
 
         spirits = new List<GameObject>();
@@ -149,6 +151,7 @@ public class Necromancer : MonoBehaviour
         ManageMana(-500f);
         yield return waitOneSec;
         int count = allies.Count;
+        print(count);
         for (int i = 0; i < count; i++)
         {
             GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
@@ -156,7 +159,8 @@ public class Necromancer : MonoBehaviour
             Destroy(explosionvfx, 3.0f);
             boomList.Add(boom);
             allies[0].GetComponent<UnitController>().Die();
-            allies.Remove(allies[0]);
+            allies.RemoveAt(0);
+            yield return null;
         }
         isSkillDoing = false;
         int boomCount = boomList.Count;
@@ -164,6 +168,7 @@ public class Necromancer : MonoBehaviour
         {
             StartCoroutine(DestroyBoom(boomList[0]));
             boomList.Remove(boomList[0]);
+            yield return null;
         }
         yield return null;
     }
@@ -192,6 +197,7 @@ public class Necromancer : MonoBehaviour
         UIManager.instance.BodyTextChange(spirits.Count);
         // 소환된 아군 리스트에 저장하기
         allies.Add(ally);
+        print(allies.Count);
     }
 
     public static void ManageKindredPoint(int amount)
@@ -229,16 +235,6 @@ public class Necromancer : MonoBehaviour
         if (spirits.Count == maxBodies) return;
         spirits.Add(spirit);
         UIManager.instance.BodyTextChange(spirits.Count);
-    }
-
-    public static void ClearSpirit()
-    {
-        spirits.Clear();
-    }
-
-    public static void AllyDies(GameObject ally)
-    {
-        allies.Remove(ally);
     }
 
     void Enforce()
