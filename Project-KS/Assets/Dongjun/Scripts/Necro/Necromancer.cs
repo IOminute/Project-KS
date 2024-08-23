@@ -162,7 +162,7 @@ public class Necromancer : MonoBehaviour
         int boomCount = boomList.Count;
         for (int i = 0; i < boomCount; i++)
         {
-            StartCoroutine(DestroyBoom(boomList[0]));
+            StartCoroutine(DestroyBoom(boomList[i]));
             boomList.Remove(boomList[0]);
         }
         yield return null;
