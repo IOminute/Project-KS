@@ -187,7 +187,7 @@ public class Necromancer : MonoBehaviour
         allies.Add(ally);
     }
 
-    static void ManageKindredPoint(int amount)
+    public static void ManageKindredPoint(int amount)
     {
         if (kindredPoint + amount < 0)
         {

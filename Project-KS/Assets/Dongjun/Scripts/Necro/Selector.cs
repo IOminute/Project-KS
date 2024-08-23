@@ -79,7 +79,7 @@ public class Selector : MonoBehaviour
             }
         }
 
-        print(selected);
+        // print(selected);
     }
 
     void Rect()
@@ -108,7 +108,7 @@ public class Selector : MonoBehaviour
 
     void MoveManager(Vector3 mousePos)
     {
-        print("currentPos : " + currentPos + " targetPos : " + mousePos);
+        // print("currentPos : " + currentPos + " targetPos : " + mousePos);
         if (!isSelecting) { print("How did you enter this? fuck..."); return; }
         foreach (GameObject ally in selected)
         {

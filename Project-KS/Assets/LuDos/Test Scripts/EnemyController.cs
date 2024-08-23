@@ -225,6 +225,8 @@ public class EnemyController : MonoBehaviour
 
         animator.SetTrigger("Death");
 
+        Necromancer.ManageKindredPoint(1);
+
         Destroy(gameObject, 2.0f);
     }
 
