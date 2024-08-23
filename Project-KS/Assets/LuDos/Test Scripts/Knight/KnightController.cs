@@ -376,10 +376,6 @@ public class KnightController : MonoBehaviour
             {
                 break;
             }
-            if (currentHealth <= 0)
-            {
-                break;
-            }
             realTime += Time.deltaTime;
             clock.fillAmount = realTime / lifeTime;
             yield return null;
