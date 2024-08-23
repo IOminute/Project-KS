@@ -122,7 +122,7 @@ public class Selector : MonoBehaviour
     IEnumerator Move(GameObject obj, Vector3 targetPos)
     {
         obj.transform.DOKill();
-        obj.transform.DOMove(targetPos, 20f).SetSpeedBased().SetEase(Ease.Linear);
+        obj.transform.DOMove(targetPos, 20f).SetSpeedBased().SetEase(Ease.Linear).OnStart(() => obj.GetComponent<UnitController>().IsSelected = true).OnComplete(() => obj.GetComponent<UnitController>().IsSelected = false) ;
         //while (true)
         //{
         //    obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetPos, 20 * Time.deltaTime);
@@ -134,7 +134,10 @@ public class Selector : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerUnit") triggered.Add(other.gameObject);
+        if (other.gameObject.tag == "PlayerUnit")
+        {
+            triggered.Add(other.gameObject);
+        }
         print(other.gameObject);
     }
 }
