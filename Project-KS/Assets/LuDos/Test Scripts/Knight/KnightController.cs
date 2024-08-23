@@ -285,7 +285,7 @@ public class KnightController : MonoBehaviour
 
     private IEnumerator DisableColliderAfterDelay()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.0f);
         DisabledWeaponCollider();
     }
     private IEnumerator AttackStart(float time)
