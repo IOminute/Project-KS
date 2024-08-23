@@ -103,13 +103,14 @@ public class SceneManagement : MonoBehaviour
                     IntervalSummon(toSummon, greenEnemies);
                 }
             }
-            else if (time >= 180f && !wave1boss)
+            else if (time >= 180f && !wave1boss && !isBossFighting)
             {
                 isBossFighting = true;
                 List<int> toSummon = new List<int>() { 4, 2, 3 }; // 초록 기마 창술사, 초록 기마궁수, 초록 메이지, 석궁(없음)
                 SummonBoss(toSummon, greenEnemies);
                 if (enemies.Count == 0)
                 {
+                    isBossFighting = false;
                     StartCoroutine(UIManager.instance.waveClear("Wave 2"));
                     time = 180f;
                     intervalTime = 0f;
@@ -170,13 +171,14 @@ public class SceneManagement : MonoBehaviour
                     IntervalSummon(toSummon, whiteEnemies);
                 }
             }
-            else if (time >= 360f && !wave2boss && wave1boss)
+            else if (time >= 360f && !wave2boss && wave1boss && !isBossFighting)
             {
                 isBossFighting = true;
                 List<int> toSummon = new List<int>() { 9, 4, 3 }; // 흰색 정예기사, 흰색 기마창술사, 흰색 메이지, 석궁(없음)
                 SummonBoss(toSummon, whiteEnemies);
                 if (enemies.Count == 0)
                 {
+                    isBossFighting = false;
                     StartCoroutine(UIManager.instance.waveClear("Wave 3"));
                     time = 360f;
                     intervalTime = 0f;
@@ -237,13 +239,14 @@ public class SceneManagement : MonoBehaviour
                     IntervalSummon(toSummon, blackEnemies);
                 }
             }
-            else if (time >= 540f && wave2boss && wave1boss && !wave3boss)
+            else if (time >= 540f && wave2boss && wave1boss && !wave3boss && !isBossFighting)
             {
                 isBossFighting = true;
                 List<int> toSummon = new List<int>() { 4, 5, 2, 3 };
                 SummonBoss(toSummon, blackEnemies);
                 if (enemies.Count == 0)
                 {
+                    isBossFighting = false;
                     StartCoroutine(UIManager.instance.waveClear("Final Wave"));
                     time = 540f;
                     intervalTime = 0f;
