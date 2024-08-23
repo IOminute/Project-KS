@@ -39,6 +39,9 @@ public class SceneManagement : MonoBehaviour
         bool wave1boss = false;
         bool wave2boss = false;
         bool wave3boss = false;
+        intervalTime = 0f;
+        List<int> tosummon = new List<int>() { 6 }; // 초록 망치든애
+        IntervalSummon(tosummon, greenEnemies);
         while (true)
         {
             if (!isBossFighting)
@@ -107,6 +110,7 @@ public class SceneManagement : MonoBehaviour
                 SummonBoss(toSummon, greenEnemies);
                 if (enemies.Count == 0)
                 {
+                    StartCoroutine(UIManager.instance.waveClear("Wave 2"));
                     time = 180f;
                     intervalTime = 0f;
                     wave1boss = true;
@@ -173,9 +177,113 @@ public class SceneManagement : MonoBehaviour
                 SummonBoss(toSummon, whiteEnemies);
                 if (enemies.Count == 0)
                 {
-                    time = 180f;
+                    StartCoroutine(UIManager.instance.waveClear("Wave 3"));
+                    time = 360f;
                     intervalTime = 0f;
                     wave2boss = true;
+                }
+            }
+            else if (time >= 360f && time < 390f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 6 }; 
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 390f && time < 420f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 6, 7, 1 }; 
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 420f && time < 450f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 6, 7, 1, 0 }; 
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 450f && time < 480f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 6, 7, 1, 0, 2 };
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 480f && time < 510f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 9, 1 };
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 510f && time < 540f && wave1boss && wave2boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 9, 1, 0 };
+                    IntervalSummon(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 540f && wave2boss && wave1boss && !wave3boss)
+            {
+                isBossFighting = true;
+                List<int> toSummon = new List<int>() { 4, 5, 2, 3 };
+                SummonBoss(toSummon, blackEnemies);
+                if (enemies.Count == 0)
+                {
+                    StartCoroutine(UIManager.instance.waveClear("Final Wave"));
+                    time = 540f;
+                    intervalTime = 0f;
+                    wave3boss = true;
+                    isBossFighting = false;
+                }
+            }
+            else if (time >= 540f && time < 560f && wave1boss && wave2boss && wave3boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 4, 2, 3 };
+                    SummonBoss(toSummon, greenEnemies);
+                }
+            }
+            else if (time >= 560f && time < 580f && wave1boss && wave2boss && wave3boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 9, 4, 3 };
+                    SummonBoss(toSummon, whiteEnemies);
+                }
+            }
+            else if (time >= 580f && time < 600f && wave1boss && wave2boss && wave3boss)
+            {
+                if (intervalTime > summonInterval)
+                {
+                    intervalTime = 0f;
+                    List<int> toSummon = new List<int>() { 4, 5, 2, 3 };
+                    SummonBoss(toSummon, blackEnemies);
+                }
+            }
+            else if (time >= 600f && wave1boss && wave2boss && wave3boss)
+            {
+                if (enemies.Count == 0)
+                {
+                    StartCoroutine(UIManager.instance.gameClear());
+                    yield break;
                 }
             }
             yield return null;
@@ -215,10 +323,13 @@ public class SceneManagement : MonoBehaviour
 
     Vector3 GetRandomPosition()
     {
-        // 무작위 방향과 거리 생성
-        Vector3 randomDirection = Random.insideUnitSphere * 150;
+        Vector3 randomDirection = Random.onUnitSphere;
+
+        // 무작위 거리 생성 (100에서 150 사이)
+        float randomDistance = Random.Range(150f, 200f);
+
         // 기준 좌표에 추가하여 랜덤 좌표 계산
-        return castle.transform.position + randomDirection;
+        return Vector3.one + randomDirection * randomDistance;
     }
 
 

@@ -8,11 +8,6 @@ public class Settings : MonoBehaviour
     public Slider masterSlider;
     public Slider bgmSlider;
     public Slider sfxSlider;
-
-
-    static float masterVol;
-    static float bgmVol;
-    static float sfxVol;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,21 +29,43 @@ public class Settings : MonoBehaviour
         float value = masterSlider.value;
         bgmSlider.value = value;
         sfxSlider.value = value;
-        masterMixer.SetFloat("Master", value * -80f);
+        if (value == 1)
+        {
+            masterMixer.SetFloat("Master", value * -80f);
+        }
+        else
+        {
+            masterMixer.SetFloat("Master", value * -20f);
+        }
         PlayerPrefs.SetFloat("MasterVolume", value);
     }
 
     public void bgmAudioControl()
     {
         float value = bgmSlider.value;
-        masterMixer.SetFloat("BGM", value * -80f);
+        if (value == 1)
+        {
+            masterMixer.SetFloat("BGM", value * -80f);
+        }
+        else
+        {
+            masterMixer.SetFloat("BGM", value * -20f);
+        }
         PlayerPrefs.SetFloat("bgmVolume", value);
     }
 
     public void sfxAudioControl()
     {
         float value = sfxSlider.value;
-        masterMixer.SetFloat("SFX", value * -80f);
+        if (value == 1)
+        {
+            masterMixer.SetFloat("SFX", value * -80f);
+        }
+        else
+        {
+            masterMixer.SetFloat("SFX", value * -20f);
+        }
+
         PlayerPrefs.SetFloat("sfxVolume", value);
     }
     public void Preset()
@@ -59,10 +76,5 @@ public class Settings : MonoBehaviour
         masterAudioControl();
         bgmAudioControl();
         sfxAudioControl();
-    }
-
-    public static void Reset()
-    {
-
     }
 }

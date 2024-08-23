@@ -43,6 +43,8 @@ public class UIManager : MonoBehaviour
     public Canvas necroCanvas;
     public Canvas knightCanvas;
 
+    public TMP_Text clearText;
+
     void Awake()
     {
         if (instance == null)
@@ -159,6 +161,12 @@ public class UIManager : MonoBehaviour
 
     public void PauseOn()
     {
+        if (Necromancer.isPossessioning)
+        {
+            GameObject knightCamera = GameObject.Find("Knight_Camera");
+            knightCamera.GetComponent<KnightCamera>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+        }
         pauseContainer.SetActive(true);
         isPaused = true;
         Time.timeScale = 0;
@@ -166,6 +174,12 @@ public class UIManager : MonoBehaviour
 
     public void PauseOff()
     {
+        if (Necromancer.isPossessioning)
+        {
+            GameObject knightCamera = GameObject.Find("Knight_Camera");
+            knightCamera.GetComponent<KnightCamera>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         pauseContainer.SetActive(false);
         isPaused = false;
         Time.timeScale = 1;
@@ -204,5 +218,24 @@ public class UIManager : MonoBehaviour
     public void GenPossess()
     {
         possessionBar.DOFillAmount(1f, 20f).SetEase(Ease.Linear);
+    }
+
+    public IEnumerator waveClear(string text)
+    {
+        clearText.text = "Stage Clear!";
+        clearText.DOFade(1f, 0.5f).SetEase(Ease.OutSine);
+        yield return new WaitForSeconds(0.5f);
+        clearText.text = text;
+        yield return new WaitForSeconds(0.5f);
+        clearText.DOFade(0f, 0.5f).SetEase(Ease.OutSine);
+        yield return null;
+    }
+
+    public IEnumerator gameClear()
+    {
+        clearText.fontSize = 100f;
+        clearText.text = "Clear!";
+        clearText.DOFade(1f, 0.5f).SetEase(Ease.OutSine);
+        yield return null;
     }
 }

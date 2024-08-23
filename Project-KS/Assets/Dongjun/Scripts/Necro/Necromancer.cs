@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
 
 public class Necromancer : MonoBehaviour
 {
-    private int kindredPoint;
+    public static int kindredPoint;
     static int maxBodies;
 
     static List<GameObject> spirits;
@@ -38,6 +39,8 @@ public class Necromancer : MonoBehaviour
 
     void Start()
     {
+        maxBodies = 20;
+
         spirits = new List<GameObject>();
         allies = new List<GameObject>();
         boomList = new List<GameObject>();
@@ -74,22 +77,36 @@ public class Necromancer : MonoBehaviour
 
     IEnumerator Rise()
     {
+        print(spirits.Count);
         if (spirits.Count == 0) 
         { 
             print("Not Enough Bodies!"); 
             yield break; 
         }
+        //for (int i = 0; i < spirits.Count; i++)
+        //{
+        //    ParticleSystem.MainModule main = spirits[i].GetComponent<ParticleSystem>().main;
+        //    main.startColor = new Color(72f, 61f, 139f);
+        //}
         isSkillDoing = true;
         StartCoroutine(UIManager.instance.SkillInitiated("Make Them Immortal.", 0.5f, 20 * spirits.Count));
         yield return waitHalfSec;
         ManageMana(-20f * spirits.Count);
-        for (int i = 0; i < spirits.Count; i++) Revive(spirits[i]);
+        int count = spirits.Count;
+        for (int i = 0; i < count; i++) {
+            Revive(spirits[0]);
+            yield return null;
+        }
         isSkillDoing = false;
         yield return null;
     }
 
     IEnumerator Rush()
     {
+        if (mana < 300f)
+        {
+            print("Not enough Mana!");
+        }
         isSkillDoing = true;
         isRushing = true;
         StartCoroutine(UIManager.instance.SkillInitiated("Feeling Spirits Of Death...", 3f, 300));
@@ -101,12 +118,11 @@ public class Necromancer : MonoBehaviour
         {
             yield return null;
             time += Time.deltaTime;
-            if (spirits.Count > 0)
+            int count = spirits.Count;
+            for (int i = 0; i < count; i++)
             {
-                for (int i = 0; i < spirits.Count; i++)
-                {
-                    Revive(spirits[i]);
-                }
+                Revive(spirits[0]);
+                yield return null;
             }
         }
         isSkillDoing = false;
@@ -117,22 +133,34 @@ public class Necromancer : MonoBehaviour
 
     IEnumerator Explode()
     {
+        if (allies.Count == 0)
+        {
+            print("Not Enough Bodies!");
+            yield break;
+        }
+        if (mana < 500f)
+        {
+            print("Not Enough Mana!");
+            yield break;
+        }
         isSkillDoing = true;
         StartCoroutine(UIManager.instance.SkillInitiated("Time To Sleep Again.", 1f, 500));
         ManageMana(-500f);
         yield return waitOneSec;
-        for (int i = 0; i < allies.Count; i++)
+        int count = allies.Count;
+        for (int i = 0; i < count; i++)
         {
-            GameObject boom = Instantiate(boomer, allies[i].transform.position, Quaternion.identity);
+            GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
             boomList.Add(boom);
-            allies[i].GetComponent<UnitController>().Die();
-            allies.Remove(allies[i]);
+            allies[0].GetComponent<UnitController>().Die();
+            allies.Remove(allies[0]);
         }
         isSkillDoing = false;
-        for (int i = 0; i < boomList.Count; i++)
+        int boomCount = boomList.Count;
+        for (int i = 0; i < boomCount; i++)
         {
             StartCoroutine(DestroyBoom(boomList[i]));
-            boomList.Remove(boomList[i]);
+            boomList.Remove(boomList[0]);
         }
         yield return null;
     }
@@ -152,12 +180,14 @@ public class Necromancer : MonoBehaviour
         ally.GetComponent<UnitController>().damage += enforceAmount;
         ally.GetComponent<UnitController>().health += enforceAmountHealth;
         spirits.Remove(soul);
+        Destroy(soul);
 
+        UIManager.instance.BodyTextChange(spirits.Count);
         // 소환된 아군 리스트에 저장하기
         allies.Add(ally);
     }
 
-    void ManageKindredPoint(int amount)
+    static void ManageKindredPoint(int amount)
     {
         if (kindredPoint + amount < 0)
         {
@@ -172,8 +202,7 @@ public class Necromancer : MonoBehaviour
 
     void ManageMana(float requireMana)
     {
-        float currentMana = mana + requireMana;
-        mana = currentMana;
+        mana += requireMana;
         UIManager.instance.ManaBarAnim(mana, maxMana);
     }
 
@@ -192,6 +221,7 @@ public class Necromancer : MonoBehaviour
     {
         if (spirits.Count == maxBodies) return;
         spirits.Add(spirit);
+        UIManager.instance.BodyTextChange(spirits.Count);
     }
 
     public static void ClearSpirit()
@@ -211,6 +241,7 @@ public class Necromancer : MonoBehaviour
             print("Not enough Kindred Points!");
             return;
         }
+        ManageKindredPoint(-2 * enforceAmount);
         enforceAmount += 5;
         if (enforceAmount % 10 == 0) enforceAmountHealth += 50;
     }
@@ -222,23 +253,33 @@ public class Necromancer : MonoBehaviour
             print("Not enough Kindred Points!");
             return;
         }
+        ManageKindredPoint(-100);
         maxBodies += 10;
     }
 
     void Possession()
     {
-        UIManager.instance.DoPossess();
-        UIManager.instance.necroCanvas.gameObject.SetActive(false);
-        UIManager.instance.knightCanvas.gameObject.SetActive(true);
-        isPossessioning = true;
-        playerKnight.GetComponent<KnightController>().enabled = true;
-        StartCoroutine(playerKnight.GetComponent<KnightController>().ClockStart());
-        necroCamera.gameObject.SetActive(false);
-        knightCamera.gameObject.SetActive(true);
+        if (UIManager.instance.possessionBar.fillAmount == 1f)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            UIManager.instance.DoPossess();
+            UIManager.instance.necroCanvas.gameObject.SetActive(false);
+            UIManager.instance.knightCanvas.gameObject.SetActive(true);
+            isPossessioning = true;
+            playerKnight.GetComponent<KnightController>().enabled = true;
+            StartCoroutine(playerKnight.GetComponent<KnightController>().ClockStart());
+            necroCamera.gameObject.SetActive(false);
+            knightCamera.gameObject.SetActive(true);
+        }
+        else
+        {
+
+        }
     }
 
     public static void EndPossesion()
     {
+        Cursor.lockState = CursorLockMode.None;
         isPossessioning = false;
         UIManager.instance.GenPossess();
         UIManager.instance.necroCanvas.gameObject.SetActive(true);
