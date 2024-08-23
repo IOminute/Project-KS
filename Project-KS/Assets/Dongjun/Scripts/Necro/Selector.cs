@@ -135,6 +135,6 @@ public class Selector : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PlayerUnit") triggered.Add(other.gameObject);
-        // print(triggered);
+        print(other.gameObject);
     }
 }
