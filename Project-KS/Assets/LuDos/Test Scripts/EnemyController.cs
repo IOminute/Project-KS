@@ -217,7 +217,7 @@ public class EnemyController : MonoBehaviour
             StopCoroutine(attackCoroutine);
         }
 
-        //SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
+        SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
 
         DropSoul();
 

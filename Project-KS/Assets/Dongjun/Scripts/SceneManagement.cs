@@ -10,7 +10,7 @@ public class SceneManagement : MonoBehaviour
     public GameObject castle;
     public int summonInterval;
 
-    private List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
     public List<GameObject> greenEnemies = new List<GameObject>();
     public List<GameObject> whiteEnemies = new List<GameObject>();
     public List<GameObject> blackEnemies = new List<GameObject>();
@@ -246,7 +246,6 @@ public class SceneManagement : MonoBehaviour
                 SummonBoss(toSummon, blackEnemies);
                 if (enemies.Count == 0)
                 {
-                    isBossFighting = false;
                     StartCoroutine(UIManager.instance.waveClear("Final Wave"));
                     time = 540f;
                     intervalTime = 0f;
