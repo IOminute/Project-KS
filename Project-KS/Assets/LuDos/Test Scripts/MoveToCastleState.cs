@@ -16,12 +16,13 @@ public class MoveToCastleState : BaseState
 
         Transform castleTransform = enemy.Castle.transform;
 
-        enemy.MoveTo(castleTransform.position);
-
         if (enemy.IsRangeShort || enemy.IsRangeLong)
         {
             enemy.ChangeState(new AttackState(enemy, castleTransform));
+            return;
         }
+
+        enemy.MoveTo(castleTransform.position);
 
         GameObject[] potentialTargets = GameObject.FindGameObjectsWithTag("PlayerUnit");
 

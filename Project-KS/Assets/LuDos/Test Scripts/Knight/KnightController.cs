@@ -96,18 +96,21 @@ public class KnightController : MonoBehaviour
 
     public void TriggerEffect1_R()
     {
+        swordAudioSource.PlayOneShot(runSound);
         Quaternion rotation = WeaponR.transform.rotation * Quaternion.Euler(0,180f, 0);
         GameObject effectInstance = Instantiate(skillEffectPrefabs[1], WeaponR.transform.position, rotation);
         Destroy(effectInstance, 1.0f);
     }
     public void TriggerEffect1_L()
     {
+        swordAudioSource.PlayOneShot(runSound);
         Quaternion rotation = WeaponL.transform.rotation * Quaternion.Euler(0, 180f, 0);
         GameObject effectInstance = Instantiate(skillEffectPrefabs[1], WeaponL.transform.position, rotation);
         Destroy(effectInstance, 1.0f);
     }
     public void TriggerEffect2()
     {
+        swordAudioSource.PlayOneShot(runSound);
         Vector3 effectPosition = transform.position;
         effectPosition.y += 3.0f;
         GameObject effectInstance = Instantiate(skillEffectPrefabs[2], effectPosition, transform.rotation);
@@ -269,19 +272,16 @@ public class KnightController : MonoBehaviour
         {
             case 0:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 1:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 2:
                 animator.SetTrigger("ComboAttack");
-                swordAudioSource.PlayOneShot(runSound);
                 EnabledWeaponCollider();
                 StartCoroutine(DisableColliderAfterDelay());
                 break;

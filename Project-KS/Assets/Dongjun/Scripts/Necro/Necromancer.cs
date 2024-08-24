@@ -9,7 +9,7 @@ public class Necromancer : MonoBehaviour
     public static int kindredPoint;
     static int maxBodies;
 
-    static List<GameObject> spirits;
+    public static List<GameObject> spirits;
     static List<GameObject> allies;
     private List<GameObject> boomList;
 

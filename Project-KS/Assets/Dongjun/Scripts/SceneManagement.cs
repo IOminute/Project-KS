@@ -330,8 +330,7 @@ public class SceneManagement : MonoBehaviour
         // 무작위 거리 생성 (100에서 150 사이)
         float randomDistance = Random.Range(100f, 150f);
 
-        // 기준 좌표에 추가하여 랜덤 좌표 계산
-        return Vector3.one + randomDirection * randomDistance;
+        return randomDirection.normalized * randomDistance;
     }
 
 

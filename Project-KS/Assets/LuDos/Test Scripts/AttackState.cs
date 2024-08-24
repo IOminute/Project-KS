@@ -25,7 +25,6 @@ public class AttackState : BaseState
 
         if (!enemy.IsAttacking && Vector3.Distance(enemy.transform.position, target.position) > enemy.attackRange + 0.5f)
         {
-            Debug.Log("ChangeToChase");
             enemy.ChangeState(new ChaseState(enemy, target));
         }
     }

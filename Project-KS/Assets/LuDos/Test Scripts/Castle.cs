@@ -30,6 +30,7 @@ public class Castle : MonoBehaviour
     {
         if (other.CompareTag("EnemyWeapon"))
         {
+            print("1");
             EnemyWeapon weapon = other.GetComponent<EnemyWeapon>();
             if (weapon != null)
             {
@@ -38,6 +39,7 @@ public class Castle : MonoBehaviour
         }
         else if (other.CompareTag("EnemyWeapon_Projectile"))
         {
+            print("2");
             EnemyWeapon_Projectile weapon = other.GetComponent<EnemyWeapon_Projectile>();
             if (weapon != null)
             {
