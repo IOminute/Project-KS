@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Castle : MonoBehaviour
 {
     bool isGameOver = false;
-    float health = 1000;
+    float health = 10000;
 
     public Image healthBar;
     private void TakeDamage(float damageAmount)
@@ -15,7 +15,7 @@ public class Castle : MonoBehaviour
         if (!isGameOver)
         {
             health -= damageAmount;
-            healthBar.fillAmount = health / 1000f;
+            healthBar.fillAmount = health / 10000f;
 
             if (health <= 0)
             {
@@ -30,16 +30,14 @@ public class Castle : MonoBehaviour
     {
         if (other.CompareTag("EnemyWeapon"))
         {
-            print("1");
             EnemyWeapon weapon = other.GetComponent<EnemyWeapon>();
             if (weapon != null)
             {
                 TakeDamage(weapon.damage);
             }
         }
-        else if (other.CompareTag("EnemyWeapon_Projectile"))
+        if (other.CompareTag("EnemyWeapon_Projectile"))
         {
-            print("2");
             EnemyWeapon_Projectile weapon = other.GetComponent<EnemyWeapon_Projectile>();
             if (weapon != null)
             {
