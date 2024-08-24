@@ -6,6 +6,11 @@ public class NecroCamController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            transform.position = new Vector3 (0, 40f, -30f);
+        }
+
         Vector3 mousePosition = Input.mousePosition;
 
         // 화면의 모서리 위치를 체크

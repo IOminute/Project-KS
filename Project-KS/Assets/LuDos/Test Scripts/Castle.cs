@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Castle : MonoBehaviour
 {
     bool isGameOver = false;
-    float health = 10000;
+    float health = 5000;
 
     public Image healthBar;
     private void TakeDamage(float damageAmount)
@@ -15,7 +15,7 @@ public class Castle : MonoBehaviour
         if (!isGameOver)
         {
             health -= damageAmount;
-            healthBar.fillAmount = health / 10000f;
+            healthBar.fillAmount = health / 5000f;
 
             if (health <= 0)
             {

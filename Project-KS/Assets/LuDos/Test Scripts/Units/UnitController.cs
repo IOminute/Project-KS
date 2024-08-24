@@ -103,6 +103,7 @@ public class UnitController : MonoBehaviour
     public void Stop()
     {
         Rb.velocity = Vector3.zero;
+        Rb.isKinematic = true;
     }
 
     public virtual void Attack(Transform targetTransform)

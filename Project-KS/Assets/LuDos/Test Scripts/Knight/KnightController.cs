@@ -65,6 +65,7 @@ public class KnightController : MonoBehaviour
             animator.SetBool("IsIdle", true);
         }
         isDead = false;
+        currentHealth = maxHealth;
     }
 
     private void Start()

@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Dongjun/Scenes/StartScene.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 93246eb66b00c8943b7058ad2ef01793
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 47655c70ac7c5c745929331d4b4fed5a
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 0706f675469b91d4ca23e1269ea0d0a3
   m_configObjects: {}

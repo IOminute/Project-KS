@@ -145,15 +145,19 @@ public class Necromancer : MonoBehaviour
             yield break;
         }
         isSkillDoing = true;
-        StartCoroutine(UIManager.instance.SkillInitiated("Time To Sleep Again.", 1f, 500));
+        StartCoroutine(UIManager.instance.SkillInitiated("Time To Sleep Again.", 1.5f, 500));
         ManageMana(-500f);
-        yield return waitOneSec;
         int count = allies.Count;
         for (int i = 0; i < count; i++)
         {
-            GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
             GameObject explosionvfx = Instantiate(explosion, allies[0].transform.position, Quaternion.identity);
             Destroy(explosionvfx, 3.0f);
+            allies[0].GetComponent<UnitController>().Stop();
+        }
+        yield return new WaitForSeconds(1.5f);
+        for (int i = 0; i < count; i++)
+        {
+            GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
             boomList.Add(boom);
             allies[0].GetComponent<UnitController>().Die();
             allies.Remove(allies[0]);
