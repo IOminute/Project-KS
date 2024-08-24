@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject[] behaviours;
 
     public TMP_Text deadBodiesCount;
+    public TMP_Text allyCount;
     public TMP_Text kindredPointCount;
 
     public TMP_Text progressName;
@@ -80,6 +81,8 @@ public class UIManager : MonoBehaviour
         settingsContainer.SetActive(false);
         isPaused = false;
         isSettingsOn = false;
+
+        allyCount.alpha = 0;
     }
 
     // Update is called once per frame
@@ -101,6 +104,17 @@ public class UIManager : MonoBehaviour
             else if (isPaused) PauseOff();
             else if (!isPaused) PauseOn();
         }
+
+        if (currentBehaviour == 2)
+        {
+            allyCount.alpha = 1f;
+            deadBodiesCount.alpha = 0f;
+        }
+        else
+        {
+            allyCount.alpha = 0f;
+            deadBodiesCount.alpha = 1f;
+        }
     }
     public IEnumerator ChangeBehaviour()
     {
@@ -118,6 +132,11 @@ public class UIManager : MonoBehaviour
     }
 
     public int GetCurrentBehaviourIndex() { return currentBehaviour; }
+
+    public void AllyTextChange(int amount)
+    {
+        allyCount.text = "Undead Allies : " + amount.ToString();
+    }
 
     public void BodyTextChange(int amount)
     {

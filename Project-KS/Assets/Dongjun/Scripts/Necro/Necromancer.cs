@@ -157,12 +157,13 @@ public class Necromancer : MonoBehaviour
             boomList.Add(boom);
             allies[0].GetComponent<UnitController>().Die();
             allies.Remove(allies[0]);
+            UIManager.instance.AllyTextChange(allies.Count);
         }
         isSkillDoing = false;
         int boomCount = boomList.Count;
         for (int i = 0; i < boomCount; i++)
         {
-            StartCoroutine(DestroyBoom(boomList[i]));
+            StartCoroutine(DestroyBoom(boomList[0]));
             boomList.Remove(boomList[0]);
         }
         yield return null;
@@ -192,6 +193,7 @@ public class Necromancer : MonoBehaviour
         UIManager.instance.BodyTextChange(spirits.Count);
         // 소환된 아군 리스트에 저장하기
         allies.Add(ally);
+        UIManager.instance.AllyTextChange(allies.Count);
     }
 
     public static void ManageKindredPoint(int amount)
@@ -229,16 +231,6 @@ public class Necromancer : MonoBehaviour
         if (spirits.Count == maxBodies) return;
         spirits.Add(spirit);
         UIManager.instance.BodyTextChange(spirits.Count);
-    }
-
-    public static void ClearSpirit()
-    {
-        spirits.Clear();
-    }
-
-    public static void AllyDies(GameObject ally)
-    {
-        allies.Remove(ally);
     }
 
     void Enforce()

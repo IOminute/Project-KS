@@ -21,6 +21,7 @@ public class Castle : MonoBehaviour
             {
                 health = 0;
                 isGameOver = true;
+                SceneManagement.Instance.SceneLoad("GameOver");
                 // 성 무너지는 애니메이션?
             }
         }
