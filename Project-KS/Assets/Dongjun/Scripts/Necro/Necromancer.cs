@@ -78,7 +78,6 @@ public class Necromancer : MonoBehaviour
 
     IEnumerator Rise()
     {
-        print(spirits.Count);
         if (spirits.Count == 0) 
         {
             StopCoroutine(UIManager.instance.manaIndian());
