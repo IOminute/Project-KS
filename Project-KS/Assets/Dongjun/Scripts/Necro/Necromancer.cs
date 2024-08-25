@@ -172,7 +172,7 @@ public class Necromancer : MonoBehaviour
             }
             yield return null;
        }
-        allies = new List<GameObject>() { };
+        allies.Clear();
         isSkillDoing = false;
         while (boomList.Count != 0)
         {
