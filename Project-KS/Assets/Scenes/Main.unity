@@ -6353,6 +6353,7 @@ MonoBehaviour:
   explosionSound: {fileID: 8300000, guid: ce99cf2c5649353498567b98bea9243d, type: 3}
   RushSound: {fileID: 8300000, guid: ce0a8e9c7f5d1764f9b4426fb6c1fed8, type: 3}
   RiseSound: {fileID: 0}
+  bgm: {fileID: 1036612512}
 --- !u!4 &991585344
 Transform:
   m_ObjectHideFlags: 0
@@ -6378,8 +6379,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 1da42286b685e064883ed16a03cc44ba, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
