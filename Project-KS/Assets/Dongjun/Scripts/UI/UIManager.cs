@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
     public Button quit;
 
     public TMP_Text manaText;
+    public TMP_Text enforceLevel;
 
     void Awake()
     {
@@ -269,5 +270,10 @@ public class UIManager : MonoBehaviour
         manaText.enabled = true;
         yield return new WaitForSeconds(0.5f);
         manaText.enabled = false;
+    }
+
+    public void EnforceText(int level)
+    {
+        enforceLevel.text = level.ToString();
     }
 }

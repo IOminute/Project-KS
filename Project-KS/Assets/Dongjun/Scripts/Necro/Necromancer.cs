@@ -122,9 +122,9 @@ public class Necromancer : MonoBehaviour
         {
             yield return null;
             time += Time.deltaTime;
-            for (int i = 0; i < spirits.Count; i++)
+            while (spirits.Count != 0) 
             {
-                this.CallOnDelay(1f, () => Revive(spirits[i]));
+                this.CallOnDelay(1f, () => Revive(spirits[0]));
                 yield return null;
             }
         }
@@ -266,6 +266,7 @@ public class Necromancer : MonoBehaviour
         }
         ManageKindredPoint(-2 * enforceAmount);
         enforceAmount += 5;
+        UIManager.instance.EnforceText(enforceAmount / 5);
         if (enforceAmount % 10 == 0) enforceAmountHealth += 50;
     }
 
