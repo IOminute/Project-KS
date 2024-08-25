@@ -141,7 +141,7 @@ public class UIManager : MonoBehaviour
     public void BodyTextChange(int amount)
     {
         deadBodiesCount.text = "Dead Bodies : " + amount.ToString();
-        if (amount == 20) deadBodiesCount.color = Color.red;
+        if (amount == Necromancer.maxBodies) deadBodiesCount.color = Color.red;
         else deadBodiesCount.color = Color.white;
     }
 

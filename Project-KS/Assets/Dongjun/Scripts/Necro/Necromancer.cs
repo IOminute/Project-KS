@@ -7,7 +7,7 @@ using DG.Tweening;
 public class Necromancer : MonoBehaviour
 {
     public static int kindredPoint;
-    static int maxBodies;
+    public static int maxBodies;
 
     public static List<GameObject> spirits;
     public static List<GameObject> allies;
