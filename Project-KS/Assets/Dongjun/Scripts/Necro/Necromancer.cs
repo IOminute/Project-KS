@@ -96,7 +96,7 @@ public class Necromancer : MonoBehaviour
         yield return waitHalfSec;
         int count = spirits.Count;
         for (int i = 0; i < count; i++) {
-            Revive(spirits[0]);
+            StartCoroutine(Revive(spirits[0], 0));
             yield return null;
         }
         isSkillDoing = false;
@@ -124,7 +124,8 @@ public class Necromancer : MonoBehaviour
             time += Time.deltaTime;
             while (spirits.Count != 0) 
             {
-                this.CallOnDelay(1f, () => Revive(spirits[0]));
+                StartCoroutine(Revive(spirits[0], 1f));
+                spirits.Remove(soul);
                 yield return null;
             }
         }
@@ -194,9 +195,11 @@ public class Necromancer : MonoBehaviour
         }
     }
 
-    void Revive(GameObject soul)
+    IEnumerator Revive(GameObject soul, float delay)
     {
-        if (soul == null) return;
+        if (soul == null) yield break;
+        if (delay > 0) yield return new WaitForSeconds(delay);
+        if (soul == null) yield break;
         Vector3 spawnAllyPos = soul.transform.position;
         spawnAllyPos.y = 0;
 
@@ -204,7 +207,6 @@ public class Necromancer : MonoBehaviour
         GameObject ally = Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
         ally.GetComponent<UnitController>().damage += enforceAmount;
         ally.GetComponent<UnitController>().health += enforceAmountHealth;
-        spirits.Remove(soul);
         Destroy(soul);
 
         UIManager.instance.BodyTextChange(spirits.Count);
