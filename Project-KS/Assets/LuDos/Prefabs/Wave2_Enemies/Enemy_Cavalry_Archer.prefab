@@ -5868,8 +5868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56fc227796164d45b245555ca2176a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  damage: 10
+  health: 200
+  damage: 20
   moveSpeed: 5
   attackCoolTime: 2
   chaseRange: 30
@@ -5884,6 +5884,7 @@ MonoBehaviour:
   soulPrefab: {fileID: 1518366863219760, guid: 26af35fe5e9d75947b82ef0e5a012218, type: 3}
   Projectile: {fileID: 1550477657380252, guid: d5a8f1e97d105f9449a488f3b28c9e8a, type: 3}
   WeaponPosition: {fileID: 3183560128291597289}
+  weaponCollider: {fileID: 0}
 --- !u!1 &7402571247638018537
 GameObject:
   m_ObjectHideFlags: 0
