@@ -66,6 +66,7 @@ public class KnightController : MonoBehaviour
         }
         isDead = false;
         currentHealth = maxHealth;
+        healthBar.fillAmount = 1f;
     }
 
     private void Start()

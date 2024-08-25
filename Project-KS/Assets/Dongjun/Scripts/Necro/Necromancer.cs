@@ -10,7 +10,7 @@ public class Necromancer : MonoBehaviour
     static int maxBodies;
 
     public static List<GameObject> spirits;
-    static List<GameObject> allies;
+    public static List<GameObject> allies;
     private List<GameObject> boomList;
 
     public float maxMana = 1000;
@@ -107,6 +107,7 @@ public class Necromancer : MonoBehaviour
         if (mana < 300f)
         {
             print("Not enough Mana!");
+            yield break;
         }
         isSkillDoing = true;
         isRushing = true;
@@ -128,7 +129,6 @@ public class Necromancer : MonoBehaviour
         }
         isSkillDoing = false;
         isRushing = false;
-        print("RushEnd");
         yield return null;
     }
 
@@ -150,26 +150,33 @@ public class Necromancer : MonoBehaviour
         int count = allies.Count;
         for (int i = 0; i < count; i++)
         {
-            GameObject explosionvfx = Instantiate(explosion, allies[0].transform.position, Quaternion.identity);
-            Destroy(explosionvfx, 3.0f);
-            allies[0].GetComponent<UnitController>().Stop();
+            if (allies[i] != null)
+            {
+                GameObject explosionvfx = Instantiate(explosion, allies[i].transform.position, Quaternion.identity);
+                Destroy(explosionvfx, 3.0f);
+                allies[i].GetComponent<UnitController>().Stop();
+            }
         }
         yield return new WaitForSeconds(1.5f);
-        for (int i = 0; i < count; i++)
+        count = allies.Count;
+       for (int i =0; i<count; i++)
         {
-            GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
-            boomList.Add(boom);
-            allies[0].GetComponent<UnitController>().Die();
-            allies.Remove(allies[0]);
-            UIManager.instance.AllyTextChange(allies.Count);
+            if (allies[i] != null)
+            {
+                GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
+                boomList.Add(boom);
+                allies[i].GetComponent<UnitController>().Die();
+            }
         }
+        allies.Clear();
         isSkillDoing = false;
         int boomCount = boomList.Count;
-        for (int i = 0; i < boomCount; i++)
+        while (boomList.Count != 0)
         {
             StartCoroutine(DestroyBoom(boomList[0]));
-            boomList.Remove(boomList[0]);
+            yield return null;
         }
+        UIManager.instance.AllyTextChange(allies.Count);
         yield return null;
     }
 
@@ -178,6 +185,7 @@ public class Necromancer : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if(boomToDestroy != null)
         {
+            boomList.Remove(boomToDestroy);
             Destroy(boomToDestroy);
         }
     }
@@ -216,6 +224,7 @@ public class Necromancer : MonoBehaviour
     void ManageMana(float requireMana)
     {
         mana += requireMana;
+        print(mana);
         UIManager.instance.ManaBarAnim(mana, maxMana);
     }
 
@@ -223,10 +232,16 @@ public class Necromancer : MonoBehaviour
     {
         while (true)
         {
-            int regenAmount = 10;
-            if (isRushing) regenAmount = 5;
-            ManageMana(regenAmount);
-            yield return waitOneSec;
+            if (mana < maxMana)
+            {
+                int regenAmount = 10;
+                if (isRushing) regenAmount = 5;
+                ManageMana(regenAmount);
+                yield return waitOneSec;
+            }else
+            {
+                yield return null;
+            }
         }
     }
 

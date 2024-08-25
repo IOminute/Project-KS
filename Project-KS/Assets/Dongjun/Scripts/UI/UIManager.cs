@@ -89,8 +89,8 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        sec += Time.deltaTime;
-        if (sec >= 60f)
+        sec = SceneManagement.Instance.time;
+        if (sec % 60 == 0)
         {
             min += 1;
             sec = 0;

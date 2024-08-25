@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using DG.Tweening.Core;
 
 public class Selector : MonoBehaviour
 {
@@ -104,6 +105,10 @@ public class Selector : MonoBehaviour
         selected = triggered;
         transform.localScale = Vector3.zero;
         isSelecting = true;
+        if (selected.Count == 0)
+        {
+            isSelecting = false;
+        }
     }
 
     void MoveManager(Vector3 mousePos)
@@ -112,8 +117,11 @@ public class Selector : MonoBehaviour
         if (!isSelecting) { print("How did you enter this? fuck..."); return; }
         foreach (GameObject ally in selected)
         {
-            Vector3 movePos = mousePos - currentPos;
-            StartCoroutine(Move(ally, ally.transform.position + movePos));
+            if (ally != null)
+            {
+                Vector3 movePos = mousePos - currentPos;
+                StartCoroutine(Move(ally, ally.transform.position + movePos));
+            }
         }
         isSelecting = false;
         selected.Clear();
