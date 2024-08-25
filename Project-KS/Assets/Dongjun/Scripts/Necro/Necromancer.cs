@@ -38,10 +38,14 @@ public class Necromancer : MonoBehaviour
     private GameObject playerKnight;
     public GameObject explosion;
 
+    public AudioClip explosionSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         maxBodies = 20;
 
+        audioSource = GetComponent<AudioSource>();
         spirits = new List<GameObject>();
         allies = new List<GameObject>();
         boomList = new List<GameObject>();
@@ -149,6 +153,7 @@ public class Necromancer : MonoBehaviour
         isSkillDoing = true;
         StartCoroutine(UIManager.instance.SkillInitiated("Time To Sleep Again.", 1.5f, 500));
         ManageMana(-500f);
+        audioSource.PlayOneShot(explosionSound);
         int count = allies.Count;
         for (int i = 0; i < count; i++)
         {
