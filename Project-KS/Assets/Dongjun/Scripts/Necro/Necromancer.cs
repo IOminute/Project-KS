@@ -123,7 +123,7 @@ public class Necromancer : MonoBehaviour
             int count = spirits.Count;
             for (int i = 0; i < count; i++)
             {
-                Revive(spirits[0]);
+                this.CallOnDelay(1f, () => Revive(spirits[0]));
                 yield return null;
             }
         }
