@@ -293,7 +293,8 @@ public class Necromancer : MonoBehaviour
             print("Not enough Kindred Points!");
             return;
         }
-        ManageKindredPoint(-2 * enforceAmount);
+        ManageKindredPoint(-1 * requireKindredPointToEnforce);
+        requireKindredPointToEnforce += 10;
         enforceAmount += 5;
         UIManager.instance.EnforceText(enforceAmount / 5);
         if (enforceAmount % 10 == 0) enforceAmountHealth += 50;
