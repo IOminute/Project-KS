@@ -128,7 +128,7 @@ public class Necromancer : MonoBehaviour
         }
         isSkillDoing = true;
         isRushing = true;
-        bgm.DOFade(0f, 2f).SetEase(Ease.Linear).OnComplete(() => rushBGM.PlayOneShot(RushSound));
+        bgm.DOFade(0f, 2f).SetEase(Ease.Linear).OnComplete(() => rushBGM.Play());
         StartCoroutine(UIManager.instance.SkillInitiated("Feeling Spirits Of Death...", 3f, 300));
         ManageMana(-300f);
         yield return waitThreeSec;
