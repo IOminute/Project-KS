@@ -46,6 +46,8 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text clearText;
 
+    public Button quit;
+
     void Awake()
     {
         if (instance == null)
@@ -83,6 +85,7 @@ public class UIManager : MonoBehaviour
         isSettingsOn = false;
 
         allyCount.alpha = 0;
+        quit.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -253,6 +256,7 @@ public class UIManager : MonoBehaviour
         clearText.fontSize = 100f;
         clearText.text = "Clear!";
         clearText.DOFade(1f, 0.5f).SetEase(Ease.OutSine);
+        quit.gameObject.SetActive(true);
         yield return null;
     }
 }

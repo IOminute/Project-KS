@@ -12664,6 +12664,7 @@ MonoBehaviour:
   necroCanvas: {fileID: 1011409072}
   knightCanvas: {fileID: 436831908}
   clearText: {fileID: 325611589}
+  quit: {fileID: 1631004113}
 --- !u!4 &2062127121
 Transform:
   m_ObjectHideFlags: 0
