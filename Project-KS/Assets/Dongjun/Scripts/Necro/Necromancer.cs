@@ -123,23 +123,15 @@ public class Necromancer : MonoBehaviour
         {
             yield return null;
             time += Time.deltaTime;
-            int count = spirits.Count;
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < spirits.Count; i++)
             {
-                //this.CallOnDelay(1f, () => Revive(spirits[0]));
-                StartCoroutine(DelayedRevive(spirits[i]));
+                this.CallOnDelay(1f, () => Revive(spirits[i]));
                 yield return null;
             }
         }
         isSkillDoing = false;
         isRushing = false;
         yield return null;
-    }
-
-    IEnumerator DelayedRevive(GameObject spirit)
-    {
-        yield return new WaitForSeconds(1f);
-        Revive(spirit);
     }
 
     IEnumerator Explode()
@@ -204,6 +196,7 @@ public class Necromancer : MonoBehaviour
 
     void Revive(GameObject soul)
     {
+        if (soul == null) return;
         Vector3 spawnAllyPos = soul.transform.position;
         spawnAllyPos.y = 0;
 
