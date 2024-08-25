@@ -17,7 +17,7 @@ public class KnightWeapon : MonoBehaviour
         }
         else
         {
-            damage = 100f;
+            damage = 800f;
         }
     }
 }

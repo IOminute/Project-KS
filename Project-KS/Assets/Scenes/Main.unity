@@ -9452,7 +9452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045d2792d871ec84a95b3159e4d22e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
 --- !u!1 &1487493351
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,6 +12800,7 @@ MonoBehaviour:
   clearText: {fileID: 325611589}
   quit: {fileID: 1631004113}
   manaText: {fileID: 23261128}
+  enforceLevel: {fileID: 0}
 --- !u!4 &2062127121
 Transform:
   m_ObjectHideFlags: 0
@@ -13277,7 +13277,7 @@ PrefabInstance:
       objectReference: {fileID: 438097124}
     - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
       propertyPath: damage
-      value: 50
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5095641040210508871, guid: f6e4a55f218c74f43bb09fbff6f44b5e, type: 3}
       propertyPath: runSound
