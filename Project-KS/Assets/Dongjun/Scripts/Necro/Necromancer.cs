@@ -84,6 +84,7 @@ public class Necromancer : MonoBehaviour
             print("Not Enough Bodies!"); 
             yield break; 
         }
+        if (mana < 20 * spirits.Count)
         //for (int i = 0; i < spirits.Count; i++)
         //{
         //    ParticleSystem.MainModule main = spirits[i].GetComponent<ParticleSystem>().main;
@@ -161,23 +162,23 @@ public class Necromancer : MonoBehaviour
         yield return new WaitForSeconds(1.6f);
         count = allies.Count;
        for (int i =0; i<count; i++)
-        {
+       {
             if (allies[i] != null)
             {
-                GameObject boom = Instantiate(boomer, allies[0].transform.position, Quaternion.identity);
+                GameObject boom = Instantiate(boomer, allies[i].transform.position, Quaternion.identity);
                 boomList.Add(boom);
                 allies[i].GetComponent<UnitController>().Die();
             }
             yield return null;
-        }
-        allies.Clear();
+       }
+        allies = new List<GameObject>() { };
         isSkillDoing = false;
-        int boomCount = boomList.Count;
         while (boomList.Count != 0)
         {
             StartCoroutine(DestroyBoom(boomList[0]));
             yield return null;
         }
+        boomList = new List<GameObject>() { };
         UIManager.instance.AllyTextChange(allies.Count);
         yield return null;
     }
@@ -187,7 +188,6 @@ public class Necromancer : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if(boomToDestroy != null)
         {
-            boomList.Remove(boomToDestroy);
             Destroy(boomToDestroy);
         }
     }
