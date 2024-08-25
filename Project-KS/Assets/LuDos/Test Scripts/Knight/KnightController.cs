@@ -159,9 +159,6 @@ public class KnightController : MonoBehaviour
 
     private void Die()
     {
-        if (isDead) return;
-
-        isDead = true;
         rb.velocity = Vector3.zero;
         animator.SetTrigger("Death");
         animator.SetBool("IsIdle", false);
@@ -179,13 +176,12 @@ public class KnightController : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Die();
+            isDead = true;
         }
     }
 
     public void EndPossess()
     {
-        if (isDead) return;
         Necromancer.EndPossesion();
         Die();
     }
@@ -382,7 +378,7 @@ public class KnightController : MonoBehaviour
         float realTime = 0f;
         while (realTime < lifeTime)
         {
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            if (Input.GetKeyDown(KeyCode.Backspace) || isDead)
             {
                 break;
             }
