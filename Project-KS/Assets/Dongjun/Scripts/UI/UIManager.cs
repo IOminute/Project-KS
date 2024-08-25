@@ -51,6 +51,9 @@ public class UIManager : MonoBehaviour
     public TMP_Text manaText;
     public TMP_Text enforceLevel;
 
+    public TMP_Text enforceText;
+    public TMP_Text maxBodiesText;
+
     void Awake()
     {
         if (instance == null)
@@ -275,5 +278,15 @@ public class UIManager : MonoBehaviour
     public void EnforceText(int level)
     {
         enforceLevel.text = level.ToString();
+    }
+
+    public void EndEnforce()
+    {
+        enforceText.text = "Max Enforced";
+    }
+
+    public void EndMaxBodies()
+    {
+        maxBodiesText.text = "Max Enforced";
     }
 }

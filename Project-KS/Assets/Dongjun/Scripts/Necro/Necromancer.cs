@@ -41,9 +41,13 @@ public class Necromancer : MonoBehaviour
     public AudioClip explosionSound;
     private AudioSource audioSource;
 
+    private bool isOverMaxBodies;
+
     void Start()
     {
         maxBodies = 20;
+
+        isOverMaxBodies = false;
 
         audioSource = GetComponent<AudioSource>();
         spirits = new List<GameObject>();
@@ -266,6 +270,10 @@ public class Necromancer : MonoBehaviour
 
     void Enforce()
     {
+        if (enforceAmount == 50)
+        {
+            return;
+        }
         if (kindredPoint < requireKindredPointToEnforce)
         {
             print("Not enough Kindred Points!");
@@ -275,10 +283,15 @@ public class Necromancer : MonoBehaviour
         enforceAmount += 5;
         UIManager.instance.EnforceText(enforceAmount / 5);
         if (enforceAmount % 10 == 0) enforceAmountHealth += 50;
+        if (enforceAmount == 50)
+        {
+            UIManager.instance.EndEnforce();
+        }
     }
 
     void OverMaxBodies()
     {
+        if (isOverMaxBodies) return;
         if (kindredPoint < requireKindredPointToOverMaxBodies)
         {
             print("Not enough Kindred Points!");
@@ -286,6 +299,8 @@ public class Necromancer : MonoBehaviour
         }
         ManageKindredPoint(-100);
         maxBodies += 10;
+        isOverMaxBodies = true;
+        UIManager.instance.EndMaxBodies();
     }
 
     void Possession()
