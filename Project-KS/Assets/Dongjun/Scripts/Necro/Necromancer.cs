@@ -158,7 +158,7 @@ public class Necromancer : MonoBehaviour
             }
             yield return null;
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.6f);
         count = allies.Count;
        for (int i =0; i<count; i++)
         {
