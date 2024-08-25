@@ -154,7 +154,6 @@ public class Selector : MonoBehaviour
             {
                 triggered.Add(rootObject);
             }
-            print(rootObject);
         }
     }
 }

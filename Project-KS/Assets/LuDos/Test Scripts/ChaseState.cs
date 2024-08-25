@@ -18,6 +18,14 @@ public class ChaseState : BaseState
     {
         if (enemy.IsDie) return;
 
+        Transform castleTransform = enemy.Castle.transform;
+
+        if (enemy.IsRangeShort || enemy.IsRangeLong)
+        {
+            enemy.ChangeState(new AttackState(enemy, castleTransform));
+            return;
+        }
+
         if (target != null)
         {
             enemy.ChaseTarget(target);

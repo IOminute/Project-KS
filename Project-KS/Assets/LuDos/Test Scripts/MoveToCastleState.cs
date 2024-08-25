@@ -46,7 +46,7 @@ public class MoveToCastleState : BaseState
             }
         }
 
-        if (closestTarget != null)
+        if (closestTarget != null && Vector3.Distance(enemy.transform.position, closestTarget.transform.position) <= enemy.chaseRange)
         {
             enemy.ChangeState(new ChaseState(enemy, closestTarget.transform));
         }
