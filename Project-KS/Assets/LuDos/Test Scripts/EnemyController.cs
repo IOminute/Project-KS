@@ -219,7 +219,7 @@ public class EnemyController : MonoBehaviour
 
         SceneManagement.Instance.enemies.Remove(gameObject); // 적 리스트에서 자기 자신 제거
 
-        if (Necromancer.spirits.Count < 20)
+        if (Necromancer.spirits.Count < Necromancer.maxBodies)
         {
             DropSoul();
         }
