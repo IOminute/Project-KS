@@ -126,13 +126,20 @@ public class Necromancer : MonoBehaviour
             int count = spirits.Count;
             for (int i = 0; i < count; i++)
             {
-                this.CallOnDelay(1f, () => Revive(spirits[0]));
+                //this.CallOnDelay(1f, () => Revive(spirits[0]));
+                StartCoroutine(DelayedRevive(spirits[0]));
                 yield return null;
             }
         }
         isSkillDoing = false;
         isRushing = false;
         yield return null;
+    }
+
+    IEnumerator DelayedRevive(GameObject spirit)
+    {
+        yield return new WaitForSeconds(1f);
+        Revive(spirit);
     }
 
     IEnumerator Explode()
