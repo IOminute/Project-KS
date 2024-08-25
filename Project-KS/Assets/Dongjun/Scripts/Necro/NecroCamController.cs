@@ -2,13 +2,28 @@ using UnityEngine;
 
 public class NecroCamController : MonoBehaviour
 {
-    public float moveSpeed = 5f; // 카메라 이동 속도
+    float moveSpeed = 20f;
+    float zoomSpeed = 0.2f;
+    float minZoom = 60f;
+    float maxZoom = 80f;
+
+    private Camera cam;
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
 
     void Update()
     {
+        HandleMovement();
+        HandleZoom();
+    }
+
+    void HandleMovement()
+    {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            transform.position = new Vector3 (0, 40f, -30f);
+            transform.position = new Vector3(0, 40f, -30f);
         }
 
         Vector3 mousePosition = Input.mousePosition;
@@ -31,5 +46,12 @@ public class NecroCamController : MonoBehaviour
         {
             transform.position += new Vector3(0, 0, 1) * moveSpeed * Time.deltaTime;
         }
+    }
+
+    void HandleZoom()
+    {
+        float scrollData = Input.GetAxis("Mouse ScrollWheel");
+        cam.fieldOfView -= scrollData * zoomSpeed * 100f;
+        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, minZoom, maxZoom);
     }
 }
