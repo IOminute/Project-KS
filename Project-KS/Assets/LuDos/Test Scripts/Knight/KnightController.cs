@@ -58,6 +58,8 @@ public class KnightController : MonoBehaviour
     public AudioClip runSound;
     public AudioClip rightClickSound;
 
+    Coroutine disableColliderCoroutine;
+
     private void OnEnable()
     {
         if (animator!= null)
@@ -128,6 +130,12 @@ public class KnightController : MonoBehaviour
 
     void EnabledWeaponCollider()
     {
+        if (disableColliderCoroutine != null)
+        {
+            StopCoroutine(disableColliderCoroutine);
+            disableColliderCoroutine = null;
+        }
+
         if (weaponColliderL != null)
         {
             weaponColliderL.enabled = true;
@@ -275,17 +283,17 @@ public class KnightController : MonoBehaviour
             case 0:
                 animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                StartCoroutine(DisableColliderAfterDelay());
+                disableColliderCoroutine = StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 1:
                 animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                StartCoroutine(DisableColliderAfterDelay());
+                disableColliderCoroutine = StartCoroutine(DisableColliderAfterDelay());
                 break;
             case 2:
                 animator.SetTrigger("ComboAttack");
                 EnabledWeaponCollider();
-                StartCoroutine(DisableColliderAfterDelay());
+                disableColliderCoroutine = StartCoroutine(DisableColliderAfterDelay());
                 break;
         }
 
@@ -294,7 +302,7 @@ public class KnightController : MonoBehaviour
 
     private IEnumerator DisableColliderAfterDelay()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.6f);
         DisabledWeaponCollider();
     }
     private IEnumerator AttackStart(float time)
@@ -349,7 +357,7 @@ public class KnightController : MonoBehaviour
         effectPosition += transform.forward * 2.5f;
         effectPosition.y += 3.0f;
 
-        DisableColliderAfterDelay();
+        disableColliderCoroutine = StartCoroutine(DisableColliderAfterDelay());
 
         yield return new WaitForSeconds(0.2f);
         GameObject effect = Instantiate(skillEffectPrefabs[0], effectPosition, rotation);
