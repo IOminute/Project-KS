@@ -100,7 +100,7 @@ public class UIManager : MonoBehaviour
         sec = (int)SceneManagement.Instance.time % 60;
         min = (int)SceneManagement.Instance.time / 60;
 
-        print(min + " : " + sec);
+        // print(min + " : " + sec);
 
         gameTime.text = min.ToString("00") + " : " + sec.ToString("00");
 

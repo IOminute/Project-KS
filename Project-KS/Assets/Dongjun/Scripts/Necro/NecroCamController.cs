@@ -3,7 +3,7 @@ using UnityEngine;
 public class NecroCamController : MonoBehaviour
 {
     float moveSpeed = 20f;
-    float zoomSpeed = 0.2f;
+    float zoomSpeed = 8.0f;
     float minZoom = 60f;
     float maxZoom = 80f;
 
@@ -51,7 +51,7 @@ public class NecroCamController : MonoBehaviour
     void HandleZoom()
     {
         float scrollData = Input.GetAxis("Mouse ScrollWheel");
-        cam.fieldOfView -= scrollData * zoomSpeed * 100f;
+        cam.fieldOfView -= scrollData * zoomSpeed * 100f * Time.deltaTime;
         cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, minZoom, maxZoom);
     }
 }
