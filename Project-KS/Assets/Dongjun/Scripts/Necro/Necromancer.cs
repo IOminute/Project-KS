@@ -92,9 +92,9 @@ public class Necromancer : MonoBehaviour
         //    main.startColor = new Color(72f, 61f, 139f);
         //}
         isSkillDoing = true;
+        ManageMana(-20f * spirits.Count);
         StartCoroutine(UIManager.instance.SkillInitiated("Make Them Immortal.", 0.5f, 20 * spirits.Count));
         yield return waitHalfSec;
-        ManageMana(-20f * spirits.Count);
         int count = spirits.Count;
         for (int i = 0; i < count; i++) {
             Revive(spirits[0]);
@@ -127,7 +127,7 @@ public class Necromancer : MonoBehaviour
             for (int i = 0; i < count; i++)
             {
                 //this.CallOnDelay(1f, () => Revive(spirits[0]));
-                StartCoroutine(DelayedRevive(spirits[0]));
+                StartCoroutine(DelayedRevive(spirits[i]));
                 yield return null;
             }
         }

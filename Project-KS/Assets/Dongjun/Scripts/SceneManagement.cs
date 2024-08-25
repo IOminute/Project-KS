@@ -54,7 +54,6 @@ public class SceneManagement : MonoBehaviour
         IntervalSummon(tosummon, greenEnemies);
         while (true)
         {
-            print(enemies.Count);
             if (time >= 0f && time < 30f)
             {
                 if (intervalTime >= summonInterval)
