@@ -37,6 +37,7 @@ public class Necromancer : MonoBehaviour
     public static bool isPossessioning;
     private GameObject playerKnight;
     public GameObject explosion;
+    public GameObject ReviveEffect;
 
     public AudioClip explosionSound;
     private AudioSource audioSource;
@@ -100,8 +101,8 @@ public class Necromancer : MonoBehaviour
         //}
         isSkillDoing = true;
         ManageMana(-20f * spirits.Count);
-        StartCoroutine(UIManager.instance.SkillInitiated("Make Them Immortal.", 0.5f, 20 * spirits.Count));
-        yield return waitHalfSec;
+        StartCoroutine(UIManager.instance.SkillInitiated("Make Them Immortal.", 1.0f, 20 * spirits.Count));
+        // yield return waitHalfSec;
         int count = spirits.Count;
         for (int i = 0; i < count; i++) {
             StartCoroutine(Revive(spirits[0], 0));
@@ -209,10 +210,13 @@ public class Necromancer : MonoBehaviour
         if (soul == null) yield break;
         if (delay > 0) yield return new WaitForSeconds(delay);
         if (soul == null) yield break;
-        Vector3 spawnAllyPos = soul.transform.position;
-        spawnAllyPos.y = 0;
 
         // 스폰 포지션에 아군 소환하기
+        Vector3 spawnAllyPos = soul.transform.position;
+        spawnAllyPos.y = 0;
+        GameObject reviveEffect = Instantiate(ReviveEffect, spawnAllyPos, Quaternion.identity);
+        Destroy(reviveEffect.gameObject, 3.0f);
+        yield return new WaitForSeconds(1.0f);
         GameObject ally = Instantiate(Units[soul.GetComponent<Soul>().soulIndex], spawnAllyPos, Quaternion.identity);
         ally.GetComponent<UnitController>().damage += enforceAmount;
         ally.GetComponent<UnitController>().health += enforceAmountHealth;
