@@ -6351,6 +6351,8 @@ MonoBehaviour:
   explosion: {fileID: 1789005739015704, guid: 1381b64ff1936ac4e80c3a00687081f3, type: 3}
   ReviveEffect: {fileID: 3377181292992421420, guid: a7c6063b53d562c4a8d68d8be8d62d41, type: 3}
   explosionSound: {fileID: 8300000, guid: ce99cf2c5649353498567b98bea9243d, type: 3}
+  RushSound: {fileID: 8300000, guid: ce0a8e9c7f5d1764f9b4426fb6c1fed8, type: 3}
+  RiseSound: {fileID: 0}
 --- !u!4 &991585344
 Transform:
   m_ObjectHideFlags: 0
