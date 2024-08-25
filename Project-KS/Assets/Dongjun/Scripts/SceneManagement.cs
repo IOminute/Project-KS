@@ -137,6 +137,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6 }; // Èò»ö ¸ÁÄ¡µç¾Ö
                     IntervalSummon(toSummon, whiteEnemies);
+                    IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
             }
@@ -146,6 +147,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 0 }; // Èò»ö ¸ÁÄ¡µç¾Ö, Èò»ö ±Ã¼ö
+                    IntervalSummon(toSummon, whiteEnemies);
                     IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
@@ -157,6 +159,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 0, 8 }; // Èò»ö ¸ÁÄ¡µç¾Ö, Èò»ö ±Ã¼ö, Èò»ö Ã¢¼ú»ç
                     IntervalSummon(toSummon, whiteEnemies);
+                    IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
             }
@@ -166,6 +169,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 0, 8, 2 }; // Èò»ö ¸ÁÄ¡µç¾Ö, Èò»ö ±Ã¼ö, Èò»ö Ã¢¼ú»ç, Èò»ö ±â¸¶±Ã¼ö
+                    IntervalSummon(toSummon, whiteEnemies);
                     IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
@@ -177,6 +181,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 7, 1 }; // Èò»ö ¸ÞÀÌÁö, Èò»ö ±â»ç
                     IntervalSummon(toSummon, whiteEnemies);
+                    IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
             }
@@ -186,6 +191,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 7, 1, 5 }; // Èò»ö ¸ÁÄ¡µç¾Ö, Èò»ö ±â»ç, Èò»ö ±â¸¶±â»ç
+                    IntervalSummon(toSummon, whiteEnemies);
                     IntervalSummon(toSummon, whiteEnemies);
                 }
                 yield return null;
@@ -212,6 +218,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6 }; 
                     IntervalSummon(toSummon, blackEnemies);
+                    IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
             }
@@ -221,6 +228,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 7, 1 }; 
+                    IntervalSummon(toSummon, blackEnemies);
                     IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
@@ -232,6 +240,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 7, 1, 0 }; 
                     IntervalSummon(toSummon, blackEnemies);
+                    IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
             }
@@ -241,6 +250,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 6, 7, 1, 0, 2 };
+                    IntervalSummon(toSummon, blackEnemies);
                     IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
@@ -252,6 +262,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 9, 1 };
                     IntervalSummon(toSummon, blackEnemies);
+                    IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
             }
@@ -261,6 +272,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 9, 1, 0 };
+                    IntervalSummon(toSummon, blackEnemies);
                     IntervalSummon(toSummon, blackEnemies);
                 }
                 yield return null;
@@ -287,6 +299,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 4, 2, 3 };
                     SummonBoss(toSummon, greenEnemies);
+                    SummonBoss(toSummon, greenEnemies);
                 }
                 yield return null;
             }
@@ -297,6 +310,7 @@ public class SceneManagement : MonoBehaviour
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 9, 4, 3 };
                     SummonBoss(toSummon, whiteEnemies);
+                    SummonBoss(toSummon, whiteEnemies);
                 }
                 yield return null;
             }
@@ -306,6 +320,7 @@ public class SceneManagement : MonoBehaviour
                 {
                     intervalTime = 0f;
                     List<int> toSummon = new List<int>() { 4, 5, 2, 3 };
+                    SummonBoss(toSummon, blackEnemies);
                     SummonBoss(toSummon, blackEnemies);
                 }
                 yield return null;

@@ -156,6 +156,7 @@ public class Necromancer : MonoBehaviour
                 Destroy(explosionvfx, 3.0f);
                 allies[i].GetComponent<UnitController>().Stop();
             }
+            yield return null;
         }
         yield return new WaitForSeconds(1.5f);
         count = allies.Count;
@@ -167,6 +168,7 @@ public class Necromancer : MonoBehaviour
                 boomList.Add(boom);
                 allies[i].GetComponent<UnitController>().Die();
             }
+            yield return null;
         }
         allies.Clear();
         isSkillDoing = false;

@@ -89,12 +89,10 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        sec = SceneManagement.Instance.time;
-        if (sec % 60 == 0)
-        {
-            min += 1;
-            sec = 0;
-        }
+        sec = (int)SceneManagement.Instance.time % 60;
+        min = (int)SceneManagement.Instance.time / 60;
+
+        print(min + " : " + sec);
 
         gameTime.text = min.ToString("00") + " : " + sec.ToString("00");
 
