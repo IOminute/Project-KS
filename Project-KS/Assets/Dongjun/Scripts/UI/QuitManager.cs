@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class QuitManager : MonoBehaviour
 {
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void Quit()
     {
 #if UNITY_EDITOR
