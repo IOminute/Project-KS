@@ -299,6 +299,8 @@ public class SceneManagement : MonoBehaviour
                     List<int> toSummon = new List<int>() { 4, 2, 3 };
                     SummonBoss(toSummon, greenEnemies);
                     SummonBoss(toSummon, greenEnemies);
+                    SummonBoss(toSummon, greenEnemies);
+                    SummonBoss(toSummon, greenEnemies);
                 }
                 yield return null;
             }
@@ -310,6 +312,8 @@ public class SceneManagement : MonoBehaviour
                     List<int> toSummon = new List<int>() { 9, 4, 3 };
                     SummonBoss(toSummon, whiteEnemies);
                     SummonBoss(toSummon, whiteEnemies);
+                    SummonBoss(toSummon, greenEnemies);
+                    SummonBoss(toSummon, greenEnemies);
                 }
                 yield return null;
             }
@@ -321,6 +325,8 @@ public class SceneManagement : MonoBehaviour
                     List<int> toSummon = new List<int>() { 4, 5, 2, 3 };
                     SummonBoss(toSummon, blackEnemies);
                     SummonBoss(toSummon, blackEnemies);
+                    SummonBoss(toSummon, greenEnemies);
+                    SummonBoss(toSummon, greenEnemies);
                 }
                 yield return null;
             }
@@ -330,9 +336,15 @@ public class SceneManagement : MonoBehaviour
                 intervalTime = 0f;
                 List<int> toSummon = new List<int>() { 4, 2, 3 };
                 SummonBoss(toSummon, greenEnemies);
+                SummonBoss(toSummon, greenEnemies);
+                SummonBoss(toSummon, greenEnemies);
                 List<int> toSummon2 = new List<int>() { 9, 4, 3 };
                 SummonBoss(toSummon2, whiteEnemies);
+                SummonBoss(toSummon2, whiteEnemies);
+                SummonBoss(toSummon2, whiteEnemies);
                 List<int> toSummon3 = new List<int>() { 4, 5, 2, 3 };
+                SummonBoss(toSummon3, blackEnemies);
+                SummonBoss(toSummon3, blackEnemies);
                 SummonBoss(toSummon3, blackEnemies);
                 yield return null;
             }
