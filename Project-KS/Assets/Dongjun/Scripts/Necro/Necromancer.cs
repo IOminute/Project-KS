@@ -125,7 +125,6 @@ public class Necromancer : MonoBehaviour
             while (spirits.Count != 0) 
             {
                 StartCoroutine(Revive(spirits[0], 1f));
-                spirits.Remove(soul);
                 yield return null;
             }
         }
@@ -197,6 +196,7 @@ public class Necromancer : MonoBehaviour
 
     IEnumerator Revive(GameObject soul, float delay)
     {
+        spirits.Remove(soul);
         if (soul == null) yield break;
         if (delay > 0) yield return new WaitForSeconds(delay);
         if (soul == null) yield break;
