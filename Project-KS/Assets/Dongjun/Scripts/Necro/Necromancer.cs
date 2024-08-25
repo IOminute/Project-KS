@@ -80,8 +80,9 @@ public class Necromancer : MonoBehaviour
     {
         print(spirits.Count);
         if (spirits.Count == 0) 
-        { 
-            print("Not Enough Bodies!"); 
+        {
+            StopCoroutine(UIManager.instance.manaIndian());
+            StartCoroutine(UIManager.instance.manaIndian());
             yield break; 
         }
         if (mana < 20 * spirits.Count)
@@ -107,7 +108,8 @@ public class Necromancer : MonoBehaviour
     {
         if (mana < 300f)
         {
-            print("Not enough Mana!");
+            StopCoroutine(UIManager.instance.manaIndian());
+            StartCoroutine(UIManager.instance.manaIndian());
             yield break;
         }
         isSkillDoing = true;
@@ -142,7 +144,8 @@ public class Necromancer : MonoBehaviour
         }
         if (mana < 500f)
         {
-            print("Not Enough Mana!");
+            StopCoroutine(UIManager.instance.manaIndian());
+            StartCoroutine(UIManager.instance.manaIndian());
             yield break;
         }
         isSkillDoing = true;
@@ -226,7 +229,6 @@ public class Necromancer : MonoBehaviour
     void ManageMana(float requireMana)
     {
         mana += requireMana;
-        print(mana);
         UIManager.instance.ManaBarAnim(mana, maxMana);
     }
 

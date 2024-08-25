@@ -48,6 +48,8 @@ public class UIManager : MonoBehaviour
 
     public Button quit;
 
+    public TMP_Text manaText;
+
     void Awake()
     {
         if (instance == null)
@@ -86,6 +88,8 @@ public class UIManager : MonoBehaviour
 
         allyCount.alpha = 0;
         quit.gameObject.SetActive(false);
+
+        manaText.enabled = false;
     }
 
     // Update is called once per frame
@@ -258,5 +262,12 @@ public class UIManager : MonoBehaviour
         clearText.DOFade(1f, 0.5f).SetEase(Ease.OutSine);
         quit.gameObject.SetActive(true);
         yield return null;
+    }
+
+    public IEnumerator manaIndian()
+    {
+        manaText.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        manaText.enabled = false;
     }
 }
