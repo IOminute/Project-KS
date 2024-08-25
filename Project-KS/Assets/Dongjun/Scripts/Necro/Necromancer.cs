@@ -108,6 +108,7 @@ public class Necromancer : MonoBehaviour
         ManageMana(-20f * spirits.Count);
         StartCoroutine(UIManager.instance.SkillInitiated("Make Them Immortal.", 1.0f, 20 * spirits.Count));
         // yield return waitHalfSec;
+        audioSource.PlayOneShot(RiseSound);
         int count = spirits.Count;
         for (int i = 0; i < count; i++) {
             StartCoroutine(Revive(spirits[0], 0));

@@ -6480,7 +6480,7 @@ MonoBehaviour:
   ReviveEffect: {fileID: 3377181292992421420, guid: a7c6063b53d562c4a8d68d8be8d62d41, type: 3}
   explosionSound: {fileID: 8300000, guid: ce99cf2c5649353498567b98bea9243d, type: 3}
   RushSound: {fileID: 8300000, guid: ce0a8e9c7f5d1764f9b4426fb6c1fed8, type: 3}
-  RiseSound: {fileID: 0}
+  RiseSound: {fileID: 8300000, guid: 1e72f31c106696041bca45f783d8ce90, type: 3}
   bgm: {fileID: 1036612512}
   rushBGM: {fileID: 221671760}
 --- !u!4 &991585344
