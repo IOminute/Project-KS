@@ -44,6 +44,7 @@ public class Necromancer : MonoBehaviour
     public AudioClip RiseSound;
 
     public AudioSource bgm;
+    public AudioSource rushBGM;
     private AudioSource audioSource;
 
     private bool isOverMaxBodies;
@@ -126,7 +127,7 @@ public class Necromancer : MonoBehaviour
         }
         isSkillDoing = true;
         isRushing = true;
-        bgm.DOFade(0f, 2f).SetEase(Ease.Linear).OnComplete(() => audioSource.PlayOneShot(RushSound));
+        bgm.DOFade(0f, 2f).SetEase(Ease.Linear).OnComplete(() => rushBGM.PlayOneShot(RushSound));
         StartCoroutine(UIManager.instance.SkillInitiated("Feeling Spirits Of Death...", 3f, 300));
         ManageMana(-300f);
         yield return waitThreeSec;
@@ -144,6 +145,7 @@ public class Necromancer : MonoBehaviour
         }
         isSkillDoing = false;
         isRushing = false;
+        rushBGM.DOFade(0f, 1.5f).SetEase(Ease.Linear).OnComplete(() => rushBGM.Stop());
         bgm.DOFade(1f, 2f).SetEase(Ease.Linear);
         yield return null;
     }
