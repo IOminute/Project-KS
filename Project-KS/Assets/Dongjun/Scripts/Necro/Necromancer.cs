@@ -230,6 +230,7 @@ public class Necromancer : MonoBehaviour
     void ManageMana(float requireMana)
     {
         mana += requireMana;
+        if (mana < 0) mana = 0;
         UIManager.instance.ManaBarAnim(mana, maxMana);
     }
 
