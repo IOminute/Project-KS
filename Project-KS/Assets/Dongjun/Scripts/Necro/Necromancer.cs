@@ -180,13 +180,14 @@ public class Necromancer : MonoBehaviour
             StartCoroutine(DestroyBoom(boomList[0]));
             yield return null;
         }
-        boomList = new List<GameObject>() { };
+        boomList.Clear();
         UIManager.instance.AllyTextChange(allies.Count);
         yield return null;
     }
 
     IEnumerator DestroyBoom(GameObject boomToDestroy)
     {
+        boomList.Remove(boomToDestroy);
         yield return new WaitForSeconds(0.2f);
         if(boomToDestroy != null)
         {
