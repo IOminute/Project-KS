@@ -21,7 +21,7 @@ public class NecroCamController : MonoBehaviour
 
     void HandleMovement()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             transform.position = new Vector3(0, 40f, -30f);
         }

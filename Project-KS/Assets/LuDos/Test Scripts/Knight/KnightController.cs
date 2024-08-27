@@ -378,7 +378,7 @@ public class KnightController : MonoBehaviour
         float realTime = 0f;
         while (realTime < lifeTime)
         {
-            if (Input.GetKeyDown(KeyCode.Backspace) || isDead)
+            if (Input.GetKeyDown(KeyCode.E) || isDead)
             {
                 break;
             }
